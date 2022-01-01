@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - ColoringObjects
   - 
   - 
   - 
@@ -40,4 +40,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: ColoringObjects
+    uniqueID: 3067904311
+    locked: 0
+  - name: Characters
+    uniqueID: 159912059
+    locked: 0
+  - name: Buttons
+    uniqueID: 3666955781
     locked: 0
