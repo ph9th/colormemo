@@ -4,9 +4,22 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneChange : MonoBehaviour
 {
-    public void LoadScene()
+    public IEnumerator LoadLevel()
     {
-        SceneManager.LoadScene("SandBoxLevel");
+        yield return new WaitForSeconds(2);
+        // load the nextlevel
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+    }
+
+    public IEnumerator Start()
+    {
+        if (SceneManager.GetActiveScene().name == "ObjectStolen")
+        {
+            Debug.Log("Level objectstolen");
+            yield return new WaitForSeconds(2);
+            SceneManager.LoadScene("SandBoxLevel");
+        }
     }
 
 }

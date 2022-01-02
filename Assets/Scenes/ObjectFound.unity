@@ -215,6 +215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 180975304}
   - component: {fileID: 180975305}
+  - component: {fileID: 180975306}
   m_Layer: 0
   m_Name: ColorManager
   m_TagString: Untagged
@@ -249,6 +250,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   penColor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &180975306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180975303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6d3c6375e9c5d241b9ad76898a5e3ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &328103392
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,7 +806,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.11, y: 1.95}
+  m_Size: {x: 11.6, y: 11.58}
   m_EdgeRadius: 0
 --- !u!1 &995935484
 GameObject:
