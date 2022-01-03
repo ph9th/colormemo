@@ -35,13 +35,45 @@ public class SetColor : MonoBehaviour
     void setObjColor()
     {
         taskColor = randomColor();
-        Debug.Log("random color is" + taskColor);
+        //Debug.Log("random color is" + taskColor);
 
     }
     Color randomColor()
     {
         return colors[Random.Range(0, 6)];
 
+    }
+
+    public string ColorToString(Color color)
+    {
+        if (color.Equals(colors[0]))
+        {
+            return "red";
+        }
+        else if (color.Equals(colors[1]))
+        {
+            return "yellow";
+        }
+        else if (color.Equals(colors[2]))
+        {
+            return "blue";
+        }
+        else if (color.Equals(colors[3]))
+        {
+            return "green";
+        }
+        else if (color.Equals(colors[4]))
+        {
+            return"orange";
+        }
+        else if (color.Equals(colors[5]))
+        {
+            return "purple";
+        }
+        else
+        {
+            return "other color";
+        }
     }
 
 }

@@ -37,7 +37,7 @@ public class GetColor : MonoBehaviour
         UnityWebRequest www = UnityWebRequest.Get(getURL);
         yield return www.SendWebRequest();
 
-        if (www.isNetworkError || www.isHttpError)
+        if ((www.result == UnityWebRequest.Result.ConnectionError) || (www.result == UnityWebRequest.Result.ProtocolError)) 
         {
             Debug.LogError(www.error);
         }
@@ -52,7 +52,6 @@ public class GetColor : MonoBehaviour
        if (colortext.CompareTo("red") == 0)
         {
             return colors[0];
-            Debug.Log("color is red");
         }
         else if (colortext.CompareTo("yellow") == 0)
         {
@@ -76,14 +75,17 @@ public class GetColor : MonoBehaviour
         }
         else
         {
+            //Debug.Log("other color " + colortext);
             return new Color(0, 0, 0, 0);
-            Debug.Log("other color " + colortext);
+            
         }
     }
 
+    
+
     void checkForUpdate ()
     {
-        Debug.Log("Check for updates");
+        //Debug.Log("Check for updates");
         StartCoroutine(SimpleGetRequest());
     }
     // Update is called once per frame

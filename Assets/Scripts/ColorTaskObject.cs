@@ -22,8 +22,6 @@ public class ColorTaskObject : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "ObjectStolen")
         {
             StoredColors.stolenObj = taskColorScript.taskColor;
-            Debug.Log("stored color: stolenObj");
-            Debug.Log(StoredColors.stolenObj);
         }
     }
 
@@ -35,8 +33,7 @@ public class ColorTaskObject : MonoBehaviour
 
     void colorTaskObject(SpriteRenderer obj)
     {
-        Debug.Log("taskcolor");
-        Debug.Log(taskColorScript.taskColor);
+        //Debug.Log("taskcolor" + taskColorScript.taskColor);
         obj.color = taskColorScript.taskColor;
     }
 
