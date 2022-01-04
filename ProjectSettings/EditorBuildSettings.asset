@@ -18,6 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/GardenLevel.unity
     guid: ce259dfb1d52c494bb1ce45049b7258b
   - enabled: 1
+    path: Assets/Scenes/ParkLevel.unity
+    guid: b3d42021b8c7647429cc83dce8251466
+  - enabled: 1
+    path: Assets/Scenes/RoadLevel.unity
+    guid: 0352ac212e27e0d4e9141c1b9462cbca
+  - enabled: 1
     path: Assets/Scenes/VSMLevel.unity
     guid: 76f04597ad9bcda4cbf7d5a64026a33f
   - enabled: 1
@@ -29,12 +35,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ButterflyLevel.unity
     guid: 3c11c47f4da225b48a79d8413ce5bfe0
-  - enabled: 1
-    path: Assets/Scenes/ParkLevel.unity
-    guid: b3d42021b8c7647429cc83dce8251466
-  - enabled: 1
-    path: Assets/Scenes/RoadLevel.unity
-    guid: 0352ac212e27e0d4e9141c1b9462cbca
   - enabled: 1
     path: Assets/Scenes/HouseLevel.unity
     guid: 96b13cd80c64fb24b8b2673b44c74ee8

@@ -33,9 +33,9 @@ public class HelpScript : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (taskColorScript.ColorToString(taskColor) == "green")
+        Debug.Log("help clicked");
+
+        if (taskColorScript.ColorToString(taskColor) == "green")
             {
                 animBlue.SetTrigger("Active");
                 animYellow.SetTrigger("Active");
@@ -52,5 +52,4 @@ public class HelpScript : MonoBehaviour
                 animBlue.SetTrigger("Active");
             }
         }
-    }
 }

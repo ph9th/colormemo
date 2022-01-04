@@ -29,7 +29,7 @@ public class GetColor : MonoBehaviour
     private void Start()
     {
         StartCoroutine(SimpleGetRequest());
-        InvokeRepeating("checkForUpdate", 5.0f, 5.0f);
+        InvokeRepeating("checkForUpdate", 3.0f, 3.0f);
     }
 
     IEnumerator SimpleGetRequest()

@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneChange : MonoBehaviour
 {
-    public static bool colorSuccess;
+    public static int levelCounter = 0;
+    private string sceneName;
     public IEnumerator LoadLevel()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
         // load the nextlevel
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
@@ -15,43 +16,75 @@ public class SceneChange : MonoBehaviour
 
     public IEnumerator Start()
     {
+        sceneName = SceneManager.GetActiveScene().name;
+        if (sceneName != "ObjectStolen" && sceneName != "ObjectFound" && sceneName != "VSMLevel")
+        {
+            SetOrder();
+        }
+        //ObjectStolen level only has animation, no task
         if (SceneManager.GetActiveScene().name == "ObjectStolen")
         {
-            CharacterManager.characters.Clear();
+            VSMScript.characters.Clear();
+            InitaliseBools();
             yield return new WaitForSeconds(6);
             SceneManager.LoadScene("SandBoxLevel");
         }
+        //SetBools();
 
-        colorSuccess = false;
+        
+        
     }
 
     private void Update()
     {
-        if(colorSuccess == true)
-        {
-            StartCoroutine(LoadYourAsyncScene());
-        }
         
     }
 
-    IEnumerator LoadYourAsyncScene()
+    void InitaliseBools()
     {
-        // Set the current Scene to be able to unload it later
-        Scene currentScene = SceneManager.GetActiveScene();
+        VSMScript.sandbox = false;
+        VSMScript.amusement = false;
+        VSMScript.garden = false;
+        VSMScript.road = false;
+        VSMScript.park = false;
+        VSMScript.house = false;
+    }
 
-        // The Application loads the Scene in the background at the same time as the current Scene.
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("VSMLevel");
-
-        // Wait until the last operation fully loads to return anything
-        while (!asyncLoad.isDone)
+    /*void SetBools()
+    {
+        if(SceneManager.GetActiveScene().name == "SandboxLevel")
         {
-            yield return null;
+            VSMScript.sandbox = true;
+        }
+        if (SceneManager.GetActiveScene().name == "AmusementParkLevel")
+        {
+            VSMScript.amusement = true;
+        }
+        if (SceneManager.GetActiveScene().name == "GardenLevel")
+        {
+            VSMScript.garden = true;
+        }
+        if (SceneManager.GetActiveScene().name == "RoadLevel")
+        {
+            VSMScript.road = true;
+        }
+        if (SceneManager.GetActiveScene().name == "ParkLevel")
+        {
+            VSMScript.park = true;
+        }
+        if(SceneManager.GetActiveScene().name == "HouseLevel")
+        {
+            VSMScript.house = true;
         }
 
-        // Move the GameObject (you attach this in the Inspector) to the newly loaded Scene
-        SceneManager.MoveGameObjectToScene(GameObject.Find("character"), SceneManager.GetSceneByName("VSMLevel"));
+    }*/
 
-        // Unload the previous Scene
-        SceneManager.UnloadSceneAsync(currentScene);
+    void SetOrder ()
+    {
+        VSMScript.levelOrder.Add(SceneManager.GetActiveScene().name);
+        levelCounter++;
+        Debug.Log("levelcounter: " + levelCounter);
     }
+
+
 }

@@ -43,12 +43,9 @@ public class ColorObject : MonoBehaviour
         taskColorScript = colorManager.GetComponent<SetColor>();
 
 
-        if (Input.touchCount > 0 || Input.anyKeyDown)
+        if (Input.touchCount > 0)
         {
             obj.color = penColorScript.penColor;
-
-            
-            
 
             //Increase try counter for every coloring try
             DataManagerScript.tryCounter++;
@@ -77,8 +74,6 @@ public class ColorObject : MonoBehaviour
                     DataManagerScript.timeSuccess = timer;
                     
                     DataManagerScript.addRecord();
-
-                    SceneChange.colorSuccess = true;
                     //load next level
                     StartCoroutine(SceneChanger.LoadLevel());
 
@@ -90,29 +85,6 @@ public class ColorObject : MonoBehaviour
             }
         }
     }
-
-    //color object if there is mouse click
-    /*void OnMouseDown()
-    {
-        obj.color = penColorScript.penColor;
-
-        DataManagerScript.tryCounter++;
-
-        if (compareColors(penColorScript.penColor, taskColorScript.taskColor))
-        {
-            Debug.Log("GOOD!");
-
-            DataManagerScript.levelID = SceneManager.GetActiveScene().buildIndex;
-            StartCoroutine(SceneChanger.LoadLevel());
-        }
-        else
-        {
-            Debug.Log("stored color: stolenObj");
-            Debug.Log(StoredColors.stolenObj);
-
-            Debug.Log("WRONG COLOR!");
-        }
-    }*/
 
     bool compareColors(Color penColor, Color taskColor)
     {
@@ -127,4 +99,53 @@ public class ColorObject : MonoBehaviour
             return false;
         }
     }
+
+
+
+    //color object if there is mouse click
+    void OnMouseDown()
+    {
+        penColorScript = colorManager.GetComponent<GetColor>();
+        taskColorScript = colorManager.GetComponent<SetColor>();
+
+        obj.color = penColorScript.penColor;
+
+        //Increase try counter for every coloring try
+        DataManagerScript.tryCounter++;
+        DataManagerScript.curTaskColor = taskColorScript.ColorToString(taskColorScript.taskColor);
+
+        if (SceneManager.GetActiveScene().name == "ObjectFound")
+        {
+            if (compareColors(penColorScript.penColor, StoredColors.stolenObj))
+            {
+                Debug.Log("GOOD! Stolen Object was this color!");
+            }
+            else
+            {
+                Debug.Log("Stolen Object was not this color!");
+            }
+        }
+        else
+        {
+            //correct color
+            if (compareColors(penColorScript.penColor, taskColorScript.taskColor))
+            {
+                Debug.Log("GOOD!");
+
+                //store data in dataManager
+                DataManagerScript.levelID = SceneManager.GetActiveScene().buildIndex;
+                DataManagerScript.timeSuccess = timer;
+
+                DataManagerScript.addRecord();
+                //load next level
+                StartCoroutine(SceneChanger.LoadLevel());
+
+            }
+            else
+            {
+                Debug.Log("WRONG COLOR!");
+            }
+        }
+    }
+
 }
