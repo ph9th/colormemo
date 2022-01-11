@@ -98,7 +98,7 @@ public class VSMScript : MonoBehaviour
     }
 
 
-    void InstantiateCharacters (List<GameObject> randomList)
+    public void InstantiateCharacters (List<GameObject> randomList)
     {
         int counter = 1;
         

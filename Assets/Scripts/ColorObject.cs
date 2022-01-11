@@ -116,9 +116,11 @@ public class ColorObject : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "ObjectFound")
         {
+            Debug.Log("level obj found!");
             if (compareColors(penColorScript.penColor, StoredColors.stolenObj))
             {
                 Debug.Log("GOOD! Stolen Object was this color!");
+                SceneManager.LoadScene("StartScreen");
             }
             else
             {
@@ -137,10 +139,12 @@ public class ColorObject : MonoBehaviour
                 DataManagerScript.timeSuccess = timer;
 
                 DataManagerScript.addRecord();
+                CharacterScript.success = true;
                 //load next level
                 StartCoroutine(SceneChanger.LoadLevel());
 
             }
+            //wrong color
             else
             {
                 Debug.Log("WRONG COLOR!");

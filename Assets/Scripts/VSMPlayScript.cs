@@ -8,6 +8,7 @@ public class VSMPlayScript : MonoBehaviour
 {
     public static int orderCounter = 0;
     SceneChange SceneChanger;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,11 @@ public class VSMPlayScript : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Converts the clones' names into the level names to set bools in VSM Level.
+    /// </summary>
+    /// <param name="prefab">prefab</param>
+    /// <returns> levelName </returns>
     string convertToLevelName (string prefab)
     {
         string levelName = "";
@@ -36,27 +42,19 @@ public class VSMPlayScript : MonoBehaviour
     //select sprite on mouse click
     void OnMouseDown()
     {
-        Debug.Log("sprite clicked");
-        Debug.Log("levelorder: " + VSMScript.levelOrder[1]);
-        Debug.Log("gameobj name: " + this.gameObject.name);
-        Debug.Log("converted prefab name: " + convertToLevelName(this.gameObject.name)); 
+
         if (convertToLevelName(this.gameObject.name) == VSMScript.levelOrder[orderCounter])
         {
             orderCounter++;
             if (orderCounter == VSMScript.levelOrder.Count)
             {
                 Debug.Log("done vsm");
-                SceneManager.LoadScene("ObjectFound");
-                //StartCoroutine(SceneChanger.LoadLevel());
+                SceneManager.LoadScene("VCMLevel");
 
             }
             this.gameObject.SetActive(false);
         }
-
-
-        Debug.Log("ordercounter: " + orderCounter);
-        Debug.Log("vsm char counter: " + VSMScript.levelOrder.Count);
-        
+   
     }
 
 }

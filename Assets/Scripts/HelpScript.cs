@@ -15,7 +15,8 @@ public class HelpScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(SceneManager.GetActiveScene().name != "VSMLevel") { 
+        string sceneName = SceneManager.GetActiveScene().name;
+        if (sceneName != "VSMLevel" && sceneName != "VCMLevel") { 
             animRed = GameObject.Find("Red").GetComponent<Animator>();
             animYellow = GameObject.Find("Yellow").GetComponent<Animator>();
             animBlue = GameObject.Find("Blue").GetComponent<Animator>();

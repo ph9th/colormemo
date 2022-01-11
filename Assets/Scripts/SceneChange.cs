@@ -16,8 +16,9 @@ public class SceneChange : MonoBehaviour
 
     public IEnumerator Start()
     {
+
         sceneName = SceneManager.GetActiveScene().name;
-        if (sceneName != "ObjectStolen" && sceneName != "ObjectFound" && sceneName != "VSMLevel")
+        if (sceneName != "ObjectStolen" && sceneName != "ObjectFound" && sceneName != "VSMLevel" && sceneName != "StartScreen")
         {
             SetOrder();
         }
@@ -49,35 +50,6 @@ public class SceneChange : MonoBehaviour
         VSMScript.park = false;
         VSMScript.house = false;
     }
-
-    /*void SetBools()
-    {
-        if(SceneManager.GetActiveScene().name == "SandboxLevel")
-        {
-            VSMScript.sandbox = true;
-        }
-        if (SceneManager.GetActiveScene().name == "AmusementParkLevel")
-        {
-            VSMScript.amusement = true;
-        }
-        if (SceneManager.GetActiveScene().name == "GardenLevel")
-        {
-            VSMScript.garden = true;
-        }
-        if (SceneManager.GetActiveScene().name == "RoadLevel")
-        {
-            VSMScript.road = true;
-        }
-        if (SceneManager.GetActiveScene().name == "ParkLevel")
-        {
-            VSMScript.park = true;
-        }
-        if(SceneManager.GetActiveScene().name == "HouseLevel")
-        {
-            VSMScript.house = true;
-        }
-
-    }*/
 
     void SetOrder ()
     {

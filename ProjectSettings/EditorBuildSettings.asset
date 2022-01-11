@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/VSMLevel.unity
     guid: 76f04597ad9bcda4cbf7d5a64026a33f
   - enabled: 1
+    path: Assets/Scenes/VCMLevel.unity
+    guid: 2c1a06f20a55db44688377ed289fefe8
+  - enabled: 1
     path: Assets/Scenes/ObjectFound.unity
     guid: 60290818d446e704880a5fe1c46057d3
   - enabled: 1
