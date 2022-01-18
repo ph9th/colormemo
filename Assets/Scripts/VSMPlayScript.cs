@@ -42,18 +42,18 @@ public class VSMPlayScript : MonoBehaviour
     //select sprite on mouse click
     void OnMouseDown()
     {
-
+        Debug.Log("VSM Sprite clicked");
         if (convertToLevelName(this.gameObject.name) == VSMScript.levelOrder[orderCounter])
         {
             orderCounter++;
             if (orderCounter == VSMScript.levelOrder.Count)
             {
-                Debug.Log("done vsm");
-                SceneManager.LoadScene("VCMLevel");
+                SceneManager.LoadScene("ObjectFound");
 
             }
             this.gameObject.SetActive(false);
         }
+
    
     }
 

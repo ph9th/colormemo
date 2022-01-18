@@ -11,13 +11,10 @@ public class StolenObjectScript : MonoBehaviour
 
     void Start()
     {
+        DataManagerScript.completedIterations = DataManagerScript.completedIterations + 1;
+
         stolenObj = this.gameObject;
         textures = Resources.LoadAll("Prefabs/VFCMObjects", typeof(Texture2D));
-
-        foreach (var t in textures)
-        {
-            Debug.Log(t.name);
-        }
 
         // change texture
         Texture2D texture = (Texture2D)textures[Random.Range(0, textures.Length)];
@@ -27,7 +24,7 @@ public class StolenObjectScript : MonoBehaviour
         stolenObj.GetComponent<SpriteRenderer>().sprite = sprite;
 
         //store sprite for VFCM Level
-        VFCMScript.stolenObjSprite = this.GetComponent<SpriteRenderer>().sprite;
+        FoundObjectScript.stolenObjSprite = this.GetComponent<SpriteRenderer>().sprite;
 
         
     }

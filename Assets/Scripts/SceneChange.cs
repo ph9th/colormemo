@@ -4,36 +4,59 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneChange : MonoBehaviour
 {
-    public static int levelCounter = 0;
+    public static int maxLevel = 1;
+    static int levelCount = 1;
     private string sceneName;
-    public IEnumerator LoadLevel()
-    {
-        yield return new WaitForSeconds(5);
-        // load the nextlevel
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
-    }
+    public static bool error = false;
+    public static int themeID;
 
     public IEnumerator Start()
     {
-
         sceneName = SceneManager.GetActiveScene().name;
-        if (sceneName != "ObjectStolen" && sceneName != "ObjectFound" && sceneName != "VSMLevel" && sceneName != "StartScreen")
+
+        if (SceneManager.GetActiveScene().name == "StartScreen")
         {
+            InitaliseGame();
+        }
+
+        if (sceneName != "ObjectStolen" && sceneName != "ObjectFound" && sceneName != "VSMLevel" && sceneName != "StartScreen" && sceneName != "ThemeSelection")
+        {
+            levelCount++;
             SetOrder();
         }
+
+        //reset levelCount after every completed level
+        if (SceneManager.GetActiveScene().name == "ThemeSelection")
+        {
+            error = false;
+            levelCount = 1;
+        }
+
         //ObjectStolen level only has animation, no task
         if (SceneManager.GetActiveScene().name == "ObjectStolen")
         {
             VSMScript.characters.Clear();
             InitaliseBools();
             yield return new WaitForSeconds(6);
-            SceneManager.LoadScene("SandBoxLevel");
-        }
-        //SetBools();
 
-        
-        
+            SceneManager.LoadScene(themeID);
+        }
+  
+    }
+
+    public IEnumerator LoadLevel()
+    {
+        yield return new WaitForSeconds(5);
+
+        if (levelCount <= maxLevel)
+        {
+            // load the next level
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else
+        {
+            SceneManager.LoadScene("VSMLevel");
+        }
     }
 
     private void Update()
@@ -51,11 +74,18 @@ public class SceneChange : MonoBehaviour
         VSMScript.house = false;
     }
 
+
+
     void SetOrder ()
     {
         VSMScript.levelOrder.Add(SceneManager.GetActiveScene().name);
-        levelCounter++;
-        Debug.Log("levelcounter: " + levelCounter);
+
+    }
+
+    void InitaliseGame ()
+    {
+        DataManagerScript.completedIterations = 0;
+
     }
 
 

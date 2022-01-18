@@ -5,23 +5,24 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
+
 public class ColorTaskObject : MonoBehaviour
 {
+    
     SpriteRenderer obj;
     GameObject colorManager;
-    SetColor taskColorScript;
+    Color32 taskColor;
 
-    // Start is called before the first frame update
     void Start()
     {
         obj = GetComponent<SpriteRenderer>();
         colorManager = GameObject.Find("ColorManager");
-        taskColorScript = colorManager.GetComponent<SetColor>();
-        colorTaskObject(obj);
+        taskColor = colorManager.GetComponent<SetColor>().taskColor;
+        ColorObj(obj);
 
         if (SceneManager.GetActiveScene().name == "ObjectStolen")
         {
-            StoredColors.stolenObj = taskColorScript.taskColor;
+            StoredColors.stolenObj = taskColor;
         }
     }
 
@@ -31,10 +32,15 @@ public class ColorTaskObject : MonoBehaviour
         
     }
 
-    void colorTaskObject(SpriteRenderer obj)
+
+    /// <summary>
+    /// Color the object in the set task color.
+    /// </summary>
+    /// <param name="obj"> object to be colored</param>
+    /// <returns></returns>
+    void ColorObj(SpriteRenderer obj)
     {
-        //Debug.Log("taskcolor" + taskColorScript.taskColor);
-        obj.color = taskColorScript.taskColor;
+        obj.color = taskColor;
     }
 
   

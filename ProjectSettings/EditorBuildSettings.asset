@@ -9,8 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScreen.unity
     guid: f41309cdc1d75a34d9bab52f3fe20734
   - enabled: 1
+    path: Assets/Scenes/ThemeSelection.unity
+    guid: 68bf94705ea6b8a489be7c1711b4ad4b
+  - enabled: 1
     path: Assets/Scenes/ObjectStolen.unity
     guid: c308e9d8721d92d4db5257f0db9e534d
+  - enabled: 0
+    path: Assets/Scenes/VCMLevel.unity
+    guid: 2c1a06f20a55db44688377ed289fefe8
+  - enabled: 1
+    path: Assets/Scenes/VSMLevel.unity
+    guid: 76f04597ad9bcda4cbf7d5a64026a33f
+  - enabled: 1
+    path: Assets/Scenes/ObjectFound.unity
+    guid: 60290818d446e704880a5fe1c46057d3
   - enabled: 1
     path: Assets/Scenes/SandboxLevel.unity
     guid: 0df20002448aa4c41a6d4ede68fc470d
@@ -24,23 +36,29 @@ EditorBuildSettings:
     path: Assets/Scenes/RoadLevel.unity
     guid: 0352ac212e27e0d4e9141c1b9462cbca
   - enabled: 1
-    path: Assets/Scenes/VSMLevel.unity
-    guid: 76f04597ad9bcda4cbf7d5a64026a33f
-  - enabled: 1
-    path: Assets/Scenes/VCMLevel.unity
-    guid: 2c1a06f20a55db44688377ed289fefe8
-  - enabled: 1
-    path: Assets/Scenes/ObjectFound.unity
-    guid: 60290818d446e704880a5fe1c46057d3
-  - enabled: 1
     path: Assets/Scenes/AmusementPark.unity
     guid: e6c21a0df498ead4198de5458650b72b
   - enabled: 1
-    path: Assets/Scenes/ButterflyLevel.unity
-    guid: 3c11c47f4da225b48a79d8413ce5bfe0
+    path: Assets/Scenes/Garden2Level.unity
+    guid: c5b647166c92c4d4a8a2d61bbbb274f2
+  - enabled: 1
+    path: Assets/Scenes/Sandbox2Level.unity
+    guid: e3691e2f71057144f8dce2f0edeec3d5
+  - enabled: 1
+    path: Assets/Scenes/Road2Level.unity
+    guid: e0dcf7dd31f6b15429c23775a74de2fa
+  - enabled: 1
+    path: Assets/Scenes/Park2Level.unity
+    guid: 37ec01200ce51aa48afb5a5c6b32ffbe
+  - enabled: 1
+    path: Assets/Scenes/AmusementPark2.unity
+    guid: 88053a00afdb0094cac189db1bc5fdde
   - enabled: 1
     path: Assets/Scenes/HouseLevel.unity
     guid: 96b13cd80c64fb24b8b2673b44c74ee8
+  - enabled: 1
+    path: Assets/Scenes/ButterflyLevel.unity
+    guid: 3c11c47f4da225b48a79d8413ce5bfe0
   - enabled: 1
     path: Assets/Scenes/MushroomLevel.unity
     guid: 230563f98a2d9624a8cbfa9aeabc23a2
@@ -50,4 +68,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TreeLevel.unity
     guid: 45e0ab5a4b889d34894896da53003e6e
+  - enabled: 1
+    path: Assets/Scenes/BarrowLevel.unity
+    guid: 03738f6c7642d2347b6c9028c83b7670
+  - enabled: 1
+    path: Assets/Scenes/BoatLevel.unity
+    guid: c204a4280f7f8f94f8a77baa081fa259
+  - enabled: 1
+    path: Assets/Scenes/ForestflowerLevel.unity
+    guid: 81f0a9dacabcd6841ad3d84a498ea676
+  - enabled: 1
+    path: Assets/Scenes/TentLevel.unity
+    guid: ecdac44de3f58a74aa0d0b1c15580b4e
+  - enabled: 1
+    path: Assets/Scenes/TreehouseLevel.unity
+    guid: 35a072defc1be944ca0636d7f24ea0c9
+  - enabled: 1
+    path: Assets/Scenes/TruckLevel.unity
+    guid: 728efe57d34d11d43bf2c4c73354fba9
+  - enabled: 1
+    path: Assets/Scenes/MenuScreen.unity
+    guid: 7e2314c983d7c4c47a3fd72bcad197b1
   m_configObjects: {}

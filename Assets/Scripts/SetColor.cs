@@ -8,6 +8,7 @@ public class SetColor : MonoBehaviour
 {
     public Color taskColor;
     Color[] colors = new Color[9];
+    public static Color32 repeatColor = new Color32(0, 0, 0, 255);
 
     private void Awake()
     {
@@ -34,9 +35,18 @@ public class SetColor : MonoBehaviour
 
     void setObjColor()
     {
-        taskColor = randomColor();
-        //Debug.Log("random color is" + taskColor);
+        if( repeatColor.Equals(new Color32(0, 0, 0, 255)) )
+        {
 
+            taskColor = randomColor();
+        }
+        else
+        {
+
+            taskColor = repeatColor;
+            repeatColor = new Color32(0, 0, 0, 255);
+        }
+        
     }
     Color randomColor()
     {

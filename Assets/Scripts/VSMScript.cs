@@ -6,6 +6,7 @@ using System.Linq;
 
 public class VSMScript : MonoBehaviour
 {
+    public static int vsmTaskAssign = 0;
     public static List<GameObject> characters = new List<GameObject>();
     //public GameObject[] children;
     Vector2 characterPos;
@@ -24,6 +25,16 @@ public class VSMScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        if (vsmTaskAssign < 2)
+        {
+            vsmTaskAssign++;
+        }
+        else
+        {
+            vsmTaskAssign = 0;
+        }
+
         setLevelTrue();
         displayCharacters();
         
@@ -68,9 +79,8 @@ public class VSMScript : MonoBehaviour
         {
             var sprite = Resources.Load<GameObject>("Prefabs/Children/park");
             characters.Add(sprite);
-            Debug.Log("park true");
         }
-        Debug.Log("character list count: " + characters.Count);
+
         InstantiateCharacters(getRandomElement(characters));
         
     }
@@ -93,7 +103,7 @@ public class VSMScript : MonoBehaviour
             list.RemoveAt(randomNumber);
         }
 
-        Debug.Log("New list count: " + newList.Count);
+
         return newList;
     }
 
