@@ -7,9 +7,9 @@ using UnityEngine.EventSystems;
 public class ButtonScript : MonoBehaviour
 {
     GameObject button;
-    public Animator animRed;
-    public Animator animYellow;
-    public Animator animBlue;
+    Animator animRed;
+    Animator animYellow;
+    Animator animBlue;
     GameObject colorManager;
     SetColor taskColorScript;
     Color32 taskColor;
@@ -19,7 +19,7 @@ public class ButtonScript : MonoBehaviour
     void Start()
     {
         sceneName = SceneManager.GetActiveScene().name;
-        if (sceneName != "VSMLevel" && sceneName != "VCMLevel" && sceneName != "ThemeSelection" && sceneName != "MenuScreen" && sceneName != "ObjectStolen")
+        if (sceneName != "VSMLevel" && sceneName != "VCMLevel" && sceneName != "ThemeSelection" && sceneName != "MenuScreen" && sceneName != "ObjectStolen" && sceneName != "StartScreen")
         {
             animRed = GameObject.Find("Red").GetComponent<Animator>();
             animYellow = GameObject.Find("Yellow").GetComponent<Animator>();
@@ -41,13 +41,35 @@ public class ButtonScript : MonoBehaviour
     {
         if(EventSystem.current.currentSelectedGameObject.name == "HumanWorld")
         {
-            //5 = HumanWorld or 16 = Forest
-            SceneChange.themeID = 5;
-        } else if (EventSystem.current.currentSelectedGameObject.name == "Forest")
-        {
-            SceneChange.themeID = 16;
-        }
+            SceneChange.themeID = 0; //HumanWorld themeID = 0
+            //select random first level
+            SceneChange.buildID = Random.Range(Constants.humanWorldStart, Constants.humanWorldEnd);
             SceneManager.LoadScene("ObjectStolen");
+        }
+        else if (EventSystem.current.currentSelectedGameObject.name == "Forest")
+        {
+            SceneChange.themeID = 1; //Forest themeID = 1
+            //select random first level
+            SceneChange.buildID = Random.Range(Constants.forestWorldStart, Constants.forestWorldEnd);
+            SceneManager.LoadScene("ObjectStolen");
+        }
+        else if(EventSystem.current.currentSelectedGameObject.name == "ThemeButton")
+        {
+            SceneManager.LoadScene("ThemeSelection");
+        }
+        else
+        {
+            SceneManager.LoadScene("ObjectStolen");
+        }
+
+        
+
+            
+    }
+
+    public void GoToIntro()
+    {
+        SceneManager.LoadScene("IntroductionLevel");
     }
 
     public void SaveData()
@@ -62,6 +84,7 @@ public class ButtonScript : MonoBehaviour
 
     public void ColorHelp()
     {
+        Debug.Log("help");
         string color; 
 
         if(sceneName == "ObjectFound")
@@ -72,8 +95,8 @@ public class ButtonScript : MonoBehaviour
         {
             color = taskColorScript.ColorToString(taskColor);
         }
-        
 
+        Debug.Log("taskcolor: " + color);
         if (color == "green")
         {
             animBlue.SetTrigger("Active");

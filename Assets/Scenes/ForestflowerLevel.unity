@@ -370,7 +370,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1227062985
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 088a54b81059a6543b761a1b52b6b961, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -832,7 +832,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.23, y: 2.25}
+    oldSize: {x: 2.22, y: 2.25}
     newSize: {x: 1.78, y: 1.68}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1162,7 +1162,7 @@ RectTransform:
   - {fileID: 1993255302}
   - {fileID: 945869849}
   - {fileID: 792768160}
-  - {fileID: 1627038353}
+  - {fileID: 1931612762}
   - {fileID: 1727842965}
   - {fileID: 2103198088}
   m_Father: {fileID: 0}
@@ -1180,6 +1180,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1465436358}
     m_Modifications:
+    - target: {fileID: 956008300730891342, guid: 21e575d620f008d4aa1f9b6420c56a52, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5171959938584513939, guid: 21e575d620f008d4aa1f9b6420c56a52, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1230,11 +1234,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21e575d620f008d4aa1f9b6420c56a52, type: 3}
---- !u!4 &1627038353 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5171959938584513939, guid: 21e575d620f008d4aa1f9b6420c56a52, type: 3}
-  m_PrefabInstance: {fileID: 1627038352}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1727842964
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,6 +1319,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!224 &1931612762 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 956008300730891342, guid: 21e575d620f008d4aa1f9b6420c56a52, type: 3}
+  m_PrefabInstance: {fileID: 1627038352}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1993255301
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -50,3 +50,6 @@ TagManager:
   - name: Buttons
     uniqueID: 3666955781
     locked: 0
+  - name: Help
+    uniqueID: 1629894047
+    locked: 0

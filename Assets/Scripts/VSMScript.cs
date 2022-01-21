@@ -35,8 +35,7 @@ public class VSMScript : MonoBehaviour
             vsmTaskAssign = 0;
         }
 
-        setLevelTrue();
-        displayCharacters();
+        DisplayCharacters(levelOrder);
         
     }
 
@@ -46,45 +45,20 @@ public class VSMScript : MonoBehaviour
         
     }
 
-   
-    void displayCharacters ()
+   void DisplayCharacters(List<string> array)
     {
-        
-        if (sandbox == true)
+        for (int i = 0; i< array.Count; i++)
         {
-            var sprite = Resources.Load<GameObject>("Prefabs/Children/sandbox");
-            characters.Add(sprite);
-        }
-        if (garden == true)
-        {
-            var sprite = Resources.Load<GameObject>("Prefabs/Children/garden");
-            characters.Add(sprite);
-        }
-        if (amusement == true)
-        {
-            var sprite = Resources.Load<GameObject>("Prefabs/Children/amusement");
-            characters.Add(sprite);
-        }
-        if (road == true)
-        {
-            var sprite = Resources.Load<GameObject>("Prefabs/Children/road");
-            characters.Add(sprite);
-        }
-        if (house == true)
-        {
-            var sprite = Resources.Load<GameObject>("Prefabs/Children/house");
-            characters.Add(sprite);
-        }
-        if (park == true)
-        {
-            var sprite = Resources.Load<GameObject>("Prefabs/Children/park");
-            characters.Add(sprite);
-        }
+            var characterName = array[i].Substring(0, array[i].Length - 5);
+            var sprite = Resources.Load<GameObject>("Prefabs/Children/" + characterName);
 
+            characters.Add(sprite);
+        }
         InstantiateCharacters(getRandomElement(characters));
-        
+
     }
 
+  
     public List<GameObject> getRandomElement(List<GameObject> list)
     {
 
@@ -121,17 +95,4 @@ public class VSMScript : MonoBehaviour
         }
     }
 
-    void setLevelTrue ()
-    {
-        for(int i = 0; i < levelOrder.Count; i++)
-        {
-            if(levelOrder[i] == "SandboxLevel") { sandbox = true; }
-            if (levelOrder[i] == "GardenLevel") { garden = true; }
-            if (levelOrder[i] == "ParkLevel") { park = true; }
-            if (levelOrder[i] == "RoadLevel") { road = true; }
-            if (levelOrder[i] == "AmusementParkLevel") { amusement = true; }
-            if (levelOrder[i] == "HouseLevel") { house = true; }
-
-        }
-    }
 }

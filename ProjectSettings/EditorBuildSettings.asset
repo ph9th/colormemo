@@ -9,8 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScreen.unity
     guid: f41309cdc1d75a34d9bab52f3fe20734
   - enabled: 1
+    path: Assets/Scenes/MenuScreen.unity
+    guid: 7e2314c983d7c4c47a3fd72bcad197b1
+  - enabled: 1
     path: Assets/Scenes/ThemeSelection.unity
     guid: 68bf94705ea6b8a489be7c1711b4ad4b
+  - enabled: 1
+    path: Assets/Scenes/IntroductionLevel.unity
+    guid: f0b14e8506bf0f542be15b72c18f283e
   - enabled: 1
     path: Assets/Scenes/ObjectStolen.unity
     guid: c308e9d8721d92d4db5257f0db9e534d
@@ -36,7 +42,7 @@ EditorBuildSettings:
     path: Assets/Scenes/RoadLevel.unity
     guid: 0352ac212e27e0d4e9141c1b9462cbca
   - enabled: 1
-    path: Assets/Scenes/AmusementPark.unity
+    path: Assets/Scenes/AmusementLevel.unity
     guid: e6c21a0df498ead4198de5458650b72b
   - enabled: 1
     path: Assets/Scenes/Garden2Level.unity
@@ -51,7 +57,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Park2Level.unity
     guid: 37ec01200ce51aa48afb5a5c6b32ffbe
   - enabled: 1
-    path: Assets/Scenes/AmusementPark2.unity
+    path: Assets/Scenes/Amusement2Level.unity
     guid: 88053a00afdb0094cac189db1bc5fdde
   - enabled: 1
     path: Assets/Scenes/HouseLevel.unity
@@ -86,7 +92,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TruckLevel.unity
     guid: 728efe57d34d11d43bf2c4c73354fba9
-  - enabled: 1
-    path: Assets/Scenes/MenuScreen.unity
-    guid: 7e2314c983d7c4c47a3fd72bcad197b1
   m_configObjects: {}

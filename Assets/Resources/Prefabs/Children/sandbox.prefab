@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -1006179201152534090}
   - component: {fileID: -2893730812353589358}
   m_Layer: 0
-  m_Name: sandbox
+  m_Name: Sandbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 698467398330530526}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 102.76555, y: 102.76555, z: 102.76555}
+  m_LocalScale: {x: 65, y: 65, z: 65}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -120,5 +120,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.55, y: 5.44}
+  m_Size: {x: 2.96, y: 6.43}
   m_EdgeRadius: 0

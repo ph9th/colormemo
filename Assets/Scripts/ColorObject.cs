@@ -129,7 +129,7 @@ public class ColorObject : MonoBehaviour
 
 
     /// <summary>
-    /// Check if the color is correct. If yes, record data in DataManager.
+    /// Check if the color is correct. If yes, record data in DataManager and Load next level.
     /// </summary>
     /// <returns></returns>
     void CheckColor()
@@ -138,6 +138,9 @@ public class ColorObject : MonoBehaviour
         if (CompareColors(penColor, taskColorScript.taskColor))
         {
             Debug.Log("CORRECT COLOR!");
+            SceneChange.levelCount++;
+            SceneChange.SetOrder();
+            CharacterScript.success = true;
 
             //record color data in Data manager
             int levelID = SceneManager.GetActiveScene().buildIndex;
@@ -153,6 +156,7 @@ public class ColorObject : MonoBehaviour
             {
                 colorTaskAssign = 0;
             }
+
 
             //load next level
             StartCoroutine(SceneChanger.LoadLevel());

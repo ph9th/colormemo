@@ -6,13 +6,14 @@ using System;
 
 public class VSMPlayScript : MonoBehaviour
 {
-    public static int orderCounter = 0;
+     static int orderCounter = 0; //
     SceneChange SceneChanger;
 
     // Start is called before the first frame update
     void Start()
     {
         SceneChanger = GameObject.Find("SceneManager").GetComponent<SceneChange>();
+        orderCounter = 0;
     }
 
     // Update is called once per frame
@@ -22,30 +23,42 @@ public class VSMPlayScript : MonoBehaviour
     }
 
     /// <summary>
-    /// Converts the clones' names into the level names to set bools in VSM Level.
+    /// Remove last x characters from given string
     /// </summary>
-    /// <param name="prefab">prefab</param>
-    /// <returns> levelName </returns>
-    string convertToLevelName (string prefab)
+    /// <param name="stringToTrim">String to be trimmed</param>
+    /// <param name="x"> Number of characters to remove</param>
+    /// <returns>Trimmed string</returns>
+    public string TrimString (string stringToTrim, int x)
     {
-        string levelName = "";
-        if (prefab == "sandbox(Clone)") { levelName = "SandboxLevel"; }
-        if (prefab == "garden(Clone)") { levelName = "GardenLevel"; }
-        if (prefab == "park(Clone)") { levelName = "ParkLevel"; }
-        if (prefab == "road(Clone)") { levelName = "RoadLevel"; }
-        if (prefab == "amusement(Clone)") { levelName = "AmusementParkLevel"; }
-        if (prefab == "house(Clone)") { levelName = "HouseLevel"; }
-
-        return levelName;
+        return stringToTrim.Substring(0, stringToTrim.Length - x);
     }
 
     //select sprite on mouse click
     void OnMouseDown()
     {
         Debug.Log("VSM Sprite clicked");
-        if (convertToLevelName(this.gameObject.name) == VSMScript.levelOrder[orderCounter])
+
+        //Debug.Log("obj name: " + TrimString(this.gameObject.name, 7));
+        //Debug.Log("levelOrder name: " + TrimString(VSMScript.levelOrder[orderCounter], 5));
+
+        foreach(string i in VSMScript.levelOrder)
         {
-            orderCounter++;
+            Debug.Log("levelorder item: " + i);
+        }
+
+        Debug.Log("order counter ++: " + orderCounter);
+        Debug.Log("content levelorder[ordercounter]: " + TrimString(VSMScript.levelOrder[orderCounter], 5));
+
+        if (TrimString(this.gameObject.name, 7 ) == TrimString(VSMScript.levelOrder[orderCounter], 5))
+        {
+            Debug.Log("order correct");
+            //Debug.Log("order counter: " + orderCounter);
+            //Debug.Log("vsm levelorder counter: " + VSMScript.levelOrder.Count);
+            
+            orderCounter = orderCounter + 1;
+
+            //Debug.Log("order counter ++: " + orderCounter);
+
             if (orderCounter == VSMScript.levelOrder.Count)
             {
                 SceneManager.LoadScene("ObjectFound");
@@ -54,7 +67,6 @@ public class VSMPlayScript : MonoBehaviour
             this.gameObject.SetActive(false);
         }
 
-   
     }
 
 }

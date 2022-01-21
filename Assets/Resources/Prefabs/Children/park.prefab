@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 953584137729145873}
   - component: {fileID: -6288630515401518666}
   m_Layer: 0
-  m_Name: park
+  m_Name: Park
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 779364482398510118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 62.84729, y: 62.84729, z: 62.84729}
+  m_LocalScale: {x: 65, y: 65, z: 65}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -120,5 +120,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.48, y: 7.73}
+  m_Size: {x: 3.69, y: 6.25}
   m_EdgeRadius: 0
