@@ -8,8 +8,6 @@ public class VSMScript : MonoBehaviour
 {
     public static int vsmTaskAssign = 0;
     public static List<GameObject> characters = new List<GameObject>();
-    //public GameObject[] children;
-    Vector2 characterPos;
 
     //levels
     public static bool sandbox;
@@ -20,9 +18,28 @@ public class VSMScript : MonoBehaviour
     public static bool park;
 
     public static List<string> levelOrder = new List<string>();
-
+    string prefabFolder;
 
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        switch (SceneChange.themeID)
+        {
+            case 0:
+                prefabFolder = "Children";
+                break;
+            case 1:
+                prefabFolder = "Forest";
+                break;
+            case 2:
+                prefabFolder = "Water";
+                break;
+            default:
+                Debug.Log("Unknown theme ID");
+                break;
+        }
+    }
     void Start()
     {
 
@@ -35,13 +52,8 @@ public class VSMScript : MonoBehaviour
             vsmTaskAssign = 0;
         }
 
-        DisplayCharacters(levelOrder);
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
+        DisplayCharacters(levelOrder);
         
     }
 
@@ -49,8 +61,9 @@ public class VSMScript : MonoBehaviour
     {
         for (int i = 0; i< array.Count; i++)
         {
+            //Get Prefab names by removing 'Level'(= last 5 characters) from Level Name
             var characterName = array[i].Substring(0, array[i].Length - 5);
-            var sprite = Resources.Load<GameObject>("Prefabs/Children/" + characterName);
+            var sprite = Resources.Load<GameObject>("Prefabs/" + prefabFolder + "/" + characterName);
 
             characters.Add(sprite);
         }

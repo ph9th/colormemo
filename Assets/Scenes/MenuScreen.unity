@@ -236,6 +236,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: button (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7427821810294523737, guid: 26c6e95b9627dbc4c870af7c7e91e357, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToAchievements
+      objectReference: {fileID: 0}
     - target: {fileID: 7708355486015137267, guid: 26c6e95b9627dbc4c870af7c7e91e357, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

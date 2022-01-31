@@ -18,8 +18,8 @@ public class ButtonScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sceneName = SceneManager.GetActiveScene().name;
-        if (sceneName != "VSMLevel" && sceneName != "VCMLevel" && sceneName != "ThemeSelection" && sceneName != "MenuScreen" && sceneName != "ObjectStolen" && sceneName != "StartScreen")
+        
+        if ( 6 <= SceneManager.GetActiveScene().buildIndex && SceneManager.GetActiveScene().buildIndex <= Constants.forestWorldEnd)
         {
             animRed = GameObject.Find("Red").GetComponent<Animator>();
             animYellow = GameObject.Find("Yellow").GetComponent<Animator>();
@@ -39,32 +39,26 @@ public class ButtonScript : MonoBehaviour
 
     public void LoadStart()
     {
-        if(EventSystem.current.currentSelectedGameObject.name == "HumanWorld")
+        string buttonName = EventSystem.current.currentSelectedGameObject.name;
+        if (buttonName == "HumanWorld")
         {
             SceneChange.themeID = 0; //HumanWorld themeID = 0
-            //select random first level
-            SceneChange.buildID = Random.Range(Constants.humanWorldStart, Constants.humanWorldEnd);
             SceneManager.LoadScene("ObjectStolen");
         }
-        else if (EventSystem.current.currentSelectedGameObject.name == "Forest")
+        else if (buttonName == "Forest")
         {
             SceneChange.themeID = 1; //Forest themeID = 1
-            //select random first level
-            SceneChange.buildID = Random.Range(Constants.forestWorldStart, Constants.forestWorldEnd);
             SceneManager.LoadScene("ObjectStolen");
         }
-        else if(EventSystem.current.currentSelectedGameObject.name == "ThemeButton")
+        else if (buttonName == "Water")
+        {
+            SceneChange.themeID = 2; //Water themeID = 1
+            SceneManager.LoadScene("ObjectStolen");
+        }
+        else if(buttonName == "ThemeButton")
         {
             SceneManager.LoadScene("ThemeSelection");
-        }
-        else
-        {
-            SceneManager.LoadScene("ObjectStolen");
-        }
-
-        
-
-            
+        }    
     }
 
     public void GoToIntro()
@@ -81,6 +75,17 @@ public class ButtonScript : MonoBehaviour
     {
         SceneManager.LoadScene("MenuScreen");
     }
+    public void GoToAchievements()
+    {
+        SceneManager.LoadScene("Achievements");
+    }
+
+    public void GoToColoringBook()
+    {
+        string buttonName = EventSystem.current.currentSelectedGameObject.name;
+
+        SceneManager.LoadScene("ColoringPage" + buttonName);
+    }
 
     public void ColorHelp()
     {
@@ -93,10 +98,11 @@ public class ButtonScript : MonoBehaviour
         }
         else
         {
+            Debug.Log("task color: " + taskColor);
             color = taskColorScript.ColorToString(taskColor);
+            
         }
 
-        Debug.Log("taskcolor: " + color);
         if (color == "green")
         {
             animBlue.SetTrigger("Active");
@@ -113,6 +119,23 @@ public class ButtonScript : MonoBehaviour
             animRed.SetTrigger("Active");
             animBlue.SetTrigger("Active");
         }
+    }
+
+    public void Screenshot()
+    {
+        //ScreenCapture.CaptureScreenshot(Application.dataPath + "/Resources/Screenshots/Screenshot2.png");
+
+       ScreenshotHandler.TakeScreenshot_Static(Screen.width, Screen.height);
+
+        StartCoroutine(ScreenshotDelay());
+        
+
+    }
+
+    private IEnumerator ScreenshotDelay()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("Achievements");
     }
 
 }

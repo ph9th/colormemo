@@ -21,13 +21,11 @@ public class CharacterScript : MonoBehaviour
             GameObject character = this.gameObject;
             string name = character.GetComponent<SpriteRenderer>().sprite.name;
 
-            Sprite texture = Resources.Load<Sprite>("Prefabs/Children/" + name + "_happy");
-            //Debug.Log("texture name: " + texture.name);
+            Sprite texture = Resources.Load<Sprite>("Prefabs/Happy/" + name + "_happy");
 
             // change texture
             //sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
 
-            //assign randomly chosen sprite to obj
             character.GetComponent<SpriteRenderer>().sprite = texture;
   
             success = false;

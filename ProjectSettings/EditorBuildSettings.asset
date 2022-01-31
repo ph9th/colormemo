@@ -15,17 +15,20 @@ EditorBuildSettings:
     path: Assets/Scenes/ThemeSelection.unity
     guid: 68bf94705ea6b8a489be7c1711b4ad4b
   - enabled: 1
+    path: Assets/Scenes/Achievements.unity
+    guid: 3bbef026ff8b02c4796ae0e8ab5eabb9
+  - enabled: 1
     path: Assets/Scenes/IntroductionLevel.unity
     guid: f0b14e8506bf0f542be15b72c18f283e
   - enabled: 1
     path: Assets/Scenes/ObjectStolen.unity
     guid: c308e9d8721d92d4db5257f0db9e534d
-  - enabled: 0
-    path: Assets/Scenes/VCMLevel.unity
-    guid: 2c1a06f20a55db44688377ed289fefe8
   - enabled: 1
     path: Assets/Scenes/VSMLevel.unity
     guid: 76f04597ad9bcda4cbf7d5a64026a33f
+  - enabled: 0
+    path: Assets/Scenes/VCMLevel.unity
+    guid: 2c1a06f20a55db44688377ed289fefe8
   - enabled: 1
     path: Assets/Scenes/ObjectFound.unity
     guid: 60290818d446e704880a5fe1c46057d3
@@ -92,4 +95,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TruckLevel.unity
     guid: 728efe57d34d11d43bf2c4c73354fba9
+  - enabled: 1
+    path: Assets/Scenes/TreasureLevel.unity
+    guid: 6f0e1790b8a1d4d4692803f2a34ee505
+  - enabled: 1
+    path: Assets/Scenes/StarfishLevel.unity
+    guid: 215870824b6c93641aa6f2ba8b31413c
+  - enabled: 1
+    path: Assets/Scenes/ShellLevel.unity
+    guid: 41748006df0dfbb4f831a2cac0087922
+  - enabled: 1
+    path: Assets/Scenes/SubmarineLevel.unity
+    guid: 3ab56c21e3ecf87499b4f4ad32056675
+  - enabled: 1
+    path: Assets/Scenes/OysterLevel.unity
+    guid: b05e8783b14bb1d4dbce64cb3472c810
+  - enabled: 1
+    path: Assets/Scenes/AnchorLevel.unity
+    guid: 574b1855bbe54c6419e5a428ce505615
+  - enabled: 1
+    path: Assets/Scenes/CoralLevel.unity
+    guid: a23f706486f5b9448aa436d7562400da
+  - enabled: 1
+    path: Assets/Scenes/ColoringPage1.unity
+    guid: c80f056f42b226949a3f4734eb31da88
   m_configObjects: {}

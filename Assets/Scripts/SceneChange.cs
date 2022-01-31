@@ -11,20 +11,38 @@ public class SceneChange : MonoBehaviour
     public static int buildID;
     public static bool[] levelBool = new bool[40]; //Array storing bool values for each level (build index); index set to true once played to avoid repeating levels
     public static int themeID = 0;
+    private int startLvl;
+    private int endLvl;
 
     public IEnumerator Start()
     {
         sceneName = SceneManager.GetActiveScene().name;
+
+        switch(themeID)
+        {
+            case 0:
+                startLvl = Constants.humanWorldStart;
+                endLvl = Constants.humanWorldEnd;
+                break;
+            case 1:
+                startLvl = Constants.forestWorldStart;
+                endLvl = Constants.forestWorldEnd;
+                break;
+            case 2:
+                startLvl = Constants.waterWorldStart;
+                endLvl = Constants.waterWorldEnd;
+                break;
+            default:
+                Debug.Log("Unknown theme ID");
+                break;
+        }
+
 
         if (sceneName == "StartScreen")
         {
             InitialiseGame();
         }
 
-        if (sceneName != "ObjectStolen" && sceneName != "ObjectFound" && sceneName != "VSMLevel" && sceneName != "StartScreen" && sceneName != "ThemeSelection" && sceneName != "MenuScreen" && sceneName != "IntroductionLevel")
-        {
-            
-        }
 
         //reset values after every completed iteration
         if (sceneName == "ThemeSelection")
@@ -39,8 +57,11 @@ public class SceneChange : MonoBehaviour
         //ObjectStolen level only has animation, no task
         if (sceneName == "ObjectStolen")
         {
-            yield return new WaitForSeconds(6);
-            SceneManager.LoadScene(buildID);
+            yield return new WaitForSeconds(1);
+            StartCoroutine(LoadLevel());
+
+            //SceneManager.LoadScene(buildID);
+            //SetLevelBoolsTrue(buildID);
         }
 
         
@@ -51,55 +72,37 @@ public class SceneChange : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
 
+        Debug.Log("levelCount: " + levelCount);
+        Debug.Log("maxLevel: " + maxLevel);
+
         if (levelCount <= maxLevel)
         {
+ 
+
             // load the next random level
-            if(themeID == 0)
+             buildID = Random.Range(startLvl, endLvl);
+
+            //if all levels have been played, reset all values in array to false
+            if (CheckLevelBools(levelBool, startLvl, endLvl))
             {
-                buildID = Random.Range(Constants.humanWorldStart, Constants.humanWorldEnd);
-
-                //if all levels have been played, reset all values in array to false
-                if (CheckLevelBools(levelBool, Constants.humanWorldStart, Constants.humanWorldEnd))
-                {
-                    Debug.Log("all levels played");
-                    levelBool = ResetLevelBools(levelBool, Constants.humanWorldStart, Constants.humanWorldEnd);
-                }
-
-                //Generate new buildID until a level is found that hasn't been played yet
-                while (levelBool[buildID] == true)
-                {
-                    buildID = Random.Range(Constants.humanWorldStart, Constants.humanWorldEnd);
-                }
-
-                SceneManager.LoadScene(buildID);
-                SetLevelBoolsTrue(buildID);
+                Debug.Log("all levels played");
+                levelBool = ResetLevelBools(levelBool, startLvl, endLvl);
             }
-            else if (themeID == 1)
+
+            //Generate new buildID until a level is found that hasn't been played yet
+            while (levelBool[buildID] == true)
             {
-                if (CheckLevelBools(levelBool, Constants.forestWorldStart, Constants.forestWorldEnd))
-                {
-                    levelBool = ResetLevelBools(levelBool, Constants.forestWorldStart, Constants.forestWorldEnd);
-                }
-
-                buildID = Random.Range(Constants.forestWorldStart, Constants.forestWorldEnd);
-
-                while (levelBool[buildID] == true)
-                {
-                    buildID = Random.Range(Constants.forestWorldStart, Constants.forestWorldEnd);
-                }
-                SceneManager.LoadScene(buildID);
-                SetLevelBoolsTrue(buildID);
+                buildID = Random.Range(startLvl, endLvl);
             }
+
+            SceneManager.LoadScene(buildID);
+            SetLevelBoolsTrue(buildID);
+          
         }
         else
         {
             SceneManager.LoadScene("VSMLevel");
         }
-    }
-
-    private void Update()
-    {
-        
     }
 
     /// <summary>

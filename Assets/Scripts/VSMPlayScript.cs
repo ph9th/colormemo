@@ -36,28 +36,15 @@ public class VSMPlayScript : MonoBehaviour
     //select sprite on mouse click
     void OnMouseDown()
     {
-        Debug.Log("VSM Sprite clicked");
-
-        //Debug.Log("obj name: " + TrimString(this.gameObject.name, 7));
-        //Debug.Log("levelOrder name: " + TrimString(VSMScript.levelOrder[orderCounter], 5));
-
         foreach(string i in VSMScript.levelOrder)
         {
-            Debug.Log("levelorder item: " + i);
         }
-
-        Debug.Log("order counter ++: " + orderCounter);
-        Debug.Log("content levelorder[ordercounter]: " + TrimString(VSMScript.levelOrder[orderCounter], 5));
 
         if (TrimString(this.gameObject.name, 7 ) == TrimString(VSMScript.levelOrder[orderCounter], 5))
         {
             Debug.Log("order correct");
-            //Debug.Log("order counter: " + orderCounter);
-            //Debug.Log("vsm levelorder counter: " + VSMScript.levelOrder.Count);
             
             orderCounter = orderCounter + 1;
-
-            //Debug.Log("order counter ++: " + orderCounter);
 
             if (orderCounter == VSMScript.levelOrder.Count)
             {
