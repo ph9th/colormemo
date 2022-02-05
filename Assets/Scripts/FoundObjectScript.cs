@@ -13,9 +13,4 @@ public class FoundObjectScript : MonoBehaviour
         this.GetComponent<SpriteRenderer>().sprite = stolenObjSprite;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

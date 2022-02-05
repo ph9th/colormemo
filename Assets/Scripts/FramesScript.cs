@@ -23,7 +23,7 @@ public class FramesScript : MonoBehaviour
         picFrame = this.gameObject;
         string frameID = picFrame.name;
 
-        texture = Resources.Load<Sprite>("Screenshots/ColoringPage" + frameID);
+        texture = Resources.Load<Sprite>("Screenshots/" + SaveSystem.name + "/" + "ColoringPage" + frameID);
 
         if (texture == null)
         {

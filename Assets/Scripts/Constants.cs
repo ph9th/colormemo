@@ -1,18 +1,19 @@
 using System;
 
-static class Constants
+public static class Constants
 {
     //start and end build index of each theme
     // Human World
-    public const int humanWorldStart = 8 ;
-    public const int humanWorldEnd = 18;
+    public const int humanWorldStart = 9 ;
+    public const int humanWorldEnd = 19;
 
     // Forest
-    public const int forestWorldStart = 19;
-    public const int forestWorldEnd = 28;
+    public const int forestWorldStart = 20;
+    public const int forestWorldEnd = 29;
 
     //Water
-    public const int waterWorldStart = 29;
-    public const int waterWorldEnd = 35;
+    public const int waterWorldStart = 30;
+    public const int waterWorldEnd = 36;
+
 
 }

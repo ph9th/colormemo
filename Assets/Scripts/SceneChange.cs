@@ -14,6 +14,11 @@ public class SceneChange : MonoBehaviour
     private int startLvl;
     private int endLvl;
 
+    private void Awake()
+    {
+        FindObjectOfType<AudioManager>().PauseAll();
+     
+    }
     public IEnumerator Start()
     {
         sceneName = SceneManager.GetActiveScene().name;
@@ -47,6 +52,12 @@ public class SceneChange : MonoBehaviour
         //reset values after every completed iteration
         if (sceneName == "ThemeSelection")
         {
+            if (!FindObjectOfType<AudioManager>().IsPlaying("Theme"))
+            {
+                FindObjectOfType<AudioManager>().Play("Theme");
+            }
+
+            FindObjectOfType<AudioManager>().Play("SelectTheme");
             error = false;
             levelCount = 1;
             VSMScript.characters.Clear();
@@ -57,6 +68,13 @@ public class SceneChange : MonoBehaviour
         //ObjectStolen level only has animation, no task
         if (sceneName == "ObjectStolen")
         {
+            if (FindObjectOfType<AudioManager>().IsPlaying("Theme"))
+            {
+                FindObjectOfType<AudioManager>().Pause("Theme");
+            }
+
+            StartCoroutine(FindObjectOfType<AudioManager>().PlayDelay("WitchSteals", 1));
+
             yield return new WaitForSeconds(1);
             StartCoroutine(LoadLevel());
 
@@ -64,10 +82,35 @@ public class SceneChange : MonoBehaviour
             //SetLevelBoolsTrue(buildID);
         }
 
-        
-  
+        if (Constants.humanWorldStart <= SceneManager.GetActiveScene().buildIndex && SceneManager.GetActiveScene().buildIndex <= Constants.waterWorldEnd)
+        {
+            if(ColorObject.colorTaskAssign == 0)
+            {
+                FindObjectOfType<AudioManager>().Play("RedBear");
+            } else if (ColorObject.colorTaskAssign == 1)
+            {
+                FindObjectOfType<AudioManager>().Play("YellowBear");
+            }
+            else if (ColorObject.colorTaskAssign == 2)
+            {
+                FindObjectOfType<AudioManager>().Play("BlueBear");
+            }
+            StartCoroutine(FindObjectOfType<AudioManager>().PlayDelay("YourTurn", 1));
+            StartCoroutine(FindObjectOfType<AudioManager>().PlayDelay("ColorIt", 2));
+
+
+        }
+
+
+
     }
 
+    public IEnumerator LoadDelay(string sceneName, int seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene(sceneName);
+
+    }
     public IEnumerator LoadLevel()
     {
         yield return new WaitForSeconds(5);

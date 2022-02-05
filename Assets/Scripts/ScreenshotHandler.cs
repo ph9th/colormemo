@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 
 
@@ -12,12 +13,14 @@ public class ScreenshotHandler : MonoBehaviour
     private Camera myCamera;
     private bool takeScreenshot;
     private string sceneName;
+    private string path;
 
     private void Awake()
     {
         instance = this;
         myCamera = gameObject.GetComponent<Camera>();
         sceneName = SceneManager.GetActiveScene().name;
+        path = Application.dataPath + "/Resources/Screenshots/" + SaveSystem.name;
 
     }
 
@@ -35,7 +38,15 @@ public class ScreenshotHandler : MonoBehaviour
             scale(renderResult, 960, 540);
 
             byte[] byteArray = renderResult.EncodeToJPG();
-            System.IO.File.WriteAllBytes(Application.dataPath + "/Resources/Screenshots/" + sceneName + ".jpg", byteArray);
+
+            //check if folder exists
+            if (!Directory.Exists(path))
+            {
+                //create folder
+                Directory.CreateDirectory(path);
+            }
+
+            System.IO.File.WriteAllBytes(path + "/" + sceneName + ".jpg", byteArray);
             Debug.Log("Saved Screenshot");
 
             RenderTexture.ReleaseTemporary(renderTexture);

@@ -457,6 +457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 740241206}
   - component: {fileID: 740241205}
+  - component: {fileID: 740241207}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -521,6 +522,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &740241207
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740241204}
+  m_Enabled: 1
 --- !u!1001 &866757771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1349,5 +1358,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: animal
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 946945590595778147, guid: 9107b86d78664ba49b84522330e713e4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9107b86d78664ba49b84522330e713e4, type: 3}

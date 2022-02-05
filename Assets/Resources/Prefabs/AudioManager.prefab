@@ -1,0 +1,236 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5868585298067187508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5868585298067187510}
+  - component: {fileID: 5868585298067187511}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5868585298067187510
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5868585298067187508}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1058.8933, y: 526.50934, z: -107.475204}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5868585298067187511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5868585298067187508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69e588540da209469c39f2477c71b2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 0}
+  sounds:
+  - name: Theme
+    clip: {fileID: 8300000, guid: 475f4837af487ce4a9e68bb227455e4c, type: 3}
+    volume: 0.032
+    volumeVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: SelectTheme
+    clip: {fileID: 8300000, guid: 2b6303d71d545844d988ddd02b3e7468, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: WitchSteals
+    clip: {fileID: 8300000, guid: 74643d9c9c5f7114f8e2fb4f9cbed24f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: BringItBack
+    clip: {fileID: 8300000, guid: 8e651c3de3129e34397dd63e146b2bfd, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: ColorIt
+    clip: {fileID: 8300000, guid: a1d3817fc8660ab4d8422ed4a5a5276a, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: RedBear
+    clip: {fileID: 8300000, guid: 9d701ff6fb84cc9409e66059efbb338f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: YellowBear
+    clip: {fileID: 8300000, guid: 8d464217568009e46ad3694e60258324, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: BlueBear
+    clip: {fileID: 8300000, guid: 0f29909edceee934c96fc72bdc44c601, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: YourTurn
+    clip: {fileID: 8300000, guid: 935a2cf8687ce524a97dba560406a933, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Wrong
+    clip: {fileID: 8300000, guid: 6833beae5105ba644a0f61e24b847be1, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Correct
+    clip: {fileID: 8300000, guid: 910b404a06006e74dbf1731df8cabc2f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: WellDone
+    clip: {fileID: 8300000, guid: 5aa0c179d621f1a45816646e9923d344, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Super
+    clip: {fileID: 8300000, guid: ecf366d721ea8c64dbd7696b1df4c443, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Prima
+    clip: {fileID: 8300000, guid: 52ffeaaf75c2c564583aae57cdb3c1f5, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: WhoFirst
+    clip: {fileID: 8300000, guid: 4957e53ae6072704f87e9f6765849be4, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: WhoNext
+    clip: {fileID: 8300000, guid: 56a901b8effd74d4cae55032e895f0bb, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: SomeoneElse
+    clip: {fileID: 8300000, guid: 043e5f7f9045dbd4aae070ebac9e9d08, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: ObjectFound
+    clip: {fileID: 8300000, guid: 420692d4432b23e4bb5e097d9ca67cd7, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: WhatColor
+    clip: {fileID: 8300000, guid: 6c6ce388382e2794daf9137fab77e58e, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: AlmostCaughtUp
+    clip: {fileID: 8300000, guid: 29b63aa129f2514468d005e194f0abe6, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Instructions
+    clip: {fileID: 8300000, guid: bcc2a52890fc698438d1beed112f36af, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: MixColors
+    clip: {fileID: 8300000, guid: 9f989b0588aaab34cb193668e271516e, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: PressHome
+    clip: {fileID: 8300000, guid: 43c55036617b3cb44b19c5652cc263b5, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: PressHelp
+    clip: {fileID: 8300000, guid: 5cb49769d5320ad42979434507017467, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Click
+    clip: {fileID: 8300000, guid: 02053f1b59acc284daf04b4f12fffbed, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: RightAnswer
+    clip: {fileID: 8300000, guid: 35b7d9764ffab734bb819955f6754833, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Magic
+    clip: {fileID: 8300000, guid: 1442f1bf4a9b83841ab7298ad6093216, type: 3}
+    volume: 1
+    volumeVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}

@@ -482,7 +482,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.97, y: 2.55}
+    oldSize: {x: 1.94, y: 2.52}
     newSize: {x: 1.78, y: 1.68}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -501,6 +501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 995935487}
   - component: {fileID: 995935486}
+  - component: {fileID: 995935485}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -508,6 +509,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!81 &995935485
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995935484}
+  m_Enabled: 1
 --- !u!20 &995935486
 Camera:
   m_ObjectHideFlags: 0
@@ -899,6 +908,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 599267029}
     m_Modifications:
+    - target: {fileID: 956008300730891342, guid: 21e575d620f008d4aa1f9b6420c56a52, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5171959938584513939, guid: 21e575d620f008d4aa1f9b6420c56a52, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -949,9 +962,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21e575d620f008d4aa1f9b6420c56a52, type: 3}
---- !u!4 &1775538267 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5171959938584513939, guid: 21e575d620f008d4aa1f9b6420c56a52, type: 3}
+--- !u!224 &1775538267 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 956008300730891342, guid: 21e575d620f008d4aa1f9b6420c56a52, type: 3}
   m_PrefabInstance: {fileID: 1775538266}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1809492499

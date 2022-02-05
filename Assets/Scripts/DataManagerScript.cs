@@ -27,6 +27,7 @@ public static class DataManagerScript
         }
     }*/
 
+    
     public static void AddSessionData()
     {
         int maxLevel = SceneChange.maxLevel;

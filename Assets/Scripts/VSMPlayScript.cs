@@ -14,6 +14,8 @@ public class VSMPlayScript : MonoBehaviour
     {
         SceneChanger = GameObject.Find("SceneManager").GetComponent<SceneChange>();
         orderCounter = 0;
+
+        
     }
 
     // Update is called once per frame
@@ -43,15 +45,22 @@ public class VSMPlayScript : MonoBehaviour
         if (TrimString(this.gameObject.name, 7 ) == TrimString(VSMScript.levelOrder[orderCounter], 5))
         {
             Debug.Log("order correct");
-            
+            FindObjectOfType<AudioManager>().PlayNoOverlay("RightAnswer");
             orderCounter = orderCounter + 1;
+            this.gameObject.SetActive(false);
 
             if (orderCounter == VSMScript.levelOrder.Count)
             {
                 SceneManager.LoadScene("ObjectFound");
-
+            } else
+            {
+                FindObjectOfType<AudioManager>().PlayNoOverlay("WhoNext");
             }
-            this.gameObject.SetActive(false);
+            
+            
+        } else
+        {
+            FindObjectOfType<AudioManager>().PlayNoOverlay("SomeoneElse");
         }
 
     }

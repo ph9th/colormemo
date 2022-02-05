@@ -57,6 +57,7 @@ public class ColorObject : MonoBehaviour
         if (Input.touchCount > 0)
 
         {
+            FindObjectOfType<AudioManager>().Play("Magic");
             obj.color = penColor; //color object with pen color
 
             //Increase try counter for every new coloring try
@@ -105,6 +106,8 @@ public class ColorObject : MonoBehaviour
     {
         if (CompareColors(penColor, StoredColors.stolenObj))
         {
+           
+            FindObjectOfType<AudioManager>().PlayNoOverlay("WellDone");
             Debug.Log("GOOD! Stolen Object was this color!");
 
             //store data
@@ -118,11 +121,13 @@ public class ColorObject : MonoBehaviour
                 SceneChange.maxLevel++;
             }
 
-            SceneManager.LoadScene("ThemeSelection");
+            StartCoroutine( SceneChanger.LoadDelay("ThemeSelection", 3));
         }
         else
         {
             SceneChange.error = true;
+
+            FindObjectOfType<AudioManager>().PlayNoOverlay("Wrong");
             Debug.Log("Stolen Object was not this color!");
         }
     }
@@ -137,34 +142,42 @@ public class ColorObject : MonoBehaviour
         //correct color
         if (CompareColors(penColor, taskColorScript.taskColor))
         {
-            Debug.Log("CORRECT COLOR!");
-            SceneChange.levelCount++;
-            SceneChange.SetOrder();
-            CharacterScript.success = true;
-
-            //record color data in Data manager
-            int levelID = SceneManager.GetActiveScene().buildIndex;
-            float timeSuccess = timer;
-            DataManagerScript.AddColorData(levelID, tryCounter, taskColorScript.ColorToString(curTaskColor), timeSuccess);
-
-            //assign next level to next avatar
-            if (colorTaskAssign < 2)
+            if (!CharacterScript.success)
             {
-                colorTaskAssign++;
-            }
-            else
-            {
-                colorTaskAssign = 0;
-            }
+                FindObjectOfType<AudioManager>().PlayNoOverlay("Super");
+                Debug.Log("CORRECT COLOR!");
+
+                SceneChange.levelCount++;
+                SceneChange.SetOrder();
+                CharacterScript.success = true;
+
+                //record color data in Data manager
+                int levelID = SceneManager.GetActiveScene().buildIndex;
+                float timeSuccess = timer;
+                DataManagerScript.AddColorData(levelID, tryCounter, taskColorScript.ColorToString(curTaskColor), timeSuccess);
+
+                //assign next level to next avatar
+                if (colorTaskAssign < 2)
+                {
+                    colorTaskAssign++;
+                }
+                else
+                {
+                    colorTaskAssign = 0;
+                }
 
 
-            //load next level
-            StartCoroutine(SceneChanger.LoadLevel());
+                //load next level
+                StartCoroutine(SceneChanger.LoadLevel());
+            }
+            
 
         }
         else
         {
             SetColor.repeatColor = taskColorScript.taskColor;
+ 
+            FindObjectOfType<AudioManager>().PlayNoOverlay("Wrong");
             Debug.Log("WRONG COLOR!");
         }
     }
@@ -172,6 +185,7 @@ public class ColorObject : MonoBehaviour
     //color object if there is mouse click
     void OnMouseDown()
     {
+        FindObjectOfType<AudioManager>().Play("Magic");
         obj.color = penColor; //color object with pen color
         if (!CompareColors(penColor, lastTryColor))
         {

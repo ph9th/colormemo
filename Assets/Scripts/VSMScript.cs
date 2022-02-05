@@ -54,7 +54,23 @@ public class VSMScript : MonoBehaviour
 
 
         DisplayCharacters(levelOrder);
-        
+
+        if (ColorObject.colorTaskAssign == 0)
+        {
+            FindObjectOfType<AudioManager>().Play("RedBear");
+        }
+        else if (ColorObject.colorTaskAssign == 1)
+        {
+            FindObjectOfType<AudioManager>().Play("YellowBear");
+        }
+        else if (ColorObject.colorTaskAssign == 2)
+        {
+            FindObjectOfType<AudioManager>().Play("BlueBear");
+        }
+        StartCoroutine(FindObjectOfType<AudioManager>().PlayDelay("YourTurn", 1));
+        StartCoroutine(FindObjectOfType<AudioManager>().PlayDelay("WhoFirst", 2));
+
+
     }
 
    void DisplayCharacters(List<string> array)

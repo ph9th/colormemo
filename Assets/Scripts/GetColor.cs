@@ -29,7 +29,7 @@ public class GetColor : MonoBehaviour
     private void Start()
     {
         StartCoroutine(SimpleGetRequest());
-        InvokeRepeating("checkForUpdate", 3.0f, 3.0f);
+        InvokeRepeating("CheckForUpdate", 3.0f, 3.0f);
     }
 
     IEnumerator SimpleGetRequest()
@@ -83,14 +83,10 @@ public class GetColor : MonoBehaviour
 
     
 
-    void checkForUpdate ()
+    void CheckForUpdate ()
     {
         //Debug.Log("Check for updates");
         StartCoroutine(SimpleGetRequest());
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

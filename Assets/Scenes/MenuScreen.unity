@@ -550,6 +550,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 599267029}
     m_Modifications:
+    - target: {fileID: 47591912600706788, guid: 21e575d620f008d4aa1f9b6420c56a52, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToPlayers
+      objectReference: {fileID: 0}
     - target: {fileID: 956008300730891342, guid: 21e575d620f008d4aa1f9b6420c56a52, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -619,6 +623,7 @@ GameObject:
   m_Component:
   - component: {fileID: 995935487}
   - component: {fileID: 995935486}
+  - component: {fileID: 995935485}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -626,6 +631,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!81 &995935485
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995935484}
+  m_Enabled: 1
 --- !u!20 &995935486
 Camera:
   m_ObjectHideFlags: 0
@@ -974,6 +987,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 599267029}
     m_Modifications:
+    - target: {fileID: 1691023577364007417, guid: 41eb91f9b87c717428c06f7f2c3dfe8e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SavePlayer
+      objectReference: {fileID: 0}
     - target: {fileID: 1917055799239846739, guid: 41eb91f9b87c717428c06f7f2c3dfe8e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
