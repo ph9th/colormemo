@@ -21,7 +21,6 @@ public class CharacterScript : MonoBehaviour
         if(success && !lvldone)
         {
             GameObject character = this.gameObject;
-            Debug.Log("character" + character);
             string name = character.GetComponent<SpriteRenderer>().sprite.name;
 
             Sprite texture = Resources.Load<Sprite>("Prefabs/Happy/" + name + "_happy");

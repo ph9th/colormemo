@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System;
 
 public static class SaveSystem
 {
-    public static string name;
     public static readonly string PLAYER_FOLDER = Application.dataPath + "/Players/";
 
+   
     public static void Init()
     {
         //check if folder exists
@@ -18,36 +19,61 @@ public static class SaveSystem
         }
     }
 
-    public static void Save (string saveString)
+    public static void Save ()
     {
-        File.WriteAllText(PLAYER_FOLDER + name + ".txt", saveString);
+        for (int i = 0; i < 3; i++)
+        {
+            PlayerObject playerObj = new PlayerObject(PlayerManager.players[i].name)
+            {
+                name = PlayerManager.players[i].name,
+                maxLevel = PlayerManager.players[i].maxLevel,
+                green = PlayerManager.players[i].green,
+                orange = PlayerManager.players[i].orange,
+                purple = PlayerManager.players[i].purple,
+
+
+            };
+
+            string json = JsonUtility.ToJson(playerObj);
+            //Debug.Log("json: " + json);
+            //SaveSystem.Save(json);
+
+            File.WriteAllText(PLAYER_FOLDER + PlayerManager.players[i].name + ".txt", json);
+        }
+
+        
     }
 
-    public static string Load ()
+    public static void LoadPlayer(string name)
     {
-        DirectoryInfo directoryInfo = new DirectoryInfo(PLAYER_FOLDER);
-        FileInfo[] playerFiles = directoryInfo.GetFiles("*.txt");
-        FileInfo mostRecentFile = null;
-        foreach(FileInfo fileInfo in playerFiles)
+        if (File.Exists(Application.dataPath + "/Players/" + name + ".txt"))
         {
-            if(mostRecentFile == null)
+            string saveString = File.ReadAllText(Application.dataPath + "/Players/" + name + ".txt");
+            //Debug.Log("savestring: " + saveString);
+            PlayerObject playerObj = JsonUtility.FromJson<PlayerObject>(saveString);
+
+            int i = Array.FindIndex(PlayerManager.players, item => item.name == name);
+
+            if (name == PlayerManager.players[i].name)
             {
-                mostRecentFile = fileInfo;
-            }else
-            {
-                if(fileInfo.LastWriteTime > mostRecentFile.LastWriteTime)
-                {
-                    mostRecentFile = fileInfo;
-                }
+                PlayerManager.players[i].maxLevel = playerObj.maxLevel;
+                PlayerManager.players[i].green = playerObj.green;
+                PlayerManager.players[i].orange = playerObj.orange;
+                PlayerManager.players[i].purple = playerObj.purple;
+
             }
         }
-        if (mostRecentFile != null)
+        else
         {
-            string saveString = File.ReadAllText(mostRecentFile.FullName);
-            return saveString;
-        }else
-        {
-            return null;
+
+            Debug.LogWarning("Player File doesn't exist");
+            File.CreateText(Application.dataPath + "/Players/" + name + ".txt");
+
+
+
         }
+            
     }
+
+
 }

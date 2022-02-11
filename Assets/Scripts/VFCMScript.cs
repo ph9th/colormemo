@@ -24,18 +24,18 @@ public class VFCMScript : MonoBehaviour
 
         if (vfcmTaskAssign == 0)
         {
-            StartCoroutine(FindObjectOfType<AudioManager>().PlayDelay("RedBear", 7));
+            StartCoroutine(FindObjectOfType<AudioManager>().PlayDelay("RedBear", 5));
         }
         else if (vfcmTaskAssign == 1)
         {
-            StartCoroutine(FindObjectOfType<AudioManager>().PlayDelay("YellowBear", 7));
+            StartCoroutine(FindObjectOfType<AudioManager>().PlayDelay("YellowBear", 5));
         }
         else if (vfcmTaskAssign == 2)
         {
-            StartCoroutine(FindObjectOfType<AudioManager>().PlayDelay("BlueBear", 7));
+            StartCoroutine(FindObjectOfType<AudioManager>().PlayDelay("BlueBear", 5));
         }
         
-        StartCoroutine(FindObjectOfType<AudioManager>().PlayDelay("WhatColor", 8));
+        StartCoroutine(FindObjectOfType<AudioManager>().PlayDelay("WhatColor", 6));
     }
 
     // Update is called once per frame

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class SetColor : MonoBehaviour
@@ -35,22 +36,61 @@ public class SetColor : MonoBehaviour
 
     void setObjColor()
     {
+        //
         if( repeatColor.Equals(new Color32(0, 0, 0, 255)) )
         {
-
             taskColor = randomColor();
         }
         else
         {
-
-            taskColor = repeatColor;
+            //taskColor = repeatColor;
             repeatColor = new Color32(0, 0, 0, 255);
         }
-        
     }
+
     Color randomColor()
     {
-        return colors[Random.Range(0, 6)];
+        //choose colors based on who the task is assigned to;
+        // red can only paint red, orange, purple
+        // yellow only yellow, green, orange
+        // 
+        Color[] colorList = new Color[3];
+
+        //Set colors according to which player's turn it is
+        int assignedTo;
+
+        if (SceneManager.GetActiveScene().name == "ObjectStolen")
+        {
+            assignedTo = VFCMScript.vfcmTaskAssign;
+        } else
+        {
+            assignedTo = ColorObject.colorTaskAssign;
+        }
+
+        if (assignedTo == 0)
+        {
+            Debug.Log("Red Turn");
+            colorList[0] = colors[0];
+            colorList[1] = colors[4];
+            colorList[2] = colors[5];
+        }
+        else if (assignedTo == 1)
+        {
+            Debug.Log("Yellow Turn");
+            colorList[0] = colors[1];
+            colorList[1] = colors[3];
+            colorList[2] = colors[4];
+        }
+        else if (assignedTo == 2)
+        {
+            Debug.Log("Blue Turn");
+            colorList[0] = colors[2];
+            colorList[1] = colors[3];
+            colorList[2] = colors[5];
+        }
+
+        return colorList[Random.Range(0, 2)];
+
 
     }
 

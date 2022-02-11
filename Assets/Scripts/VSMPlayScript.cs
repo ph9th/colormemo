@@ -6,7 +6,7 @@ using System;
 
 public class VSMPlayScript : MonoBehaviour
 {
-     static int orderCounter = 0; //
+    public static int orderCounter = 0; //
     SceneChange SceneChanger;
 
     // Start is called before the first frame update
@@ -33,18 +33,17 @@ public class VSMPlayScript : MonoBehaviour
     public string TrimString (string stringToTrim, int x)
     {
         return stringToTrim.Substring(0, stringToTrim.Length - x);
+    
+     
     }
 
     //select sprite on mouse click
     void OnMouseDown()
     {
-        foreach(string i in VSMScript.levelOrder)
-        {
-        }
-
         if (TrimString(this.gameObject.name, 7 ) == TrimString(VSMScript.levelOrder[orderCounter], 5))
         {
-            Debug.Log("order correct");
+            //Debug.Log("order correct");
+            GameObject.Find("Finger").GetComponent<SpriteRenderer>().enabled = false;
             FindObjectOfType<AudioManager>().PlayNoOverlay("RightAnswer");
             orderCounter = orderCounter + 1;
             this.gameObject.SetActive(false);

@@ -99,7 +99,7 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound: " + name + " not found!");
             return;
         }
-        Debug.Log("Pause");
+
         s.source.Stop();
     }
 

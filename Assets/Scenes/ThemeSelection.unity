@@ -502,6 +502,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 599267029}
     m_Modifications:
+    - target: {fileID: 47591912600706788, guid: 21e575d620f008d4aa1f9b6420c56a52, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 956008300730891342, guid: 21e575d620f008d4aa1f9b6420c56a52, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -553,6 +557,10 @@ PrefabInstance:
     - target: {fileID: 5171959938584513940, guid: 21e575d620f008d4aa1f9b6420c56a52, type: 3}
       propertyPath: m_Name
       value: helpButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924838438131583163, guid: 21e575d620f008d4aa1f9b6420c56a52, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21e575d620f008d4aa1f9b6420c56a52, type: 3}
@@ -821,6 +829,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Avatars
       objectReference: {fileID: 0}
+    - target: {fileID: 1262936309132433308, guid: 512e3d73666268b4c9dc5fce0dbbb3c3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2917108603481038796, guid: 512e3d73666268b4c9dc5fce0dbbb3c3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401424761215538303, guid: 512e3d73666268b4c9dc5fce0dbbb3c3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 512e3d73666268b4c9dc5fce0dbbb3c3, type: 3}
 --- !u!1 &1127784161
@@ -880,7 +900,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 80547d96145ab294d802202291ba9a26, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 952cb3243c3d996458a36ad0f20ab93e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -987,6 +1007,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: e8d395a6af0174f4c874b39400c12685, type: 3}
+    - target: {fileID: 2388376272712233299, guid: 26c6e95b9627dbc4c870af7c7e91e357, type: 3}
+      propertyPath: m_UseGraphicAlpha
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2388376272712233299, guid: 26c6e95b9627dbc4c870af7c7e91e357, type: 3}
+      propertyPath: m_EffectDistance.x
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2388376272712233299, guid: 26c6e95b9627dbc4c870af7c7e91e357, type: 3}
+      propertyPath: m_EffectDistance.y
+      value: -14
+      objectReference: {fileID: 0}
     - target: {fileID: 3596712556650194414, guid: 26c6e95b9627dbc4c870af7c7e91e357, type: 3}
       propertyPath: m_Name
       value: HumanWorld

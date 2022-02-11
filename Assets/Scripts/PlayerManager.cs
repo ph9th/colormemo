@@ -21,20 +21,22 @@ public class PlayerManager : MonoBehaviour
     public GameObject panel;
 
 
-
+    public static PlayerObject[] players = new PlayerObject[3] ; //index 0: red bear, index 1: yellow bear, index 2: blue bear
 
     // Start is called before the first frame update
     private void Awake()
     {
+        //PlayerInitalise();
+        
         names = new List<string>();
         names = ReadNames(names);
-
     }
     void Start()
     {
         panel.SetActive(false);
         DisplayNames(names);
     }
+
 
     void DisplayNames(List<string> names)
     {
@@ -43,7 +45,7 @@ public class PlayerManager : MonoBehaviour
         {
             GameObject button = Instantiate(buttonPrefab);
             button.transform.SetParent(Content.transform, false);
-            button.transform.position = new Vector3(x, y, 0);
+            button.transform.position = new Vector3(x, y, -5);
             button.GetComponentInChildren<TextMeshProUGUI>().text = name;
             
             y = y - 150;
@@ -113,7 +115,7 @@ public class PlayerManager : MonoBehaviour
 
         GameObject button = Instantiate(buttonPrefab);
         button.transform.SetParent(Content.transform, false);
-        button.transform.position = new Vector3(x, y, 0);
+        button.transform.position = new Vector3(x, y, -5);
         button.GetComponentInChildren<TextMeshProUGUI>().text = name;
 
         y = y - 150;
@@ -130,11 +132,44 @@ public class PlayerManager : MonoBehaviour
 
     }
 
- 
+    public static void IncreaseColorCount(int assigned, string color, int counter, int error)
+    {
+        PlayerObject player = players[assigned];
+
+        switch (color)
+        {
+            case "green":
+                player.green[0] = player.green[0] + counter;
+                player.green[1] = player.green[1] + error;
+                player.green[2] = player.green[1] / player.green[0];
+                break;
+            case "orange":
+                player.orange[0] = player.orange[0] + counter;
+                player.orange[1] = player.orange[1] + error;
+                player.orange[2] = player.orange[1] / player.orange[0];
+                break;
+            case "purple":
+                player.purple[0] = player.purple[0] + counter;
+                player.purple[1] = player.purple[1] + error;
+                player.purple[2] = player.purple[1] / player.purple[0];
+                break;
+        }
+    }
+
+    //swap(ref array[0], ref array[1]);
+    /*static void swap(ref PlayerObject a, ref PlayerObject b)
+    {
+        PlayerObject temp = a;
+        a = b;
+        b = temp;
+    }*/
+
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(5);
     }
+
+   
 
    
 }

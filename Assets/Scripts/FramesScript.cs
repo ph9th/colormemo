@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class FramesScript : MonoBehaviour
 {
     GameObject picFrame;
-    Sprite texture;
+    private Sprite texture;
 
     private void Awake()
     {
@@ -23,16 +23,22 @@ public class FramesScript : MonoBehaviour
         picFrame = this.gameObject;
         string frameID = picFrame.name;
 
-        texture = Resources.Load<Sprite>("Screenshots/" + SaveSystem.name + "/" + "ColoringPage" + frameID);
+        Debug.Log("path: " + Application.dataPath + "/Resources/Screenshots/" + PlayerManager.players[0].name + "/" + "ColoringPage" + frameID + ".jpg");
 
-        if (texture == null)
+        if (File.Exists(Application.dataPath + "/Resources/Screenshots/" + PlayerManager.players[0].name + "/" + "ColoringPage" + frameID + ".jpg"))
         {
-            Resources.Load<Sprite>("ColoringPages/" + frameID);
-        }
-        else
+            
+            texture = Resources.Load<Sprite>("Screenshots/" + PlayerManager.players[0].name + "/" + "ColoringPage" + frameID);
+            Debug.Log("texture: " + texture);
+        } else
         {
-            picFrame.GetComponent<Image>().sprite = texture;
+            Debug.Log("No screenshot exists.");
+            texture = Resources.Load<Sprite>("ColoringPages/empty");
         }
+
+        picFrame.GetComponent<Image>().sprite = texture;
+
+
     }
 
     private void Update()

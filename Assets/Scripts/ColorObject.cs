@@ -19,8 +19,6 @@ public class ColorObject : MonoBehaviour
     public static int colorTaskAssign = 0;
     int tryCounter;
 
-
-
     void Start()
     {
         //Debug.Log("assigned to: " + colorTaskAssign);
@@ -108,27 +106,34 @@ public class ColorObject : MonoBehaviour
         {
            
             FindObjectOfType<AudioManager>().PlayNoOverlay("WellDone");
-            Debug.Log("GOOD! Stolen Object was this color!");
+            //Debug.Log("GOOD! Stolen Object was this color!");
 
             //store data
             float timeSuccess = timer;
             int maxLevel = SceneChange.maxLevel;
             DataManagerScript.AddVFCData(tryCounter, taskColorScript.ColorToString(StoredColors.stolenObj), timeSuccess, maxLevel);
 
+            PlayerManager.players[VFCMScript.vfcmTaskAssign].maxLevel = maxLevel;
             //if no error was made, number of levels will increase in the next iteration
             if (SceneChange.error == false)
             {
                 SceneChange.maxLevel++;
             }
 
-            StartCoroutine( SceneChanger.LoadDelay("ThemeSelection", 3));
+            if (!(tryCounter > 1)) {
+                StartCoroutine(SceneChanger.LoadDelay("RewardSelection", 3));
+            }
+            else
+            {
+                StartCoroutine(SceneChanger.LoadDelay("ThemeSelection", 3));
+            }
         }
         else
         {
             SceneChange.error = true;
 
             FindObjectOfType<AudioManager>().PlayNoOverlay("Wrong");
-            Debug.Log("Stolen Object was not this color!");
+            //Debug.Log("Stolen Object was not this color!");
         }
     }
 
@@ -145,7 +150,7 @@ public class ColorObject : MonoBehaviour
             if (!CharacterScript.success)
             {
                 FindObjectOfType<AudioManager>().PlayNoOverlay("Super");
-                Debug.Log("CORRECT COLOR!");
+                //Debug.Log("CORRECT COLOR!");
 
                 SceneChange.levelCount++;
                 SceneChange.SetOrder();
@@ -154,7 +159,9 @@ public class ColorObject : MonoBehaviour
                 //record color data in Data manager
                 int levelID = SceneManager.GetActiveScene().buildIndex;
                 float timeSuccess = timer;
-                DataManagerScript.AddColorData(levelID, tryCounter, taskColorScript.ColorToString(curTaskColor), timeSuccess);
+                DataManagerScript.AddColorData(colorTaskAssign, levelID, tryCounter, taskColorScript.ColorToString(curTaskColor), timeSuccess);
+
+                PlayerManager.IncreaseColorCount(colorTaskAssign, taskColorScript.ColorToString(curTaskColor), 1, 0);
 
                 //assign next level to next avatar
                 if (colorTaskAssign < 2)
@@ -175,10 +182,12 @@ public class ColorObject : MonoBehaviour
         }
         else
         {
-            SetColor.repeatColor = taskColorScript.taskColor;
- 
+            //SetColor.repeatColor = taskColorScript.taskColor;
+
+            PlayerManager.IncreaseColorCount(colorTaskAssign, taskColorScript.ColorToString(curTaskColor), 1, 1);
+
             FindObjectOfType<AudioManager>().PlayNoOverlay("Wrong");
-            Debug.Log("WRONG COLOR!");
+            //Debug.Log("WRONG COLOR!");
         }
     }
 

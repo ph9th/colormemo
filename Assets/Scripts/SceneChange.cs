@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneChange : MonoBehaviour
 {
-    public static int maxLevel = 1;
+    public static int maxLevel = 2;
     public static int levelCount = 1;
     private string sceneName;
     public static bool error = false;
@@ -16,7 +16,13 @@ public class SceneChange : MonoBehaviour
 
     private void Awake()
     {
+
+        if (FindObjectOfType<AudioManager>() == null)
+        {
+            Instantiate(Resources.Load("Prefabs/AudioManager", typeof(AudioManager)));
+        }
         FindObjectOfType<AudioManager>().PauseAll();
+
      
     }
     public IEnumerator Start()
@@ -38,7 +44,7 @@ public class SceneChange : MonoBehaviour
                 endLvl = Constants.waterWorldEnd;
                 break;
             default:
-                Debug.Log("Unknown theme ID");
+                Debug.LogWarning("Unknown theme ID");
                 break;
         }
 
@@ -115,8 +121,8 @@ public class SceneChange : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
 
-        Debug.Log("levelCount: " + levelCount);
-        Debug.Log("maxLevel: " + maxLevel);
+        //Debug.Log("levelCount: " + levelCount);
+        //Debug.Log("maxLevel: " + maxLevel);
 
         if (levelCount <= maxLevel)
         {
@@ -128,15 +134,17 @@ public class SceneChange : MonoBehaviour
             //if all levels have been played, reset all values in array to false
             if (CheckLevelBools(levelBool, startLvl, endLvl))
             {
-                Debug.Log("all levels played");
                 levelBool = ResetLevelBools(levelBool, startLvl, endLvl);
             }
-
-            //Generate new buildID until a level is found that hasn't been played yet
-            while (levelBool[buildID] == true)
+            else
             {
-                buildID = Random.Range(startLvl, endLvl);
+                //Generate new buildID until a level is found that hasn't been played yet
+                if (levelBool[buildID] == true)
+                {
+                    buildID = Random.Range(startLvl, endLvl);
+                }
             }
+            
 
             SceneManager.LoadScene(buildID);
             SetLevelBoolsTrue(buildID);
@@ -171,6 +179,7 @@ public class SceneChange : MonoBehaviour
                 return false;
             }
         }
+        Debug.Log("All levels played");
         return true;
     }
 

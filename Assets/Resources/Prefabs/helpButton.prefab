@@ -161,6 +161,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2edb9c9e1cfc937408089a68ef3cd96a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animRed: {fileID: 0}
-  animYellow: {fileID: 0}
-  animBlue: {fileID: 0}

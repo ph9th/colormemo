@@ -1,27 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BearScript : MonoBehaviour
 {
     float xPos;
 
-    float moveX = -800;
+    float moveX;
 
     Animator anim;
 
     GameObject bear;
 
-    private bool walk;
+    private bool walk; //set true until bear has reached original position
 
-    float speed = 5;
+    char direction; 
+
+    const float speed = 1;
+
+    SpriteRenderer _renderer;
 
     private void Awake()
     {
+       
         bear = this.gameObject;
+        _renderer = bear.GetComponent<SpriteRenderer>();
         xPos = bear.transform.position.x;
-        Debug.Log(bear.name);
-        Debug.Log("position: " + xPos);
+
+        if(xPos < 960)
+        {
+            moveX = -800;
+            direction = 'L'; //if L, bear walks in from the left; 
+        } else
+        {
+            moveX = 800;
+            direction = 'R'; //if R, bear walks in from the right
+            _renderer.flipX = true;
+        }
         walk = true;
 
         
@@ -29,27 +45,46 @@ public class BearScript : MonoBehaviour
 
     private void Start()
     {
-        bear.transform.Translate(new Vector3(moveX, 0, 0));
-        anim = bear.GetComponent<Animator>();
-        anim.SetTrigger("Walk");
+            
+            bear.transform.Translate(new Vector3(moveX, 0, 0));
+            anim = bear.GetComponent<Animator>();
+            anim.SetTrigger("Walk");
+
     }
 
     private void Update()
     {
-        Debug.Log(bear.name);
-        Debug.Log(bear.transform.position);
         if (walk)
         {
-            if (bear.transform.position.x >= xPos)
+
+            switch (direction)
             {
-                Debug.Log("Reset" + bear.name);
-                anim.ResetTrigger("Walk");
-                walk = false;
+                case 'L':
+                    if (bear.transform.position.x >= xPos)
+                    {
+                        anim.ResetTrigger("Walk");
+                        walk = false;
+                    }
+                    else
+                    {
+                        bear.transform.position += new Vector3(1 * speed, 0, 0);
+                    }
+                    break;
+
+                case 'R':
+                    if (bear.transform.position.x <= xPos)
+                    {
+                        anim.ResetTrigger("Walk");
+                        walk = false;
+                    }
+                    else
+                    {
+                        bear.transform.position -= new Vector3(1 * speed, 0, 0);
+                    }
+                    break;
             }
-            else
-            {
-                bear.transform.position += new Vector3(1 * speed, 0, 0);
-            }
+
+
         }
         
     }

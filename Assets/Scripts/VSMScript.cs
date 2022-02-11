@@ -36,7 +36,7 @@ public class VSMScript : MonoBehaviour
                 prefabFolder = "Water";
                 break;
             default:
-                Debug.Log("Unknown theme ID");
+                Debug.LogWarning("Unknown theme ID");
                 break;
         }
     }
@@ -52,6 +52,7 @@ public class VSMScript : MonoBehaviour
             vsmTaskAssign = 0;
         }
 
+        GameObject.Find("Finger").GetComponent<SpriteRenderer>().enabled = false;
 
         DisplayCharacters(levelOrder);
 

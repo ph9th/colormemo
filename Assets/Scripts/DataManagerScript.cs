@@ -8,25 +8,44 @@ public static class DataManagerScript
 {
     public static int completedIterations { get; set; }
 
-    static void Main (string [] args)
-    {
-
-    }
-    /*public static void AddRecord()
+    public static void AddHeadings()
     {
         try
         {
             using (System.IO.StreamWriter file = new System.IO.StreamWriter("Assets/data.txt", true))
             {
-                file.WriteLine(levelID + "\t" + curTaskColor + "\t" + tryCounter + "\t" + timeSuccess.ToString("0.00"));
+                for (int i = 0; i< 3; i++)
+                {
+                    file.WriteLine(PlayerManager.players[i].name);
+                }
+                
+                file.WriteLine("maxLevel" + "\t" + "completedIterations");
+            }
+
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter("Assets/color_data.txt", true))
+            {
+
+                for (int i = 0; i < 3; i++)
+                {
+                    file.WriteLine(PlayerManager.players[i].name);
+                }
+                file.WriteLine("levelID" + "\t" + "tryCounter" + "\t" + "taskColor" + "\t" + "timeSuccess");
+            }
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter("Assets/vfc_data.txt", true))
+            {
+
+                for (int i = 0; i < 3; i++)
+                {
+                    file.WriteLine(PlayerManager.players[i].name);
+                }
+                file.WriteLine("tryCounter" + "\t" + "taskColor" + "\t" + "timeSuccess" + "\t" + "levelCount");
             }
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
             throw new System.ApplicationException("Data error:", ex);
         }
-    }*/
-
+    }
     
     public static void AddSessionData()
     {
@@ -44,7 +63,7 @@ public static class DataManagerScript
         }
     }
 
-    
+
     /// <summary>
     /// Record data of each completed color level
     /// </summary>
@@ -53,7 +72,7 @@ public static class DataManagerScript
     /// <param name="taskColor"></param>
     /// <param name="timeSuccess"></param>
     /// <returns></returns>
-    public static void AddColorData(int levelID, int tryCounter, string taskColor, float timeSuccess)
+    public static void AddColorData(int assigned, int levelID, int tryCounter, string taskColor, float timeSuccess)
     {
         try
         {

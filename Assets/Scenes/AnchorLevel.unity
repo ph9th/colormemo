@@ -1068,6 +1068,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Avatars
       objectReference: {fileID: 0}
+    - target: {fileID: 1262936309132433308, guid: 512e3d73666268b4c9dc5fce0dbbb3c3, type: 3}
+      propertyPath: moveX
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2917108603481038796, guid: 512e3d73666268b4c9dc5fce0dbbb3c3, type: 3}
+      propertyPath: moveX
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401424761215538303, guid: 512e3d73666268b4c9dc5fce0dbbb3c3, type: 3}
+      propertyPath: moveX
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 512e3d73666268b4c9dc5fce0dbbb3c3, type: 3}
 --- !u!4 &1993255302 stripped

@@ -1,36 +1,353 @@
-13	1	purple	6,469771
-26	1	yellow	5,381538
-31	1	yellow	3,338951
-32	1	red	4,632812
-14	2	blue	7,743005
-15	2	green	5,9797
-15	2	green	6,922884
-15	2	green	8,144794
-15	2	green	9,305385
-27	2	blue	9,701754
-14	2	yellow	3,649398
-15	1	yellow	2,02689
-9	2	orange	3,610626
-9	2	orange	5,632878
-9	2	orange	7,736268
-14	2	green	4,073353
-14	2	green	7,6799
-9	2	orange	4,112696
-10	1	blue	3,476514
-17	4	purple	12,29374
-15	1	yellow	1,810505
-19	1	yellow	3,459262
-12	3	blue	13,06953
-15	1	purple	3,335105
-15	1	purple	8,87987
-9	2	orange	5,027998
-16	1	yellow	11,17933
-10	2	blue	10,4609
-12	1	red	5,225115
-32	1	purple	4,41925
-23	1	purple	4,80138
-25	1	yellow	4,681353
-14	1	orange	5,140097
-10	1	red	4,62651
-13	1	purple	4,186244
-13	2	red	24,42344
+
+levelID	tryCounter	taskColor	timeSuccess
+13	1	green	3,212656
+31	1	purple	3,115416
+35	1	green	3,861053
+Thao
+Leo
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Leo
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Leo
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Leo
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Leo
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Leo
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Leo
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+16	1	red	10,54088
+23	1	blue	3,796446
+22	1	orange	4,822899
+Thao
+Leo
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+13	1	blue	4,648507
+20	3	purple	9,992236
+21	1	purple	4,159756
+Thao
+Leo
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+14	3	purple	12,06653
+25	1	purple	3,430415
+Thao
+Leo
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+16	1	green	3,495816
+20	3	orange	13,44123
+23	1	orange	1,427002
+Thao
+Leo
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+9	2	purple	7,837077
+21	1	orange	3,810692
+22	2	green	10,58063
+Thao
+Leo
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Leo
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Leo
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Leo
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+Amy
+Anton
+Leo
+levelID	tryCounter	taskColor	timeSuccess
+10	2	purple	9,564459
+Thao
+Leo
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Leo
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Leo
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+24	2	red	6,725577
+Thao
+Leo
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Leo
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Leo
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+16	1	blue	39,11263
+25	2	red	3,771202
+24	1	red	1,28171
+Thao
+Leo
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+17	1	red	3,189128
+27	2	red	3,282004
+31	1	blue	3,091686
+22	2	blue	3,303982
+25	1	blue	1,083734
+21	4	purple	18,98071
+20	1	purple	3,7839
+27	2	orange	4,815782
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+14	1	green	6,915433
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+14	1	blue	6,22645
+12	2	purple	13,69734
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+17	2	red	9,387431
+16	1	red	1,206761
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+18	2	yellow	3,418587
+13	1	yellow	1,459262
+12	1	orange	3,578769
+18	1	green	4,11505
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+16	1	orange	5,602418
+12	1	orange	10,97598
+26	1	red	4,995003
+22	1	blue	4,56503
+25	1	yellow	4,962358
+33	1	purple	5,618774
+31	1	green	4,868051
+35	1	green	4,965323
+33	1	orange	4,837101
+23	2	yellow	9,437452
+21	1	yellow	4,940507
+20	1	red	4,606613
+27	1	green	4,408031
+33	1	purple	5,148138
+30	1	purple	4,587412
+32	1	yellow	4,642624
+31	1	yellow	4,553581
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+14	2	yellow	9,326206
+10	1	yellow	1,034704
+16	2	green	3,036989
+12	1	green	1,170023
+23	1	orange	4,508924
+28	1	red	4,845648
+20	1	red	2,39917
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+12	1	red	6,136309
+13	1	purple	4,77812
+28	1	orange	4,515064
+23	1	blue	3,403925
+27	2	yellow	3,287066
+34	1	blue	5,492933
+31	2	green	12,09632
+30	1	green	4,51137
+31	1	red	4,325131
+Leo
+Amy
+Anton
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+14	1	red	5,14852
+13	1	red	7,241225
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+14	1	red	5,321578
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+11	1	orange	7,934629
+14	1	yellow	5,795348
+26	1	green	5,296477
+20	1	red	4,941514
+20	1	yellow	4,782085
+Anton
+Amy
+Thao
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+14	2	red	3,264738
+16	1	green	3,056374
+21	1	blue	3,298769
+23	1	red	3,394843
+28	1	green	5,452178
+20	1	green	5,907976
+27	1	red	5,126249
+32	1	yellow	4,732901
+31	1	blue	5,179693
+30	1	red	4,936795
+34	1	yellow	5,229188
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Anton
+Thao
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess
+Thao
+Anton
+Amy
+levelID	tryCounter	taskColor	timeSuccess

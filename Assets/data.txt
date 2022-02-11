@@ -1,1 +1,275 @@
+Thao
+Leo
+Anton
+maxLevel	completedIterations
 1	0
+Thao
+Leo
+Anton
+maxLevel	completedIterations
+1	0
+Thao
+Leo
+Anton
+maxLevel	completedIterations
+Thao
+Leo
+Anton
+maxLevel	completedIterations
+1	0
+Thao
+Leo
+Anton
+maxLevel	completedIterations
+1	0
+Thao
+Leo
+Anton
+maxLevel	completedIterations
+3	2
+Thao
+Leo
+Anton
+maxLevel	completedIterations
+3	2
+Thao
+Leo
+Anton
+maxLevel	completedIterations
+2	2
+Thao
+Leo
+Anton
+maxLevel	completedIterations
+3	2
+Thao
+Leo
+Anton
+maxLevel	completedIterations
+3	2
+Thao
+Leo
+Anton
+maxLevel	completedIterations
+Thao
+Leo
+Anton
+maxLevel	completedIterations
+Thao
+Leo
+Anton
+maxLevel	completedIterations
+Thao
+Leo
+Anton
+maxLevel	completedIterations
+Amy
+Anton
+Leo
+maxLevel	completedIterations
+2	1
+Thao
+Leo
+Anton
+maxLevel	completedIterations
+Thao
+Leo
+Anton
+maxLevel	completedIterations
+Thao
+Leo
+Thao
+Leo
+Anton
+maxLevel	completedIterations
+Thao
+Leo
+Anton
+maxLevel	completedIterations
+Thao
+Leo
+Anton
+maxLevel	completedIterations
+Thao
+Leo
+Anton
+maxLevel	completedIterations
+Thao
+Leo
+Anton
+maxLevel	completedIterations
+4	5
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+2	0
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+4	2
+4	2
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+5	3
+Leo
+Amy
+Anton
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+4	2
+Anton
+Amy
+Thao
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+5	4
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Anton
+Thao
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations
+Thao
+Anton
+Amy
+maxLevel	completedIterations

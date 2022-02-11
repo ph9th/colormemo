@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using System.IO;
 using TMPro;
+using UnityEngine.UI;
 
 public class ButtonScript : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class ButtonScript : MonoBehaviour
     SetColor taskColorScript;
     Color32 taskColor;
     string sceneName;
+
 
     // Start is called before the first frame update
     void Start()
@@ -103,37 +105,11 @@ public class ButtonScript : MonoBehaviour
     public void SavePlayer()
     {
         FindObjectOfType<AudioManager>().Play("Click");
-        string playerName = SaveSystem.name;
-        string path = Application.dataPath + "/Resources/Prefabs/Screenshots/";
-        int lvl = SceneChange.maxLevel;
 
-        SaveObject saveObject = new SaveObject
-        {
-            maxLevel = lvl,
-            name = playerName,
-
-        };
-
-        string json = JsonUtility.ToJson(saveObject);
-        SaveSystem.Save(json);
+        SaveSystem.Save();
+        SaveData();
     }
 
-    public void LoadPlayer()
-{
-    if(File.Exists(Application.dataPath + "/Players/" + SaveSystem.name + ".txt"))
-        {
-            string saveString = File.ReadAllText(Application.dataPath + "/Players/" + SaveSystem.name + ".txt");
-
-            SaveObject saveObject = JsonUtility.FromJson<SaveObject>(saveString);
-
-            //SceneChange.maxLevel = saveObject.maxLevel;
-
-        }
-    else
-        {
-            Debug.LogWarning("Not saved");
-        }
-}
     public void AddPlayer()
     {
         FindObjectOfType<AudioManager>().Play("Click");
@@ -153,14 +129,41 @@ public class ButtonScript : MonoBehaviour
         SceneManager.LoadScene("PlayerSelection");
     }
 
-    public void SelectPlayer()
+    public void PlayerSelectionDone()
     {
         FindObjectOfType<AudioManager>().Play("Click");
-        string text = EventSystem.current.currentSelectedGameObject.GetComponentInChildren<TextMeshProUGUI>().text;
-        SaveSystem.name = text;
-        Debug.Log(text);
-        LoadPlayer();
-        SceneManager.LoadScene("MenuScreen");
+
+        string red = PlayerSlot.redSlotName;
+        string yellow = PlayerSlot.yellowSlotName;
+        string blue = PlayerSlot.blueSlotName;
+
+        if(red != null && yellow != null && blue != null)
+        {
+            SelectPlayer(0, red);
+            SelectPlayer(1, yellow);
+            SelectPlayer(2, blue);
+
+            SceneManager.LoadScene("MenuScreen");
+            DataManagerScript.AddHeadings();
+
+        }
+        else
+        {
+            Debug.LogWarning("Select 3 Players.");
+        }
+
+        
+    }
+    public void SelectPlayer (int playerArrayID, string name)
+    {
+        PlayerManager.players[playerArrayID] = new PlayerObject(name);
+        SaveSystem.LoadPlayer(name);
+    }
+
+    public void GoToPlayerStats()
+    {
+        FindObjectOfType<AudioManager>().Play("Click");
+        SceneManager.LoadScene("PlayerStats");
     }
 
     public void GoToMenu()
@@ -170,6 +173,7 @@ public class ButtonScript : MonoBehaviour
     }
     public void GoToAchievements()
     {
+
         FindObjectOfType<AudioManager>().Play("Click");
         SceneManager.LoadScene("Achievements");
     }
@@ -177,15 +181,23 @@ public class ButtonScript : MonoBehaviour
     public void GoToColoringBook()
     {
         FindObjectOfType<AudioManager>().Play("Click");
-        string buttonName = EventSystem.current.currentSelectedGameObject.name;
+        string buttonName;
 
+        if(sceneName == "RewardSelection")
+        {
+            buttonName = EventSystem.current.currentSelectedGameObject.GetComponent<Image>().sprite.name.Substring(9, 1);
+        }
+        else
+        {
+            buttonName = EventSystem.current.currentSelectedGameObject.name;
+        }
         SceneManager.LoadScene("ColoringPage" + buttonName);
     }
 
     public void ColorHelp()
     {
         FindObjectOfType<AudioManager>().Play("Click");
-        Debug.Log("help");
+        //Debug.Log("help");
         string color; 
 
         if(sceneName == "ObjectFound")
@@ -227,9 +239,22 @@ public class ButtonScript : MonoBehaviour
         }
     }
 
-    public void OrderHelp()
+    public void VSMHelp()
     {
+        GameObject hand = GameObject.Find("Hand");
+        GameObject finger = GameObject.Find("Finger");
+     
+        string objName = VSMScript.levelOrder[VSMPlayScript.orderCounter].Substring(0, VSMScript.levelOrder[VSMPlayScript.orderCounter].Length - 5);
+        float xPos = GameObject.Find(objName + "(Clone)").transform.position.x;
 
+        Animator anim = finger.GetComponent<Animator>();
+
+        GameObject.Find("Finger").GetComponent<SpriteRenderer>().enabled = true;
+        hand.transform.position = new Vector3(xPos, 750, 0);
+        anim.SetTrigger("Help");
+        
+
+        
     }
 
     public void Screenshot()
@@ -250,10 +275,5 @@ public class ButtonScript : MonoBehaviour
         SceneManager.LoadScene("Achievements");
     }
 
-    private class SaveObject
-    {
-        public int maxLevel;
-        public string name;
-
-    }
+   
 }

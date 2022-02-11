@@ -13,14 +13,13 @@ public class ScreenshotHandler : MonoBehaviour
     private Camera myCamera;
     private bool takeScreenshot;
     private string sceneName;
-    private string path;
+    private string path0, path1, path2;
 
     private void Awake()
     {
         instance = this;
         myCamera = gameObject.GetComponent<Camera>();
         sceneName = SceneManager.GetActiveScene().name;
-        path = Application.dataPath + "/Resources/Screenshots/" + SaveSystem.name;
 
     }
 
@@ -39,15 +38,20 @@ public class ScreenshotHandler : MonoBehaviour
 
             byte[] byteArray = renderResult.EncodeToJPG();
 
-            //check if folder exists
-            if (!Directory.Exists(path))
+            for (int i = 0; i< 3; i++)
             {
-                //create folder
-                Directory.CreateDirectory(path);
+                string path = Application.dataPath + "/Resources/Screenshots/" + PlayerManager.players[i].name;
+                //check if folder exists
+                if (!Directory.Exists(path))
+                {
+                    //create folder
+                    Directory.CreateDirectory(path);
+                }
+
+                System.IO.File.WriteAllBytes(path + "/" + sceneName + ".jpg", byteArray);
+                Debug.Log("Saved Screenshot");
             }
 
-            System.IO.File.WriteAllBytes(path + "/" + sceneName + ".jpg", byteArray);
-            Debug.Log("Saved Screenshot");
 
             RenderTexture.ReleaseTemporary(renderTexture);
             myCamera.targetTexture = null;
