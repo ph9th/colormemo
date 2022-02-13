@@ -40,6 +40,15 @@ public static class DataManagerScript
                 }
                 file.WriteLine("tryCounter" + "\t" + "taskColor" + "\t" + "timeSuccess" + "\t" + "levelCount");
             }
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter("Assets/vsm_data.txt", true))
+            {
+
+                for (int i = 0; i < 3; i++)
+                {
+                    file.WriteLine(PlayerManager.players[i].name);
+                }
+                file.WriteLine("errorCounter" + "\t" + "timeSuccess" + "\t" + "levelCount");
+            }
         }
         catch (Exception ex)
         {
@@ -72,13 +81,13 @@ public static class DataManagerScript
     /// <param name="taskColor"></param>
     /// <param name="timeSuccess"></param>
     /// <returns></returns>
-    public static void AddColorData(int assigned, int levelID, int tryCounter, string taskColor, float timeSuccess)
+    public static void AddColorData(int assigned, int levelID, int tryCounter, string taskColor, float timeSuccess, bool hint)
     {
         try
         {
             using (System.IO.StreamWriter file = new System.IO.StreamWriter("Assets/color_data.txt", true))
             {
-                file.WriteLine(levelID + "\t" + tryCounter + "\t" + taskColor + "\t" + timeSuccess);
+                file.WriteLine(levelID + "\t" + tryCounter + "\t" + taskColor + "\t" + timeSuccess + "\t" + hint);
             }
         }
         catch (Exception ex)
@@ -87,13 +96,28 @@ public static class DataManagerScript
         }
     }
 
-    public static void AddVFCData(int tryCounter, string taskColor, float timeSuccess, int levelCount)
+    public static void AddVFCData(int tryCounter, string taskColor, float timeSuccess, int levelCount, bool hint)
     {
         try
         {
             using (System.IO.StreamWriter file = new System.IO.StreamWriter("Assets/vfc_data.txt", true))
             {
-                file.WriteLine(tryCounter + "\t" + taskColor + "\t" + timeSuccess + "\t" + levelCount);
+                file.WriteLine(tryCounter + "\t" + taskColor + "\t" + timeSuccess + "\t" + levelCount + "\t" + hint);
+            }
+        }
+        catch (Exception ex)
+        {
+            throw new System.ApplicationException("Data error:", ex);
+        }
+    }
+
+    public static void AddVSMData(int errorCounter, float timeSuccess, int levelCount, bool hint)
+    {
+        try
+        {
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter("Assets/vsm_data.txt", true))
+            {
+                file.WriteLine(errorCounter + "\t" + timeSuccess + "\t" + levelCount + "\t" + hint);
             }
         }
         catch (Exception ex)

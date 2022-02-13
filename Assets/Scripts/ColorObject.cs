@@ -111,9 +111,12 @@ public class ColorObject : MonoBehaviour
             //store data
             float timeSuccess = timer;
             int maxLevel = SceneChange.maxLevel;
-            DataManagerScript.AddVFCData(tryCounter, taskColorScript.ColorToString(StoredColors.stolenObj), timeSuccess, maxLevel);
+            DataManagerScript.AddVFCData(tryCounter, taskColorScript.ColorToString(StoredColors.stolenObj), timeSuccess, maxLevel, ButtonScript.hint);
 
             PlayerManager.players[VFCMScript.vfcmTaskAssign].maxLevel = maxLevel;
+
+            GameObject.Find("witch").GetComponent<Animator>().SetTrigger("Correct");
+
             //if no error was made, number of levels will increase in the next iteration
             if (SceneChange.error == false)
             {
@@ -121,16 +124,18 @@ public class ColorObject : MonoBehaviour
             }
 
             if (!(tryCounter > 1)) {
-                StartCoroutine(SceneChanger.LoadDelay("RewardSelection", 3));
+                StartCoroutine(SceneChanger.LoadDelay("ColoringPage" + StolenObjectScript.coloringPageId, 3));
             }
             else
             {
                 StartCoroutine(SceneChanger.LoadDelay("ThemeSelection", 3));
             }
         }
+        //keep number of levels the same
         else
         {
             SceneChange.error = true;
+            GameObject.Find("witch").GetComponent<Animator>().SetTrigger("Error");
 
             FindObjectOfType<AudioManager>().PlayNoOverlay("Wrong");
             //Debug.Log("Stolen Object was not this color!");
@@ -159,7 +164,7 @@ public class ColorObject : MonoBehaviour
                 //record color data in Data manager
                 int levelID = SceneManager.GetActiveScene().buildIndex;
                 float timeSuccess = timer;
-                DataManagerScript.AddColorData(colorTaskAssign, levelID, tryCounter, taskColorScript.ColorToString(curTaskColor), timeSuccess);
+                DataManagerScript.AddColorData(colorTaskAssign, levelID, tryCounter, taskColorScript.ColorToString(curTaskColor), timeSuccess, ButtonScript.hint);
 
                 PlayerManager.IncreaseColorCount(colorTaskAssign, taskColorScript.ColorToString(curTaskColor), 1, 0);
 

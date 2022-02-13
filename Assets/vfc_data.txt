@@ -1,118 +1,23 @@
 
-tryCounter	taskColor	timeSuccess	levelCount
-1	orange	2,41755	1
-2	orange	4,597592	2
 Thao
-Leo
 Anton
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Leo
-Anton
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Leo
-Anton
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Leo
-Anton
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Leo
-Anton
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Leo
-Anton
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Leo
-Anton
-tryCounter	taskColor	timeSuccess	levelCount
-1	purple	7,169724	1
-1	red	3,629885	2
-Thao
-Leo
-Anton
-tryCounter	taskColor	timeSuccess	levelCount
-1	red	3,089624	1
-1	red	1,045793	2
-Thao
-Leo
-Anton
-tryCounter	taskColor	timeSuccess	levelCount
-2	red	3,808484	1
-1	blue	5,475678	1
-Thao
-Leo
-Anton
-tryCounter	taskColor	timeSuccess	levelCount
-1	orange	7,022607	1
-1	blue	3,579837	2
-Thao
-Leo
-Anton
-tryCounter	taskColor	timeSuccess	levelCount
-1	purple	3,967843	1
-1	red	4,570817	2
-Thao
-Leo
-Anton
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Leo
-Anton
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Leo
-Anton
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Leo
-Anton
-tryCounter	taskColor	timeSuccess	levelCount
 Amy
-Anton
-Leo
 tryCounter	taskColor	timeSuccess	levelCount
-1	orange	3,050283	1
+1	orange	10,52798	2	True
+1	yellow	9,499973	3	True
 Thao
-Leo
 Anton
+Amy
 tryCounter	taskColor	timeSuccess	levelCount
+1	red	9,434238	2	True
 Thao
-Leo
 Anton
+Amy
 tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Leo
-Anton
-tryCounter	taskColor	timeSuccess	levelCount
-2	green	6,348597	1
-Thao
-Leo
-Anton
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Leo
-Anton
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Leo
-Anton
-tryCounter	taskColor	timeSuccess	levelCount
-1	green	6,572392	1
-1	red	3,370377	2
-Thao
-Leo
-Anton
-tryCounter	taskColor	timeSuccess	levelCount
-2	green	6,707587	1
-2	purple	4,275834	1
-1	red	3,949288	1
-1	red	5,123483	2
-1	yellow	3,850033	3
+1	red	9,24159	2	True
+1	green	7,226645	3	False
+1	blue	9,247911	4	False
+1	orange	6,757361	5	False
 Thao
 Anton
 Amy
@@ -121,22 +26,10 @@ Thao
 Anton
 Amy
 tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Anton
-Amy
-tryCounter	taskColor	timeSuccess	levelCount
-1	yellow	20,09726	2
-Thao
-Anton
-Amy
-tryCounter	taskColor	timeSuccess	levelCount
-1	blue	10,23656	2
-Thao
-Anton
-Amy
-tryCounter	taskColor	timeSuccess	levelCount
-2	orange	6,348968	2
-1	orange	11,00885	2
+2	orange	7,501826	2	False
+3	yellow	10,09764	2	True
+1	green	5,381766	2	True
+1	orange	6,561748	3	True
 Thao
 Anton
 Amy
@@ -145,6 +38,37 @@ Thao
 Anton
 Amy
 tryCounter	taskColor	timeSuccess	levelCount
+2	orange	7,487921	2	True
+1	green	4,25034	2	False
+1	green	6,651621	3	True
+Thao
+Anton
+Amy
+tryCounter	taskColor	timeSuccess	levelCount
+2	red	6,030246	2	False
+1	yellow	4,271971	2	True
+1	green	4,616837	3	True
+Thao
+Anton
+Amy
+tryCounter	taskColor	timeSuccess	levelCount
+2	red	6,654217	2	True
+1	green	5,616703	2	True
+2	blue	6,847423	3	True
+Thao
+Anton
+Amy
+tryCounter	taskColor	timeSuccess	levelCount
+2	red	6,172801	2	True
+1	yellow	5,604694	2	False
+1	green	5,117601	3	True
+Thao
+Anton
+Amy
+tryCounter	taskColor	timeSuccess	levelCount
+1	orange	4,438735	2	True
+1	green	4,028872	3	True
+1	blue	4,117181	4	True
 Thao
 Anton
 Amy
@@ -153,6 +77,9 @@ Thao
 Anton
 Amy
 tryCounter	taskColor	timeSuccess	levelCount
+1	red	4,628897	2	True
+1	green	4,405205	3	True
+1	green	9,185291	4	False
 Thao
 Anton
 Amy
@@ -161,6 +88,9 @@ Thao
 Anton
 Amy
 tryCounter	taskColor	timeSuccess	levelCount
+2	red	6,405298	2	True
+1	yellow	8,181414	2	True
+1	blue	5,599036	3	False
 Thao
 Anton
 Amy
@@ -169,136 +99,57 @@ Thao
 Anton
 Amy
 tryCounter	taskColor	timeSuccess	levelCount
+1	red	4,896523	2	True
+1	green	4,876116	3	True
+1	blue	4,34955	4	True
 Thao
 Anton
 Amy
 tryCounter	taskColor	timeSuccess	levelCount
-1	blue	16,52478	2
-1	yellow	10,29719	3
-2	orange	18,62933	4
-2	purple	16,817	4
-1	orange	10,57146	4
+1	red	3,777433	2	True
+1	yellow	4,409335	3	True
+1	blue	6,742167	4	True
+1	orange	6,275666	5	True
 Thao
 Anton
 Amy
 tryCounter	taskColor	timeSuccess	levelCount
-2	purple	6,017056	2
-1	orange	9,208858	2
-1	red	5,884876	3
+1	red	4,147553	2	True
 Thao
 Anton
 Amy
 tryCounter	taskColor	timeSuccess	levelCount
-1	orange	8,31158	2
-1	red	5,594857	3
-1	yellow	8,218946	4
-Leo
-Amy
-Anton
-tryCounter	taskColor	timeSuccess	levelCount
+1	orange	3,980448	2	False
+1	green	4,039417	3	True
 Thao
 Anton
 Amy
 tryCounter	taskColor	timeSuccess	levelCount
+2	red	6,605917	2	True
 Thao
 Anton
 Amy
 tryCounter	taskColor	timeSuccess	levelCount
+1	red	7,272788	2	True
+1	yellow	13,97251	3	True
+2	blue	6,512042	4	True
 Thao
 Anton
 Amy
 tryCounter	taskColor	timeSuccess	levelCount
+2	red	6,636592	2	False
+1	yellow	6,793015	2	True
 Thao
 Anton
 Amy
 tryCounter	taskColor	timeSuccess	levelCount
+1	orange	15,08477	2	True
 Thao
 Anton
 Amy
 tryCounter	taskColor	timeSuccess	levelCount
-1	red	9,012626	2
-1	blue	9,6253	3
-Anton
-Amy
-Thao
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Anton
-Amy
-tryCounter	taskColor	timeSuccess	levelCount
-2	red	7,075964	2
-1	green	6,746323	2
-1	green	13,00056	3
-1	green	12,48043	4
-Thao
-Anton
-Amy
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Anton
-Amy
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Anton
-Amy
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Anton
-Amy
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Anton
-Amy
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Anton
-Amy
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Anton
-Amy
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Anton
-Amy
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Anton
-Amy
-tryCounter	taskColor	timeSuccess	levelCount
-Anton
-Thao
-Amy
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Anton
-Amy
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Anton
-Amy
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Anton
-Amy
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Anton
-Amy
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Anton
-Amy
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Anton
-Amy
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Anton
-Amy
-tryCounter	taskColor	timeSuccess	levelCount
-Thao
-Anton
-Amy
-tryCounter	taskColor	timeSuccess	levelCount
+1	red	5,089396	2	True
+1	yellow	5,335137	3	True
+1	blue	5,273072	4	True
+2	red	6,963647	5	False
+2	yellow	21,45092	5	False

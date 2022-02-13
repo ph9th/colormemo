@@ -1,0 +1,170 @@
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+0	1,229403	2	False
+2	10,8339	3	False
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+0	1,824545	2	False
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+0	1,730041	2	False
+0	2,242732	3	False
+0	7,03074	4	False
+5	5,204529	5	False
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+0	1,658736	2	False
+1	2,118714	2	False
+0	1,802038	2	False
+1	2,925496	3	False
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+0	1,601914	2	False
+0	1,729615	2	False
+0	2,948004	3	False
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+1	2,071039	2	False
+0	5,879019	2	False
+1	5,500691	3	False
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+1	1,956851	2	False
+0	1,456544	2	False
+0	2,075909	3	False
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+0	1,486134	2	False
+1	2,484836	2	False
+1	3,151001	3	False
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+0	1,276547	2	False
+1	2,3075	3	False
+0	4,443118	4	False
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+0	1,31695	2	False
+2	2,555514	3	False
+4	15,07611	4	False
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+0	1,772092	2	False
+0	2,882883	2	False
+0	2,11225	3	False
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+0	1,818533	2	False
+0	2,261504	3	False
+1	8,631417	4	True
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+0	2,108886	2	False
+0	2,121721	3	False
+3	5,586816	4	False
+1	13,28608	5	True
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+0	1,459782	2	False
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+0	1,400581	2	False
+0	1,731214	3	False
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+0	3,266762	2	False
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+0	2,105575	2	False
+1	4,824183	3	True
+0	82,39837	4	True
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+0	1,049441	2	False
+0	1,811272	2	False
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+0	1,653987	2	False
+Thao
+Anton
+Amy
+errorCounter	timeSuccess	levelCount
+0	1,369283	2	False
+0	2,712245	3	True
+2	4,602867	4	True
+2	14,06936	5	True
+0	7,466751	5	True

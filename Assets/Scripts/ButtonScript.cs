@@ -18,10 +18,13 @@ public class ButtonScript : MonoBehaviour
     Color32 taskColor;
     string sceneName;
 
+    public static bool hint;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        hint = false;
         sceneName = SceneManager.GetActiveScene().name;
 
         if ( Constants.humanWorldStart <= SceneManager.GetActiveScene().buildIndex && SceneManager.GetActiveScene().buildIndex <= Constants.waterWorldEnd || sceneName == "ObjectFound" || sceneName == "IntroductionLevel")
@@ -196,6 +199,7 @@ public class ButtonScript : MonoBehaviour
 
     public void ColorHelp()
     {
+        hint = true;
         FindObjectOfType<AudioManager>().Play("Click");
         //Debug.Log("help");
         string color; 
@@ -241,6 +245,7 @@ public class ButtonScript : MonoBehaviour
 
     public void VSMHelp()
     {
+        hint = true;
         GameObject hand = GameObject.Find("Hand");
         GameObject finger = GameObject.Find("Finger");
      

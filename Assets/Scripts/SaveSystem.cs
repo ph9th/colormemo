@@ -8,7 +8,8 @@ public static class SaveSystem
 {
     public static readonly string PLAYER_FOLDER = Application.dataPath + "/Players/";
 
-   
+
+
     public static void Init()
     {
         //check if folder exists
@@ -49,8 +50,20 @@ public static class SaveSystem
         if (File.Exists(Application.dataPath + "/Players/" + name + ".txt"))
         {
             string saveString = File.ReadAllText(Application.dataPath + "/Players/" + name + ".txt");
-            //Debug.Log("savestring: " + saveString);
-            PlayerObject playerObj = JsonUtility.FromJson<PlayerObject>(saveString);
+            PlayerObject playerObj; 
+
+            //if file empty create new player object
+            if (saveString != "")
+            {
+                
+                    playerObj = JsonUtility.FromJson<PlayerObject>(saveString);
+            }
+            else
+            {
+                Debug.LogError("player file empty");
+                playerObj = new PlayerObject(name);
+
+            }
 
             int i = Array.FindIndex(PlayerManager.players, item => item.name == name);
 

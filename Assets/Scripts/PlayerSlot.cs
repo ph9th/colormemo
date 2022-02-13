@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine.Animations;
 
 public class PlayerSlot : MonoBehaviour, IDropHandler
 {
@@ -16,6 +17,7 @@ public class PlayerSlot : MonoBehaviour, IDropHandler
         if(eventData.pointerDrag != null)
         {
             eventData.pointerDrag.GetComponent<RectTransform>().position = GetComponent<RectTransform>().position;
+            eventData.pointerDrag.transform.SetParent(this.gameObject.transform, true);
 
             //Get player name of button dropped on Slot
             string playerName = eventData.pointerDrag.GetComponentInChildren<TextMeshProUGUI>().text;

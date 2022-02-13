@@ -9,16 +9,10 @@ public class VSMScript : MonoBehaviour
     public static int vsmTaskAssign = 0;
     public static List<GameObject> characters = new List<GameObject>();
 
-    //levels
-    public static bool sandbox;
-    public static bool garden;
-    public static bool amusement;
-    public static bool road;
-    public static bool house;
-    public static bool park;
-
     public static List<string> levelOrder = new List<string>();
     string prefabFolder;
+
+    public static int errorCounter;
 
     // Start is called before the first frame update
 
@@ -42,7 +36,7 @@ public class VSMScript : MonoBehaviour
     }
     void Start()
     {
-
+        errorCounter = 0;
         if (vsmTaskAssign < 2)
         {
             vsmTaskAssign++;

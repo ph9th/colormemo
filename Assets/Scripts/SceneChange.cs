@@ -14,6 +14,8 @@ public class SceneChange : MonoBehaviour
     private int startLvl;
     private int endLvl;
 
+    public static List<int> curPlayedLevels = new List<int>(); //Stores buildIDs of all played levels during one iteration 
+
     private void Awake()
     {
 
@@ -68,6 +70,7 @@ public class SceneChange : MonoBehaviour
             levelCount = 1;
             VSMScript.characters.Clear();
             VSMScript.levelOrder.Clear();
+            curPlayedLevels.Clear();
 
         }
 
@@ -90,6 +93,8 @@ public class SceneChange : MonoBehaviour
 
         if (Constants.humanWorldStart <= SceneManager.GetActiveScene().buildIndex && SceneManager.GetActiveScene().buildIndex <= Constants.waterWorldEnd)
         {
+            GameObject.Find("witch").GetComponent<Animator>().SetTrigger("Fly");
+
             if(ColorObject.colorTaskAssign == 0)
             {
                 FindObjectOfType<AudioManager>().Play("RedBear");
@@ -103,11 +108,7 @@ public class SceneChange : MonoBehaviour
             }
             StartCoroutine(FindObjectOfType<AudioManager>().PlayDelay("YourTurn", 1));
             StartCoroutine(FindObjectOfType<AudioManager>().PlayDelay("ColorIt", 2));
-
-
         }
-
-
 
     }
 
@@ -121,34 +122,31 @@ public class SceneChange : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
 
-        //Debug.Log("levelCount: " + levelCount);
-        //Debug.Log("maxLevel: " + maxLevel);
-
+        //Load new level until maxLevel is reached
         if (levelCount <= maxLevel)
         {
- 
-
-            // load the next random level
-             buildID = Random.Range(startLvl, endLvl);
-
             //if all levels have been played, reset all values in array to false
             if (CheckLevelBools(levelBool, startLvl, endLvl))
             {
+                Debug.Log("Reset");
                 levelBool = ResetLevelBools(levelBool, startLvl, endLvl);
+                buildID = Random.Range(startLvl, endLvl);
+                if (CheckJustPlayed(curPlayedLevels, buildID))
+                {
+                    GenerateNewId();
+                }
             }
             else
             {
                 //Generate new buildID until a level is found that hasn't been played yet
-                if (levelBool[buildID] == true)
-                {
-                    buildID = Random.Range(startLvl, endLvl);
-                }
+                buildID = GenerateNewId();
+           
+
             }
             
-
             SceneManager.LoadScene(buildID);
             SetLevelBoolsTrue(buildID);
-          
+            
         }
         else
         {
@@ -169,6 +167,7 @@ public class SceneChange : MonoBehaviour
         return array;
     }
 
+  
     private bool CheckLevelBools(bool[] array, int startIndex, int endIndex) 
     {
         
@@ -186,6 +185,7 @@ public class SceneChange : MonoBehaviour
     void SetLevelBoolsTrue(int buildIndex)
     {
         levelBool[buildIndex] = true;
+        curPlayedLevels.Add(buildIndex);
     }
 
     public static void SetOrder ()
@@ -194,6 +194,62 @@ public class SceneChange : MonoBehaviour
 
     }
 
+    private int GenerateNewId()
+    {
+        int id = Random.Range(startLvl, endLvl);
+
+        int i = 0;
+        //Generate new ID until level found that has not been played yet
+        while ((CheckPlayed(levelBool, id) || CheckJustPlayed(curPlayedLevels, id)) && i < 10)
+        {
+
+            id = Random.Range(startLvl, endLvl);
+            i++;
+        }
+  
+        //if no level was found, use the next buildId that is set to false
+        if (i == 10)
+        {
+            for (int j = startLvl; j <= endLvl; j++)
+            {
+                if (levelBool[j] == false && CheckJustPlayed(curPlayedLevels, j) == false)
+                {
+                    id = j;
+
+                }
+            }
+        }
+
+        return id;
+    }
+
+    private bool CheckPlayed(bool[] array, int index)
+    {
+        if (array[index] == false)
+        {
+       
+            return false;
+        }
+        else
+        {
+    
+            return true;
+        }
+    }
+
+    /// <summary>
+    /// Check if next level has already been played in this iteration
+    /// </summary>
+    private static bool CheckJustPlayed(List<int> curPlayed, int levelId)
+    {
+        if(curPlayed.Exists(x => x == levelId))
+        {
+          
+            return true;
+        }
+     
+        return false;
+    }
     void InitialiseGame ()
     {
         DataManagerScript.completedIterations = 0;

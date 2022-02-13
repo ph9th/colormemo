@@ -1,1 +1,1 @@
-{"name":"Anton","maxLevel":4,"green":[2.0,0.0,0.0],"orange":[0.0,0.0,0.0],"purple":[0.0,0.0,0.0]}
+{"name":"Anton","maxLevel":2,"green":[2.0,1.0,0.5],"orange":[0.0,0.0,0.0],"purple":[0.0,0.0,0.0]}

@@ -9,6 +9,8 @@ public class VSMPlayScript : MonoBehaviour
     public static int orderCounter = 0; //
     SceneChange SceneChanger;
 
+    float timer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,7 @@ public class VSMPlayScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        timer += Time.deltaTime;
     }
 
     /// <summary>
@@ -48,8 +50,11 @@ public class VSMPlayScript : MonoBehaviour
             orderCounter = orderCounter + 1;
             this.gameObject.SetActive(false);
 
+            
+
             if (orderCounter == VSMScript.levelOrder.Count)
             {
+                DataManagerScript.AddVSMData(VSMScript.errorCounter, timer, SceneChange.maxLevel, ButtonScript.hint);
                 SceneManager.LoadScene("ObjectFound");
             } else
             {
@@ -59,6 +64,7 @@ public class VSMPlayScript : MonoBehaviour
             
         } else
         {
+            VSMScript.errorCounter++;
             FindObjectOfType<AudioManager>().PlayNoOverlay("SomeoneElse");
         }
 

@@ -1,127 +1,57 @@
-
-levelID	tryCounter	taskColor	timeSuccess
-13	1	green	3,212656
-31	1	purple	3,115416
-35	1	green	3,861053
 Thao
-Leo
 Anton
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Leo
-Anton
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Leo
-Anton
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Leo
-Anton
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Leo
-Anton
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Leo
-Anton
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Leo
-Anton
-levelID	tryCounter	taskColor	timeSuccess
-16	1	red	10,54088
-23	1	blue	3,796446
-22	1	orange	4,822899
-Thao
-Leo
-Anton
-levelID	tryCounter	taskColor	timeSuccess
-13	1	blue	4,648507
-20	3	purple	9,992236
-21	1	purple	4,159756
-Thao
-Leo
-Anton
-levelID	tryCounter	taskColor	timeSuccess
-14	3	purple	12,06653
-25	1	purple	3,430415
-Thao
-Leo
-Anton
-levelID	tryCounter	taskColor	timeSuccess
-16	1	green	3,495816
-20	3	orange	13,44123
-23	1	orange	1,427002
-Thao
-Leo
-Anton
-levelID	tryCounter	taskColor	timeSuccess
-9	2	purple	7,837077
-21	1	orange	3,810692
-22	2	green	10,58063
-Thao
-Leo
-Anton
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Leo
-Anton
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Leo
-Anton
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Leo
-Anton
-levelID	tryCounter	taskColor	timeSuccess
 Amy
-Anton
-Leo
 levelID	tryCounter	taskColor	timeSuccess
-10	2	purple	9,564459
+10	1	orange	3,534048	False
+9	2	yellow	3,5381	False
+30	2	green	6,465167	False
+33	2	red	3,335762	False
+33	2	yellow	3,537342	False
 Thao
-Leo
 Anton
+Amy
 levelID	tryCounter	taskColor	timeSuccess
+9	1	orange	3,669938	False
+11	1	yellow	3,585421	False
+22	1	green	4,597695	False
+22	1	red	5,297862	False
 Thao
-Leo
 Anton
+Amy
 levelID	tryCounter	taskColor	timeSuccess
+24	1	red	4,605555	False
+22	1	yellow	3,974196	False
+35	1	blue	3,272532	False
+34	1	red	3,244551	False
+33	1	yellow	4,055732	False
+20	1	green	2,663873	False
+28	1	orange	3,69396	False
+23	2	yellow	3,85557	False
+27	1	blue	3,157861	False
+26	1	red	5,034327	False
+21	1	green	4,114277	False
+25	1	green	2,196586	False
+21	2	red	135,3449	False
+23	1	yellow	6,554032	False
 Thao
-Leo
 Anton
+Amy
 levelID	tryCounter	taskColor	timeSuccess
-24	2	red	6,725577
+16	1	orange	4,546029	False
 Thao
-Leo
 Anton
+Amy
 levelID	tryCounter	taskColor	timeSuccess
-Thao
-Leo
-Anton
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Leo
-Anton
-levelID	tryCounter	taskColor	timeSuccess
-16	1	blue	39,11263
-25	2	red	3,771202
-24	1	red	1,28171
-Thao
-Leo
-Anton
-levelID	tryCounter	taskColor	timeSuccess
-17	1	red	3,189128
-27	2	red	3,282004
-31	1	blue	3,091686
-22	2	blue	3,303982
-25	1	blue	1,083734
-21	4	purple	18,98071
-20	1	purple	3,7839
-27	2	orange	4,815782
+15	1	red	7,475841	False
+18	2	green	3,491392	False
+12	2	blue	3,590577	False
+11	2	orange	3,497784	False
+17	1	yellow	4,411168	False
+16	1	green	7,422241	False
+10	1	orange	4,7414	False
+13	1	green	3,164873	False
+14	1	green	1,814243	False
+9	2	red	9,43841	False
 Thao
 Anton
 Amy
@@ -130,108 +60,69 @@ Thao
 Anton
 Amy
 levelID	tryCounter	taskColor	timeSuccess
-14	1	green	6,915433
+20	1	orange	5,083181	False
+27	1	yellow	4,125458	False
+26	1	blue	3,294645	False
+21	2	red	3,687406	False
+22	2	yellow	3,721559	False
+25	2	green	3,691873	False
+23	1	orange	3,262729	False
+28	1	green	3,572167	False
 Thao
 Anton
 Amy
 levelID	tryCounter	taskColor	timeSuccess
-14	1	blue	6,22645
-12	2	purple	13,69734
+22	1	red	4,30814	False
+21	2	green	3,331469	False
+28	2	blue	3,016219	False
+25	1	red	3,107154	False
+27	1	yellow	2,591723	False
+23	1	green	9,761538	False
+26	1	red	4,034745	False
+20	1	green	3,903275	False
+24	2	blue	3,421697	False
 Thao
 Anton
 Amy
 levelID	tryCounter	taskColor	timeSuccess
-17	2	red	9,387431
-16	1	red	1,206761
+24	2	red	3,220368	False
+22	1	yellow	3,454784	False
+25	2	green	3,694888	False
+27	1	orange	3,143	False
+26	1	green	6,558844	False
+28	1	green	3,246878	False
+23	2	orange	3,731705	False
+21	1	green	3,445496	False
+20	1	green	1,643323	False
 Thao
 Anton
 Amy
 levelID	tryCounter	taskColor	timeSuccess
-18	2	yellow	3,418587
-13	1	yellow	1,459262
-12	1	orange	3,578769
-18	1	green	4,11505
+28	1	orange	6,891763	False
+23	1	green	3,052104	False
+22	1	green	4,097504	False
+26	1	red	3,08651	False
+27	1	green	3,124387	False
+25	1	blue	3,038412	False
+21	1	red	3,611169	False
+24	1	green	3,407318	False
+20	1	blue	3,815381	False
 Thao
 Anton
 Amy
 levelID	tryCounter	taskColor	timeSuccess
-Thao
-Anton
-Amy
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Anton
-Amy
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Anton
-Amy
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Anton
-Amy
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Anton
-Amy
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Anton
-Amy
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Anton
-Amy
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Anton
-Amy
-levelID	tryCounter	taskColor	timeSuccess
-16	1	orange	5,602418
-12	1	orange	10,97598
-26	1	red	4,995003
-22	1	blue	4,56503
-25	1	yellow	4,962358
-33	1	purple	5,618774
-31	1	green	4,868051
-35	1	green	4,965323
-33	1	orange	4,837101
-23	2	yellow	9,437452
-21	1	yellow	4,940507
-20	1	red	4,606613
-27	1	green	4,408031
-33	1	purple	5,148138
-30	1	purple	4,587412
-32	1	yellow	4,642624
-31	1	yellow	4,553581
-Thao
-Anton
-Amy
-levelID	tryCounter	taskColor	timeSuccess
-14	2	yellow	9,326206
-10	1	yellow	1,034704
-16	2	green	3,036989
-12	1	green	1,170023
-23	1	orange	4,508924
-28	1	red	4,845648
-20	1	red	2,39917
-Thao
-Anton
-Amy
-levelID	tryCounter	taskColor	timeSuccess
-12	1	red	6,136309
-13	1	purple	4,77812
-28	1	orange	4,515064
-23	1	blue	3,403925
-27	2	yellow	3,287066
-34	1	blue	5,492933
-31	2	green	12,09632
-30	1	green	4,51137
-31	1	red	4,325131
-Leo
-Amy
-Anton
-levelID	tryCounter	taskColor	timeSuccess
+21	2	orange	3,019532	False
+28	1	yellow	3,537693	False
+24	2	green	3,624812	False
+20	1	red	3,0109	False
+25	1	yellow	5,004891	False
+27	1	green	4,289865	False
+26	1	red	3,041294	False
+23	2	yellow	3,339936	False
+22	1	blue	0,8702387	False
+24	1	orange	3,893866	False
+28	1	yellow	3,513999	False
+27	1	blue	6,751914	False
 Thao
 Anton
 Amy
@@ -240,8 +131,17 @@ Thao
 Anton
 Amy
 levelID	tryCounter	taskColor	timeSuccess
-14	1	red	5,14852
-13	1	red	7,241225
+30	2	orange	3,655633	False
+33	1	yellow	3,762811	False
+34	2	green	3,23595	False
+32	2	orange	3,22815	False
+31	1	green	3,023504	False
+35	1	blue	3,925093	False
+32	1	orange	3,551222	False
+34	1	yellow	7,18618	False
+31	2	blue	3,506055	False
+27	2	red	6,116288	False
+25	2	green	3,422513	False
 Thao
 Anton
 Amy
@@ -250,35 +150,17 @@ Thao
 Anton
 Amy
 levelID	tryCounter	taskColor	timeSuccess
-14	1	red	5,321578
-Thao
-Anton
-Amy
-levelID	tryCounter	taskColor	timeSuccess
-11	1	orange	7,934629
-14	1	yellow	5,795348
-26	1	green	5,296477
-20	1	red	4,941514
-20	1	yellow	4,782085
-Anton
-Amy
-Thao
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Anton
-Amy
-levelID	tryCounter	taskColor	timeSuccess
-14	2	red	3,264738
-16	1	green	3,056374
-21	1	blue	3,298769
-23	1	red	3,394843
-28	1	green	5,452178
-20	1	green	5,907976
-27	1	red	5,126249
-32	1	yellow	4,732901
-31	1	blue	5,179693
-30	1	red	4,936795
-34	1	yellow	5,229188
+34	1	red	3,253784	False
+31	2	green	3,86101	False
+27	1	green	4,512872	False
+20	1	orange	3,909944	False
+21	1	green	3,263585	False
+24	1	green	1,587639	False
+28	1	orange	3,318587	False
+22	1	green	3,126008	False
+23	1	green	1,439916	False
+25	1	red	6,995769	False
+22	1	green	3,770499	False
 Thao
 Anton
 Amy
@@ -287,67 +169,104 @@ Thao
 Anton
 Amy
 levelID	tryCounter	taskColor	timeSuccess
+21	1	orange	3,248427	False
+24	2	green	9,465509	False
+23	2	blue	18,41009	False
+28	2	orange	9,615317	False
+26	1	green	3,376641	False
+25	2	blue	3,426342	False
+20	1	orange	6,254677	False
+27	1	green	4,116282	False
+22	1	blue	4,902331	False
 Thao
 Anton
 Amy
 levelID	tryCounter	taskColor	timeSuccess
+34	1	red	2,894582	False
+32	1	green	3,397406	False
+21	2	blue	3,100471	False
+23	1	red	3,218721	False
+27	2	green	3,354669	False
+35	1	green	3,472623	False
+33	1	red	3,950599	False
+30	1	yellow	3,147678	False
+36	1	blue	3,479961	False
+31	1	orange	3,642	False
+33	1	green	6,440462	False
+30	1	green	3,493626	False
+34	1	red	4,202085	False
+31	1	green	3,536825	False
 Thao
 Anton
 Amy
 levelID	tryCounter	taskColor	timeSuccess
+34	1	orange	3,353815	False
+31	2	yellow	3,666183	False
+35	2	blue	3,017202	False
 Thao
 Anton
 Amy
 levelID	tryCounter	taskColor	timeSuccess
+34	2	red	3,461421	False
+35	2	yellow	3,655303	False
+34	1	blue	3,726212	False
+33	2	red	3,497883	False
+32	2	green	3,274664	False
 Thao
 Anton
 Amy
 levelID	tryCounter	taskColor	timeSuccess
+30	1	red	9,684813	False
+35	1	yellow	9,932525	False
 Thao
 Anton
 Amy
 levelID	tryCounter	taskColor	timeSuccess
+30	1	red	3,431807	False
+33	1	yellow	4,758029	False
+31	1	blue	10,41065	False
+35	1	red	3,584069	False
+32	1	green	3,228318	False
+35	1	green	61,69952	False
+31	1	red	3,962386	False
+34	1	green	4,662031	False
+32	1	green	1,011788	False
+32	2	red	3,047568	False
+33	1	yellow	3,041078	False
 Thao
 Anton
 Amy
 levelID	tryCounter	taskColor	timeSuccess
+35	2	red	3,353392	False
+30	2	yellow	3,415161	False
+33	1	green	3,24671	False
+32	2	orange	3,591457	False
 Thao
 Anton
 Amy
 levelID	tryCounter	taskColor	timeSuccess
-Anton
-Thao
-Amy
-levelID	tryCounter	taskColor	timeSuccess
+31	1	red	10,3845	False
+32	1	green	4,307441	False
 Thao
 Anton
 Amy
 levelID	tryCounter	taskColor	timeSuccess
-Thao
-Anton
-Amy
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Anton
-Amy
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Anton
-Amy
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Anton
-Amy
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Anton
-Amy
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Anton
-Amy
-levelID	tryCounter	taskColor	timeSuccess
-Thao
-Anton
-Amy
-levelID	tryCounter	taskColor	timeSuccess
+34	1	red	4,320356	False
+35	2	yellow	3,479779	False
+31	1	blue	3,182345	False
+32	1	red	3,454132	False
+33	1	yellow	3,183695	False
+30	1	blue	3,38225	False
+36	1	orange	3,740195	False
+31	2	yellow	6,702336	False
+34	1	blue	5,210238	False
+30	1	red	4,50157	False
+33	2	green	7,317831	False
+32	1	blue	4,954596	False
+35	1	orange	3,590553	False
+36	2	yellow	6,674914	False
+30	1	green	3,88116	False
+31	2	orange	12,13318	False
+34	1	yellow	3,625551	False
+33	2	blue	3,541868	False
+32	1	orange	3,20493	False
