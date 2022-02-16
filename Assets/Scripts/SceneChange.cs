@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
+
 public class SceneChange : MonoBehaviour
 {
     public static int maxLevel = 2;
@@ -18,6 +20,22 @@ public class SceneChange : MonoBehaviour
 
     private void Awake()
     {
+        Debug.Log("Application.persistentdatapath: " + Application.persistentDataPath);
+
+        Debug.Log("Application.datapath: " + Application.dataPath);
+
+        DirectoryInfo d = new DirectoryInfo(Application.dataPath); //Assuming Test is your Folder
+
+        FileInfo[] Files = d.GetFiles("*.txt"); //Getting Text files
+        string str = "";
+
+        foreach (FileInfo file in Files)
+        {
+            str = str + ", " + file.Name;
+            Debug.Log(str);
+        }
+
+
 
         if (FindObjectOfType<AudioManager>() == null)
         {
@@ -25,7 +43,9 @@ public class SceneChange : MonoBehaviour
         }
         FindObjectOfType<AudioManager>().PauseAll();
 
-     
+
+
+
     }
     public IEnumerator Start()
     {

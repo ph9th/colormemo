@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class BearScript : MonoBehaviour
 {
-    float xPos;
+    private float xPos;
 
-    float moveX;
+    private float moveX;
 
     Animator anim;
 
@@ -17,7 +17,7 @@ public class BearScript : MonoBehaviour
 
     char direction; 
 
-    const float speed = 1;
+    const float speed = 600;
 
     SpriteRenderer _renderer;
 
@@ -67,19 +67,22 @@ public class BearScript : MonoBehaviour
                     }
                     else
                     {
-                        bear.transform.position += new Vector3(1 * speed, 0, 0);
+                        //bear.transform.position += new Vector3(1  * speed, 0, 0) ;
+                        bear.transform.Translate(speed * Time.deltaTime * Vector3.right);
                     }
                     break;
 
                 case 'R':
                     if (bear.transform.position.x <= xPos)
                     {
+                  
                         anim.ResetTrigger("Walk");
                         walk = false;
                     }
                     else
                     {
-                        bear.transform.position -= new Vector3(1 * speed, 0, 0);
+                        //bear.transform.position -= new Vector3(1 * Time.deltaTime * speed, 0, 0);
+                        bear.transform.Translate(speed * Time.deltaTime * Vector3.left);
                     }
                     break;
             }

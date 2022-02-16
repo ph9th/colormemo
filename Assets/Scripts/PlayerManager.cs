@@ -7,18 +7,18 @@ using TMPro;
 
 public class PlayerManager : MonoBehaviour
 {
-    public GameObject buttonPrefab;
-    public GameObject Content;
+     GameObject buttonPrefab;
+     GameObject Content;
     List<string> names;
 
     int x = 400;
-    int y = 800;
+    int y = 900;
     int counter = 0;
 
-    public TMP_InputField inputField;
+     TMP_InputField inputField;
     [HideInInspector]
     public static bool submitted = false;
-    public GameObject panel;
+     GameObject panel;
 
 
     public static PlayerObject[] players = new PlayerObject[3] ; //index 0: red bear, index 1: yellow bear, index 2: blue bear
@@ -26,8 +26,16 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
+        //load prefabs
+        buttonPrefab = Resources.Load<GameObject>("Prefabs/NameButton");
+        Debug.Log("buttonprefab: " + buttonPrefab);
+        Content = GameObject.Find("Content");
+        Debug.Log("content: " + Content);
+        panel = GameObject.Find("Panel");
+        inputField = panel.GetComponentInChildren<TMP_InputField>();
+
         //PlayerInitalise();
-        
+
         names = new List<string>();
         names = ReadNames(names);
     }
@@ -69,7 +77,7 @@ public class PlayerManager : MonoBehaviour
         int counter = 0;
 
         // Read the file and display it line by line.  
-        foreach (string line in System.IO.File.ReadLines("Assets/playerNames.txt"))
+        foreach (string line in System.IO.File.ReadLines(Application.persistentDataPath + "/playerNames.txt"))
         {
             System.Console.WriteLine(line);
 
@@ -103,7 +111,7 @@ public class PlayerManager : MonoBehaviour
 
         try
         {
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter("Assets/playerNames.txt", true))
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath + "/playerNames.txt", true))
             {
                 file.WriteLine(name);
             }

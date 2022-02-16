@@ -3,29 +3,11 @@
     "m_SelectedPackage": {
         "deviceId": "CBCNU21128201278",
         "name": "com.DefaultCompany.colormem",
-        "processId": 16664,
+        "processId": 6467,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "CBCNU21128201278",
-            "name": "com.DefaultCompany.colormem",
-            "processId": 2417,
-            "exited": true
-        },
-        {
-            "deviceId": "CBCNU21128201278",
-            "name": "com.DefaultCompany.colormem",
-            "processId": 3047,
-            "exited": true
-        },
-        {
-            "deviceId": "CBCNU21128201278",
-            "name": "com.DefaultCompany.colormem",
-            "processId": 26782,
-            "exited": true
-        },
         {
             "deviceId": "CBCNU21128201278",
             "name": "com.DefaultCompany.colormem",
@@ -36,12 +18,30 @@
             "deviceId": "CBCNU21128201278",
             "name": "com.DefaultCompany.colormem",
             "processId": 8176,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "CBCNU21128201278",
             "name": "com.DefaultCompany.colormem",
             "processId": 16664,
+            "exited": true
+        },
+        {
+            "deviceId": "CBCNU21128201278",
+            "name": "com.DefaultCompany.colormem",
+            "processId": 32295,
+            "exited": true
+        },
+        {
+            "deviceId": "CBCNU21128201278",
+            "name": "com.DefaultCompany.colormem",
+            "processId": 5128,
+            "exited": true
+        },
+        {
+            "deviceId": "CBCNU21128201278",
+            "name": "com.DefaultCompany.colormem",
+            "processId": 6467,
             "exited": false
         }
     ],

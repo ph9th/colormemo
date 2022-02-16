@@ -18,6 +18,7 @@ public class ColorObject : MonoBehaviour
     Color32 lastTryColor = new Color(0,0,0,255);
     public static int colorTaskAssign = 0;
     int tryCounter;
+    bool witchGone = false;
 
     void Start()
     {
@@ -40,6 +41,8 @@ public class ColorObject : MonoBehaviour
         ColorThisObject(obj);
 
         timer += Time.deltaTime;
+     
+
 
     }
 
@@ -52,27 +55,39 @@ public class ColorObject : MonoBehaviour
     {
         penColor = colorManager.GetComponent<GetColor>().penColor;
     
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
 
         {
-            FindObjectOfType<AudioManager>().Play("Magic");
-            obj.color = penColor; //color object with pen color
 
-            //Increase try counter for every new coloring try
-            if (!CompareColors(penColor, lastTryColor))
+            Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
             {
-                tryCounter++;
+                if (hit.collider != null)
+                {
+                    Debug.Log("Hit collider: " + hit.collider.name);
+
+                    FindObjectOfType<AudioManager>().Play("Magic");
+                    obj.color = penColor; //color object with pen color
+
+                    //Increase try counter for every new coloring try
+                    if (!CompareColors(penColor, lastTryColor))
+                    {
+                        tryCounter++;
+                    }
+                    lastTryColor = obj.color; //store used color to check if equal to the color of next touch input
+
+                    if (SceneManager.GetActiveScene().name == "ObjectFound")
+                    {
+                        CheckObjFoundColor();
+                    }
+                    else
+                    {
+                        CheckColor();
+                    }
+                }
             }
-            lastTryColor = obj.color; //store used color to check if equal to the color of next touch input
             
-            if (SceneManager.GetActiveScene().name == "ObjectFound")
-            {
-                CheckObjFoundColor();
-            }
-            else
-            {
-                CheckColor();
-            }
         }
     }
 
@@ -115,6 +130,10 @@ public class ColorObject : MonoBehaviour
 
             PlayerManager.players[VFCMScript.vfcmTaskAssign].maxLevel = maxLevel;
 
+            GameObject.Find("witch").GetComponent<Animator>().ResetTrigger("Fly");
+
+            FindObjectOfType<AudioManager>().PlayNoOverlay("WitchBeBack");
+
             GameObject.Find("witch").GetComponent<Animator>().SetTrigger("Correct");
 
             //if no error was made, number of levels will increase in the next iteration
@@ -135,9 +154,20 @@ public class ColorObject : MonoBehaviour
         else
         {
             SceneChange.error = true;
-            GameObject.Find("witch").GetComponent<Animator>().SetTrigger("Error");
-
-            FindObjectOfType<AudioManager>().PlayNoOverlay("Wrong");
+            
+            if(witchGone == false)
+            {
+                FindObjectOfType<AudioManager>().PlayNoOverlay("WitchBeBack");
+                GameObject.Find("witch").GetComponent<Animator>().ResetTrigger("Fly");
+                GameObject.Find("witch").GetComponent<Animator>().SetTrigger("Error");
+                FindObjectOfType<AudioManager>().PlayDelay("Wrong", 2);
+                witchGone = true;
+            }
+            else
+            {
+                FindObjectOfType<AudioManager>().PlayNoOverlay("Wrong");
+            }
+            
             //Debug.Log("Stolen Object was not this color!");
         }
     }

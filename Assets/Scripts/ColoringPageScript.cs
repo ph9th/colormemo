@@ -11,7 +11,6 @@ public class ColoringPageScript : MonoBehaviour
     SpriteRenderer obj;
     GameObject colorManager;
     Color32 penColor;
-    SceneChange SceneChanger;
 
 
 
@@ -21,7 +20,7 @@ public class ColoringPageScript : MonoBehaviour
         // 
         obj = GetComponent<SpriteRenderer>();
         colorManager = GameObject.Find("ColorManager");
-        SceneChanger = GameObject.Find("SceneManager").GetComponent<SceneChange>();
+      
 
     }
 
@@ -40,13 +39,20 @@ public class ColoringPageScript : MonoBehaviour
     {
         penColor = colorManager.GetComponent<GetColor>().penColor;
 
-        if (Input.touchCount > 0)
-
+        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
         {
-            obj.color = penColor; //color object with pen color
-
+            Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.collider != null)
+                {
+                    obj.color = penColor; //color object with pen color
+                }
+            }
         }
     }
+
 
 
     //color object if there is mouse click

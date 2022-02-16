@@ -121,6 +121,7 @@ public class ButtonScript : MonoBehaviour
 
    public void Submit()
     {
+        Debug.Log("Submit new Player");
         FindObjectOfType<AudioManager>().Play("Click");
         PlayerManager.submitted = true;
 
@@ -265,8 +266,8 @@ public class ButtonScript : MonoBehaviour
     public void Screenshot()
     {
         //ScreenCapture.CaptureScreenshot(Application.dataPath + "/Resources/Screenshots/Screenshot2.png");
-
-       ScreenshotHandler.TakeScreenshot_Static(Screen.width, Screen.height);
+        FindObjectOfType<AudioManager>().Play("Screenshot");
+        ScreenshotHandler.TakeScreenshot_Static(Screen.width, Screen.height);
 
 
         StartCoroutine(ScreenshotDelay());
@@ -277,7 +278,7 @@ public class ButtonScript : MonoBehaviour
     private IEnumerator ScreenshotDelay()
     {
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("Achievements");
+        SceneManager.LoadScene("ThemeSelection");
     }
 
    

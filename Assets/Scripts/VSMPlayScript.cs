@@ -42,9 +42,11 @@ public class VSMPlayScript : MonoBehaviour
     //select sprite on mouse click
     void OnMouseDown()
     {
+        FindObjectOfType<AudioManager>().Play("Magic");
         if (TrimString(this.gameObject.name, 7 ) == TrimString(VSMScript.levelOrder[orderCounter], 5))
         {
             //Debug.Log("order correct");
+            
             GameObject.Find("Finger").GetComponent<SpriteRenderer>().enabled = false;
             FindObjectOfType<AudioManager>().PlayNoOverlay("RightAnswer");
             orderCounter = orderCounter + 1;
@@ -65,6 +67,7 @@ public class VSMPlayScript : MonoBehaviour
         } else
         {
             VSMScript.errorCounter++;
+            SceneChange.error = true;
             FindObjectOfType<AudioManager>().PlayNoOverlay("SomeoneElse");
         }
 

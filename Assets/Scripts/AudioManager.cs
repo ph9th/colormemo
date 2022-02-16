@@ -124,6 +124,7 @@ public class AudioManager : MonoBehaviour
   
     public IEnumerator PlayDelay(string sound, int seconds)
     {
+        Debug.Log("sound: " + sound);
         yield return new WaitForSeconds(seconds);
         Sound s = Array.Find(sounds, item => item.name == sound);
   

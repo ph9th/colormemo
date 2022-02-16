@@ -6,7 +6,7 @@ using System;
 
 public static class SaveSystem
 {
-    public static readonly string PLAYER_FOLDER = Application.dataPath + "/Players/";
+    public static readonly string PLAYER_FOLDER = Application.persistentDataPath + "/Players/";
 
 
 
@@ -47,9 +47,9 @@ public static class SaveSystem
 
     public static void LoadPlayer(string name)
     {
-        if (File.Exists(Application.dataPath + "/Players/" + name + ".txt"))
+        if (File.Exists(Application.persistentDataPath + "/Players/" + name + ".txt"))
         {
-            string saveString = File.ReadAllText(Application.dataPath + "/Players/" + name + ".txt");
+            string saveString = File.ReadAllText(Application.persistentDataPath + "/Players/" + name + ".txt");
             PlayerObject playerObj; 
 
             //if file empty create new player object
@@ -80,7 +80,7 @@ public static class SaveSystem
         {
 
             Debug.LogWarning("Player File doesn't exist");
-            File.CreateText(Application.dataPath + "/Players/" + name + ".txt");
+            File.CreateText(Application.persistentDataPath + "/Players/" + name + ".txt");
 
 
 

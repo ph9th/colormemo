@@ -18,17 +18,20 @@ public class FramesScript : MonoBehaviour
 
     private void Start()
     {
-        AssetDatabase.Refresh();
+        //AssetDatabase.Refresh();
 
         picFrame = this.gameObject;
         string frameID = picFrame.name;
+        string screenshotPath = Application.persistentDataPath + "/Screenshots/";
 
 
-
-        if (File.Exists(Application.dataPath + "/Resources/Screenshots/" + PlayerManager.players[0].name + "/" + "ColoringPage" + frameID + ".jpg"))
+        if (File.Exists(screenshotPath + PlayerManager.players[0].name + "/" + "ColoringPage" + frameID + ".jpg"))
         {
-            
-            texture = Resources.Load<Sprite>("Screenshots/" + PlayerManager.players[0].name + "/" + "ColoringPage" + frameID);
+            Debug.Log("Screenshot exists at: " + screenshotPath + PlayerManager.players[0].name + "/" + "ColoringPage" + frameID + ".jpg");
+            Texture2D SpriteTexture = LoadImage(screenshotPath + PlayerManager.players[0].name + "/" + "ColoringPage" + frameID + ".jpg");
+            Sprite coloringPic = Sprite.Create(SpriteTexture, new Rect(0, 0, SpriteTexture.width, SpriteTexture.height), new Vector2(0.5f, 0.5f));
+
+            texture = coloringPic;
             //Debug.Log("texture: " + texture);
         } else
         {
@@ -41,10 +44,21 @@ public class FramesScript : MonoBehaviour
 
     }
 
-    private void Update()
+    private static Texture2D LoadImage(string filePath)
     {
-   
+
+        Texture2D tex = null;
+        byte[] fileData;
+
+        if (System.IO.File.Exists(filePath))
+        {
+            fileData = System.IO.File.ReadAllBytes(filePath);
+            tex = new Texture2D(2, 2);
+            tex.LoadImage(fileData); //..this will auto-resize the texture dimensions.
+        }
+        return tex;
     }
+
 
 
 }

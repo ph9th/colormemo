@@ -9,19 +9,9 @@ public class VFCMScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (vfcmTaskAssign < 2)
-        {
-            vfcmTaskAssign++;
-        }
-        else
-        {
-            vfcmTaskAssign = 0;
-        }
+        StartCoroutine(FindObjectOfType<AudioManager>().PlayDelay("WitchChallenge", 2));
 
-
-        FindObjectOfType<AudioManager>().PlayNoOverlay("ObjectFound");
-
-
+        //Assign task to a player
         if (vfcmTaskAssign == 0)
         {
             StartCoroutine(FindObjectOfType<AudioManager>().PlayDelay("RedBear", 6));
@@ -36,11 +26,17 @@ public class VFCMScript : MonoBehaviour
         }
         
         StartCoroutine(FindObjectOfType<AudioManager>().PlayDelay("WhatColor", 7));
+
+        //assign next vfcm task to next player
+        if (vfcmTaskAssign < 2)
+        {
+            vfcmTaskAssign++;
+        }
+        else
+        {
+            vfcmTaskAssign = 0;
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

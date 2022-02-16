@@ -34,13 +34,13 @@ public class ScreenshotHandler : MonoBehaviour
             Rect rect = new Rect(0, 0, renderTexture.width, renderTexture.height);
             renderResult.ReadPixels(rect, 0, 0);
 
-            scale(renderResult, 960, 540);
+            scale(renderResult, 960, 600);
 
             byte[] byteArray = renderResult.EncodeToJPG();
 
             for (int i = 0; i< 3; i++)
             {
-                string path = Application.dataPath + "/Resources/Screenshots/" + PlayerManager.players[i].name;
+                string path = Application.persistentDataPath + "/Screenshots/" + PlayerManager.players[i].name;
                 //check if folder exists
                 if (!Directory.Exists(path))
                 {

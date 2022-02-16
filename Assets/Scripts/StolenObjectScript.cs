@@ -24,7 +24,7 @@ public class StolenObjectScript : MonoBehaviour
 
         while (i < 10) { 
             //if coloring page already exists, get new texture
-            if (File.Exists(Application.dataPath + "/Resources/Screenshots/" + PlayerManager.players[0].name + "/" + "ColoringPage" + texture.name + ".jpg"))
+            if (File.Exists(Application.persistentDataPath + "/Screenshots/" + PlayerManager.players[0].name + "/" + "ColoringPage" + texture.name + ".jpg"))
             {
                 Debug.Log("Texture already used.");
                 i++;

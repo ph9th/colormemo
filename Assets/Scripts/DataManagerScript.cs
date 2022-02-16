@@ -12,8 +12,9 @@ public static class DataManagerScript
     {
         try
         {
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter("Assets/data.txt", true))
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath + "/data.txt", true))
             {
+                file.WriteLine("Date & Time: " + System.DateTime.Now);
                 for (int i = 0; i< 3; i++)
                 {
                     file.WriteLine(PlayerManager.players[i].name);
@@ -22,27 +23,27 @@ public static class DataManagerScript
                 file.WriteLine("maxLevel" + "\t" + "completedIterations");
             }
 
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter("Assets/color_data.txt", true))
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath +  "/color_data.txt", true))
             {
-
+                file.WriteLine("Date & Time: " + System.DateTime.Now);
                 for (int i = 0; i < 3; i++)
                 {
                     file.WriteLine(PlayerManager.players[i].name);
                 }
                 file.WriteLine("levelID" + "\t" + "tryCounter" + "\t" + "taskColor" + "\t" + "timeSuccess");
             }
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter("Assets/vfc_data.txt", true))
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath + "/vfc_data.txt", true))
             {
-
+                file.WriteLine("Date & Time: " + System.DateTime.Now);
                 for (int i = 0; i < 3; i++)
                 {
                     file.WriteLine(PlayerManager.players[i].name);
                 }
                 file.WriteLine("tryCounter" + "\t" + "taskColor" + "\t" + "timeSuccess" + "\t" + "levelCount");
             }
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter("Assets/vsm_data.txt", true))
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath + "/vsm_data.txt", true))
             {
-
+                file.WriteLine("Date & Time: " + System.DateTime.Now);
                 for (int i = 0; i < 3; i++)
                 {
                     file.WriteLine(PlayerManager.players[i].name);
@@ -61,7 +62,7 @@ public static class DataManagerScript
         int maxLevel = SceneChange.maxLevel;
         try
         {
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter("Assets/data.txt", true))
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath +  "/data.txt", true))
             {
                 file.WriteLine(maxLevel + "\t" + completedIterations);
             }
@@ -85,7 +86,7 @@ public static class DataManagerScript
     {
         try
         {
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter("Assets/color_data.txt", true))
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath + "/color_data.txt", true))
             {
                 file.WriteLine(levelID + "\t" + tryCounter + "\t" + taskColor + "\t" + timeSuccess + "\t" + hint);
             }
@@ -100,7 +101,7 @@ public static class DataManagerScript
     {
         try
         {
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter("Assets/vfc_data.txt", true))
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath + "/vfc_data.txt", true))
             {
                 file.WriteLine(tryCounter + "\t" + taskColor + "\t" + timeSuccess + "\t" + levelCount + "\t" + hint);
             }
@@ -115,7 +116,7 @@ public static class DataManagerScript
     {
         try
         {
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter("Assets/vsm_data.txt", true))
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath + "/vsm_data.txt", true))
             {
                 file.WriteLine(errorCounter + "\t" + timeSuccess + "\t" + levelCount + "\t" + hint);
             }
