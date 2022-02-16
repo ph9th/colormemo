@@ -49,6 +49,7 @@ public class SceneChange : MonoBehaviour
     }
     public IEnumerator Start()
     {
+        Debug.Log("Camera: " + FindObjectOfType<Camera>().name);
         sceneName = SceneManager.GetActiveScene().name;
 
         switch(themeID)

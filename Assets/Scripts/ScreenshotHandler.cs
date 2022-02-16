@@ -40,6 +40,7 @@ public class ScreenshotHandler : MonoBehaviour
 
             for (int i = 0; i< 3; i++)
             {
+
                 string path = Application.persistentDataPath + "/Screenshots/" + PlayerManager.players[i].name;
                 //check if folder exists
                 if (!Directory.Exists(path))

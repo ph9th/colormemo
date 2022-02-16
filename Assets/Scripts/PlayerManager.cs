@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 using TMPro;
+using System.IO;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -76,18 +77,30 @@ public class PlayerManager : MonoBehaviour
     {
         int counter = 0;
 
-        // Read the file and display it line by line.  
-        foreach (string line in System.IO.File.ReadLines(Application.persistentDataPath + "/playerNames.txt"))
+        try
         {
-            System.Console.WriteLine(line);
+            if (!File.Exists(Application.persistentDataPath + "/playerNames.txt"))
+            {
+                File.CreateText(Application.persistentDataPath + "/playerNames.txt"); 
+            }
 
-            names.Add(line);
-            counter++;
+            // Read the file and display it line by line.  
+            foreach (string line in System.IO.File.ReadLines(Application.persistentDataPath + "/playerNames.txt"))
+            {
+                System.Console.WriteLine(line);
+
+                names.Add(line);
+                counter++;
+            }
+
+            // Suspend the screen.  
+            System.Console.ReadLine();
+            return names;
         }
-
-        // Suspend the screen.  
-        System.Console.ReadLine();
-        return names;
+        catch (Exception ex)
+        {
+            throw new System.ApplicationException("Data error:", ex);
+        }
     }
     public IEnumerator CreatePlayer()
     {

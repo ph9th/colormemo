@@ -10,8 +10,15 @@ public static class DataManagerScript
 
     public static void AddHeadings()
     {
+       
+
+
         try
         {
+            if (!File.Exists(Application.persistentDataPath + "/data.txt"))
+            {
+                File.CreateText(Application.persistentDataPath + "/data.txt");
+            }
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath + "/data.txt", true))
             {
                 file.WriteLine("Date & Time: " + System.DateTime.Now);
@@ -23,6 +30,10 @@ public static class DataManagerScript
                 file.WriteLine("maxLevel" + "\t" + "completedIterations");
             }
 
+            if (!File.Exists(Application.persistentDataPath + "/color_data.txt"))
+            {
+                File.CreateText(Application.persistentDataPath + "/color_data.txt");
+            }
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath +  "/color_data.txt", true))
             {
                 file.WriteLine("Date & Time: " + System.DateTime.Now);
@@ -32,6 +43,11 @@ public static class DataManagerScript
                 }
                 file.WriteLine("levelID" + "\t" + "tryCounter" + "\t" + "taskColor" + "\t" + "timeSuccess");
             }
+
+            if (!File.Exists(Application.persistentDataPath + "/vfc_data.txt"))
+            {
+                File.CreateText(Application.persistentDataPath + "/vfc_data.txt");
+            }
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath + "/vfc_data.txt", true))
             {
                 file.WriteLine("Date & Time: " + System.DateTime.Now);
@@ -40,6 +56,11 @@ public static class DataManagerScript
                     file.WriteLine(PlayerManager.players[i].name);
                 }
                 file.WriteLine("tryCounter" + "\t" + "taskColor" + "\t" + "timeSuccess" + "\t" + "levelCount");
+            }
+
+            if (!File.Exists(Application.persistentDataPath + "/vsm_data.txt"))
+            {
+                File.CreateText(Application.persistentDataPath + "/vsm_data.txt");
             }
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath + "/vsm_data.txt", true))
             {
@@ -90,6 +111,7 @@ public static class DataManagerScript
             {
                 file.WriteLine(levelID + "\t" + tryCounter + "\t" + taskColor + "\t" + timeSuccess + "\t" + hint);
             }
+
         }
         catch (Exception ex)
         {

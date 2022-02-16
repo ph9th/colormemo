@@ -132,8 +132,10 @@ public class ColorObject : MonoBehaviour
 
             GameObject.Find("witch").GetComponent<Animator>().ResetTrigger("Fly");
 
-            FindObjectOfType<AudioManager>().PlayNoOverlay("WitchBeBack");
-
+            if (witchGone == false)
+            {
+                FindObjectOfType<AudioManager>().PlayNoOverlay("WitchBeBack");
+            }
             GameObject.Find("witch").GetComponent<Animator>().SetTrigger("Correct");
 
             //if no error was made, number of levels will increase in the next iteration

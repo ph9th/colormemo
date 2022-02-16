@@ -24,6 +24,15 @@ public class FramesScript : MonoBehaviour
         string frameID = picFrame.name;
         string screenshotPath = Application.persistentDataPath + "/Screenshots/";
 
+        //check if folder exists
+        if (!Directory.Exists(screenshotPath))
+        {
+            //create folder
+            Directory.CreateDirectory(screenshotPath);
+        }
+
+        
+
 
         if (File.Exists(screenshotPath + PlayerManager.players[0].name + "/" + "ColoringPage" + frameID + ".jpg"))
         {

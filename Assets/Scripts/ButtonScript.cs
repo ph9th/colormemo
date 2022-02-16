@@ -42,7 +42,11 @@ public class ButtonScript : MonoBehaviour
 
     }
 
-
+    public void Quit()
+    {
+        Application.Quit();
+    }
+    
     public void LoadStart()
     {
         FindObjectOfType<AudioManager>().Play("Click");
