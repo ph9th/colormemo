@@ -56,7 +56,7 @@ public class VSMPlayScript : MonoBehaviour
 
             if (orderCounter == VSMScript.levelOrder.Count)
             {
-                DataManagerScript.AddVSMData(VSMScript.errorCounter, timer, SceneChange.maxLevel, ButtonScript.hint);
+                DataManagerScript.AddVSMData(VSMScript.vsmTaskAssign, VSMScript.errorCounter, timer, SceneChange.maxLevel, ButtonScript.hint);
                 SceneManager.LoadScene("ObjectFound");
             } else
             {

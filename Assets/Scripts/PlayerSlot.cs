@@ -11,6 +11,9 @@ public class PlayerSlot : MonoBehaviour, IDropHandler
     public static string yellowSlotName;
     public static string blueSlotName;
 
+    public static int playerCount = 3;
+
+
     public void OnDrop(PointerEventData eventData)
     {
  
@@ -37,4 +40,6 @@ public class PlayerSlot : MonoBehaviour, IDropHandler
             }
         }
     }
+
+ 
 }

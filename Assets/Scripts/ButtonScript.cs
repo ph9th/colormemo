@@ -141,27 +141,66 @@ public class ButtonScript : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("Click");
 
-        string red = PlayerSlot.redSlotName;
-        string yellow = PlayerSlot.yellowSlotName;
-        string blue = PlayerSlot.blueSlotName;
-
-        if(red != null && yellow != null && blue != null)
+        if (PlayerSlot.playerCount == 1)
         {
-            SelectPlayer(0, red);
+            string yellow = PlayerSlot.yellowSlotName;
+
+            SelectPlayer(0, yellow);
             SelectPlayer(1, yellow);
-            SelectPlayer(2, blue);
+            SelectPlayer(2, yellow);
 
             SceneManager.LoadScene("MenuScreen");
             DataManagerScript.AddHeadings();
 
         }
+        else if(PlayerSlot.playerCount == 3)
+        {
+            string red = PlayerSlot.redSlotName;
+            string yellow = PlayerSlot.yellowSlotName;
+            string blue = PlayerSlot.blueSlotName;
+
+            if (red != null && yellow != null && blue != null)
+            {
+                SelectPlayer(0, red);
+                SelectPlayer(1, yellow);
+                SelectPlayer(2, blue);
+
+                SceneManager.LoadScene("MenuScreen");
+                DataManagerScript.AddHeadings();
+
+            }
+            else
+            {
+                Debug.LogWarning("Select 3 Players.");
+            }
+        }
         else
         {
-            Debug.LogWarning("Select 3 Players.");
+            Debug.LogWarning("PlayerCount Error");
         }
 
-        
     }
+
+    public void SetOnePlayer()
+    {
+        PlayerSlot.playerCount = 1;
+        GameObject.Find("Blue").GetComponent<SpriteRenderer>().enabled = false;
+        GameObject.Find("Red").GetComponent<SpriteRenderer>().enabled = false;
+        GameObject.Find("BlueSlot").GetComponent<Image>().enabled = false;
+        GameObject.Find("RedSlot").GetComponent<Image>().enabled = false;
+
+    }
+
+    public void SetThreePlayers()
+    {
+        PlayerSlot.playerCount = 3;
+        GameObject.Find("Blue").GetComponent<SpriteRenderer>().enabled = true;
+        GameObject.Find("Red").GetComponent<SpriteRenderer>().enabled = true;
+        GameObject.Find("BlueSlot").GetComponent<Image>().enabled = true;
+        GameObject.Find("RedSlot").GetComponent<Image>().enabled = true;
+    }
+
+
     public void SelectPlayer (int playerArrayID, string name)
     {
         PlayerManager.players[playerArrayID] = new PlayerObject(name);

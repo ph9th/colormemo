@@ -65,8 +65,6 @@ public class ColorObject : MonoBehaviour
             {
                 if (hit.collider != null)
                 {
-                    Debug.Log("Hit collider: " + hit.collider.name);
-
                     FindObjectOfType<AudioManager>().Play("Magic");
                     obj.color = penColor; //color object with pen color
 
@@ -98,7 +96,6 @@ public class ColorObject : MonoBehaviour
     /// <param name="color1"></param>
     /// <param name="color2"></param>
     /// <returns>true if the same colors, false if not the same colors</returns>
-
     bool CompareColors(Color color1, Color color2)
     {
         if (color1.Equals(color2))
@@ -126,7 +123,7 @@ public class ColorObject : MonoBehaviour
             //store data
             float timeSuccess = timer;
             int maxLevel = SceneChange.maxLevel;
-            DataManagerScript.AddVFCData(tryCounter, taskColorScript.ColorToString(StoredColors.stolenObj), timeSuccess, maxLevel, ButtonScript.hint);
+            DataManagerScript.AddVFCData(VFCMScript.vfcmTaskAssign, tryCounter, taskColorScript.ColorToString(StoredColors.stolenObj), timeSuccess, maxLevel, ButtonScript.hint);
 
             PlayerManager.players[VFCMScript.vfcmTaskAssign].maxLevel = maxLevel;
 

@@ -120,36 +120,42 @@ EditorBuildSettings:
     path: Assets/Scenes/CoralLevel.unity
     guid: a23f706486f5b9448aa436d7562400da
   - enabled: 1
-    path: Assets/Scenes/ColoringPage1.unity
-    guid: c80f056f42b226949a3f4734eb31da88
-  - enabled: 1
-    path: Assets/Scenes/ColoringPage2.unity
-    guid: adb33425ac03be54d90168aa14090b98
-  - enabled: 1
     path: Assets/Scenes/PlayerStats.unity
     guid: 7850da18538dbea48a17ccc31274e5f4
   - enabled: 1
     path: Assets/Scenes/RewardSelection.unity
     guid: 1f2d4c61e371fe04ea3651cbcb3889e1
   - enabled: 1
-    path: Assets/Scenes/ColoringPage3.unity
-    guid: 18f7291277dbf214c8bd6b85c509e703
+    path: Assets/Scenes/ColoringPage01.unity
+    guid: 949943e8fe5ca844c8913595bf3ade4d
   - enabled: 1
-    path: Assets/Scenes/ColoringPage4.unity
-    guid: 64c730daa6afd974c8a04606784a8b79
+    path: Assets/Scenes/ColoringPage02.unity
+    guid: 22a1ab7e52883a54f9734a276c0159d6
   - enabled: 1
-    path: Assets/Scenes/ColoringPage5.unity
-    guid: bcfb1dea6c61da245ac9fe6bd9acd832
+    path: Assets/Scenes/ColoringPage03.unity
+    guid: ba45ca979988a6747b10ec6381b328d6
   - enabled: 1
-    path: Assets/Scenes/ColoringPage6.unity
-    guid: d4ceebafacff39a4b886214a416c7497
+    path: Assets/Scenes/ColoringPage04.unity
+    guid: 3cd3392be0ee4514ba6bccc54b80abcc
   - enabled: 1
-    path: Assets/Scenes/ColoringPage7.unity
-    guid: 41434e4893474c242b281d14db2992dc
+    path: Assets/Scenes/ColoringPage05.unity
+    guid: ba214da7ea808b64da96c84ea13739a9
   - enabled: 1
-    path: Assets/Scenes/ColoringPage8.unity
-    guid: 1fb13b2827df96d4aa33a32c930b680a
+    path: Assets/Scenes/ColoringPage06.unity
+    guid: 5433c8909edb8d043820f287de75ce9d
   - enabled: 1
-    path: Assets/Scenes/ColoringPage9.unity
-    guid: 75e68511ddc16214986467923431e2b8
+    path: Assets/Scenes/ColoringPage07.unity
+    guid: 2aac763f3e39ce34394024e49ee375c1
+  - enabled: 1
+    path: Assets/Scenes/ColoringPage08.unity
+    guid: 24b6a4e2f6f56bd4f98f90891b2f2cee
+  - enabled: 1
+    path: Assets/Scenes/ColoringPage09.unity
+    guid: 71b30429825a4024e85c39a0073a296f
+  - enabled: 1
+    path: Assets/Scenes/ColoringPage10.unity
+    guid: 2f55b35ccd2c50f4e8b81de48196af02
+  - enabled: 1
+    path: Assets/Scenes/ColoringPage11.unity
+    guid: 7829db3b229bf044980f008b1dc7004e
   m_configObjects: {}

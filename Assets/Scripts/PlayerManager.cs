@@ -29,9 +29,7 @@ public class PlayerManager : MonoBehaviour
     {
         //load prefabs
         buttonPrefab = Resources.Load<GameObject>("Prefabs/NameButton");
-        Debug.Log("buttonprefab: " + buttonPrefab);
         Content = GameObject.Find("Content");
-        Debug.Log("content: " + Content);
         panel = GameObject.Find("Panel");
         inputField = panel.GetComponentInChildren<TMP_InputField>();
 
@@ -63,14 +61,12 @@ public class PlayerManager : MonoBehaviour
                 x = x + 500;
                 y = 800;
                 counter = 0;
-            }else
+            }
+            else
             {
                 counter++;
-            }
-            
+            } 
         }
-
-        
     }
 
     List<string> ReadNames(List<string> names)
@@ -118,8 +114,6 @@ public class PlayerManager : MonoBehaviour
         submitted = false;
         string name = inputField.text;
         GameObject.Find("Panel").SetActive(false);
-
-
 
 
         try

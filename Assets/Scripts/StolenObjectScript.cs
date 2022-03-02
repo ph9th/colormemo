@@ -1,4 +1,6 @@
+using System.Collections;
 using System.IO;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +13,7 @@ public class StolenObjectScript : MonoBehaviour
     public static Sprite sprite;
 
     public static string coloringPageId;
+    private object n;
 
     void Start()
     {
@@ -18,11 +21,18 @@ public class StolenObjectScript : MonoBehaviour
 
         stolenObj = this.gameObject;
         textures = Resources.LoadAll("Prefabs/VFCMObjects", typeof(Texture2D));
+
         int i = 0;
         // change texture
         Texture2D texture = (Texture2D)textures[i];
 
-        while (i < 10) { 
+        for(int j = 0; j< textures.Length; j++)
+        {
+            Debug.Log("textures item " + j + " name: " + textures[j].name);
+        }
+        
+
+        while (i < 10) {
             //if coloring page already exists, get new texture
             if (File.Exists(Application.persistentDataPath + "/Screenshots/" + PlayerManager.players[0].name + "/" + "ColoringPage" + texture.name + ".jpg"))
             {
@@ -38,6 +48,7 @@ public class StolenObjectScript : MonoBehaviour
         }
 
         coloringPageId = texture.name;
+        Debug.Log("texture name: " + coloringPageId);
         sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
 
         //assign randomly chosen sprite to obj
@@ -49,11 +60,6 @@ public class StolenObjectScript : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 
 }

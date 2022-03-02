@@ -27,7 +27,7 @@ public static class DataManagerScript
                     file.WriteLine(PlayerManager.players[i].name);
                 }
                 
-                file.WriteLine("maxLevel" + "\t" + "completedIterations");
+                file.WriteLine("maxLevel" + ";" + "completedIterations");
             }
 
             if (!File.Exists(Application.persistentDataPath + "/color_data.txt"))
@@ -41,7 +41,7 @@ public static class DataManagerScript
                 {
                     file.WriteLine(PlayerManager.players[i].name);
                 }
-                file.WriteLine("levelID" + "\t" + "tryCounter" + "\t" + "taskColor" + "\t" + "timeSuccess");
+                file.WriteLine("levelID" + ";" + "tryCounter" + ";" + "taskColor" + ";" + "timeSuccess" + ";" + "hintUsed");
             }
 
             if (!File.Exists(Application.persistentDataPath + "/vfc_data.txt"))
@@ -55,7 +55,7 @@ public static class DataManagerScript
                 {
                     file.WriteLine(PlayerManager.players[i].name);
                 }
-                file.WriteLine("tryCounter" + "\t" + "taskColor" + "\t" + "timeSuccess" + "\t" + "levelCount");
+                file.WriteLine("tryCounter" + ";" + "taskColor" + ";" + "timeSuccess" + ";" + "levelCount" + ";" + "hintUsed");
             }
 
             if (!File.Exists(Application.persistentDataPath + "/vsm_data.txt"))
@@ -69,7 +69,7 @@ public static class DataManagerScript
                 {
                     file.WriteLine(PlayerManager.players[i].name);
                 }
-                file.WriteLine("errorCounter" + "\t" + "timeSuccess" + "\t" + "levelCount");
+                file.WriteLine("errorCounter" + ";" + "timeSuccess" + ";" + "levelCount" + ";" + "hintUsed");
             }
         }
         catch (Exception ex)
@@ -85,7 +85,7 @@ public static class DataManagerScript
         {
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath +  "/data.txt", true))
             {
-                file.WriteLine(maxLevel + "\t" + completedIterations);
+                file.WriteLine(maxLevel + ";" + completedIterations);
             }
         }
         catch (Exception ex)
@@ -109,7 +109,7 @@ public static class DataManagerScript
         {
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath + "/color_data.txt", true))
             {
-                file.WriteLine(levelID + "\t" + tryCounter + "\t" + taskColor + "\t" + timeSuccess + "\t" + hint);
+                file.WriteLine(assigned + ";" + levelID + ";" + tryCounter + ";" + taskColor + ";" + timeSuccess + ";" + hint);
             }
 
         }
@@ -119,13 +119,13 @@ public static class DataManagerScript
         }
     }
 
-    public static void AddVFCData(int tryCounter, string taskColor, float timeSuccess, int levelCount, bool hint)
+    public static void AddVFCData(int assigned, int tryCounter, string taskColor, float timeSuccess, int levelCount, bool hint)
     {
         try
         {
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath + "/vfc_data.txt", true))
             {
-                file.WriteLine(tryCounter + "\t" + taskColor + "\t" + timeSuccess + "\t" + levelCount + "\t" + hint);
+                file.WriteLine(assigned + ";" + tryCounter + ";" + taskColor + ";" + timeSuccess + ";" + levelCount + ";" + hint);
             }
         }
         catch (Exception ex)
@@ -134,13 +134,13 @@ public static class DataManagerScript
         }
     }
 
-    public static void AddVSMData(int errorCounter, float timeSuccess, int levelCount, bool hint)
+    public static void AddVSMData(int assigned, int errorCounter, float timeSuccess, int levelCount, bool hint)
     {
         try
         {
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath + "/vsm_data.txt", true))
             {
-                file.WriteLine(errorCounter + "\t" + timeSuccess + "\t" + levelCount + "\t" + hint);
+                file.WriteLine(assigned + ";" + errorCounter + ";" + timeSuccess + ";" + levelCount + ";" + hint);
             }
         }
         catch (Exception ex)
