@@ -7,9 +7,11 @@ public class PlayerObject
     public string name;
     public int maxLevel;
 
-        public float[] green = new float[3]; //index 0: how many times task color was green, index 1: how many times wrong color input, 2: error rate
-        public float[] orange = new float[3];
-        public float[] purple = new float[3];
+    public float[] green = new float[3]; //index 0: how many times task color was green, index 1: how many times wrong color input, 2: error rate
+    public float[] orange = new float[3];
+    public float[] purple = new float[3];
+
+    public int stolenObjId;
 
 
     public PlayerObject(string name)
@@ -17,6 +19,7 @@ public class PlayerObject
 
         this.name = name;
         this.maxLevel = 0;
+        this.stolenObjId = 1;
 
         for (int i = 0; i < 3; i++)
         {

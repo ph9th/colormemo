@@ -222,7 +222,7 @@ public class ButtonScript : MonoBehaviour
     {
 
         FindObjectOfType<AudioManager>().Play("Click");
-        SceneManager.LoadScene("Achievements");
+        SceneManager.LoadScene("RewardsRoom");
     }
 
     public void GoToColoringBook()

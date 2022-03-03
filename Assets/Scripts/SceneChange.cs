@@ -20,9 +20,6 @@ public class SceneChange : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("Application.persistentdatapath: " + Application.persistentDataPath);
-
-        Debug.Log("Application.datapath: " + Application.dataPath);
 
         DirectoryInfo d = new DirectoryInfo(Application.dataPath); //Assuming Test is your Folder
 
@@ -133,7 +130,8 @@ public class SceneChange : MonoBehaviour
 
     }
 
-    public IEnumerator LoadDelay(string sceneName, int seconds)
+
+public IEnumerator LoadDelay(string sceneName, int seconds)
     {
         yield return new WaitForSeconds(seconds);
         SceneManager.LoadScene(sceneName);
@@ -141,7 +139,7 @@ public class SceneChange : MonoBehaviour
     }
     public IEnumerator LoadLevel()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
 
         //Load new level until maxLevel is reached
         if (levelCount <= maxLevel)

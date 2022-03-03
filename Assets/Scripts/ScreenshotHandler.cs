@@ -34,7 +34,7 @@ public class ScreenshotHandler : MonoBehaviour
             Rect rect = new Rect(0, 0, renderTexture.width, renderTexture.height);
             renderResult.ReadPixels(rect, 0, 0);
 
-            scale(renderResult, 960, 600);
+            scale(renderResult, 1920, 1200);
 
             byte[] byteArray = renderResult.EncodeToJPG();
 
@@ -49,7 +49,7 @@ public class ScreenshotHandler : MonoBehaviour
                     Directory.CreateDirectory(path);
                 }
 
-                System.IO.File.WriteAllBytes(path + "/" + sceneName + ".jpg", byteArray);
+                System.IO.File.WriteAllBytes(path + "/" + "Rewards.jpg", byteArray);
                 Debug.Log("Saved Screenshot");
             }
 

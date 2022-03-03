@@ -139,10 +139,22 @@ public class ColorObject : MonoBehaviour
             if (SceneChange.error == false)
             {
                 SceneChange.maxLevel++;
+                StolenObjectScript.stolenObjId++;
+                Debug.Log("stolenObjId++: " + StolenObjectScript.stolenObjId);
+
+                //Update values for each player
+                for(int i = 0; i<3; i++)
+                {
+                    if(StolenObjectScript.stolenObjId > PlayerManager.players[i].stolenObjId)
+                    {
+                        PlayerManager.players[i].stolenObjId = StolenObjectScript.stolenObjId;
+                    }
+
+                }
             }
 
             if (!(tryCounter > 1)) {
-                StartCoroutine(SceneChanger.LoadDelay("ColoringPage" + StolenObjectScript.coloringPageId, 3));
+                StartCoroutine(SceneChanger.LoadDelay("Rewards" , 3));
             }
             else
             {

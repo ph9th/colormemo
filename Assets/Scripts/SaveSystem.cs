@@ -22,32 +22,51 @@ public static class SaveSystem
 
     public static void Save ()
     {
+       
+
         try
-        {
-            for (int i = 0; i < 3; i++)
             {
-                PlayerObject playerObj = new PlayerObject(PlayerManager.players[i].name)
+            
+            for (int i = 0; i < 3; i++)
                 {
-                    name = PlayerManager.players[i].name,
-                    maxLevel = PlayerManager.players[i].maxLevel,
-                    green = PlayerManager.players[i].green,
-                    orange = PlayerManager.players[i].orange,
-                    purple = PlayerManager.players[i].purple,
+                    PlayerObject playerObj = new PlayerObject(PlayerManager.players[i].name)
+                    {
+                        name = PlayerManager.players[i].name,
+                        maxLevel = PlayerManager.players[i].maxLevel,
+                        green = PlayerManager.players[i].green,
+                        orange = PlayerManager.players[i].orange,
+                        purple = PlayerManager.players[i].purple,
+                        stolenObjId = PlayerManager.players[i].stolenObjId
 
+                    };
 
-                };
+                    if (PlayerSlot.playerCount == 1)
+                    {
+                        playerObj.stolenObjId = PlayerManager.players[0].stolenObjId;
 
-                string json = JsonUtility.ToJson(playerObj);
-                //Debug.Log("json: " + json);
-                //SaveSystem.Save(json);
+                        for (int j = 1; j < 3; j++)
+                        {
+                            if (PlayerManager.players[j].stolenObjId < playerObj.stolenObjId)
+                            {
+                                playerObj.stolenObjId = PlayerManager.players[j].stolenObjId;
+                            }
+                        }
+                    }
 
-                File.WriteAllText(PLAYER_FOLDER + PlayerManager.players[i].name + ".txt", json);
+                    string json = JsonUtility.ToJson(playerObj);
+                    //Debug.Log("json: " + json);
+                    //SaveSystem.Save(json);
+
+                    File.WriteAllText(PLAYER_FOLDER + PlayerManager.players[i].name + ".txt", json);
+                }
             }
-        }
-        catch(Exception ex)
-        {
-            throw new System.ApplicationException("Data error:", ex);
-        }
+            catch (Exception ex)
+            {
+                throw new System.ApplicationException("Data error:", ex);
+            }
+    
+
+        
         
 
         
@@ -70,7 +89,7 @@ public static class SaveSystem
                 }
                 else
                 {
-                    Debug.LogError("player file empty");
+                    Debug.Log("player file empty");
                     playerObj = new PlayerObject(name);
 
                 }
@@ -83,6 +102,7 @@ public static class SaveSystem
                     PlayerManager.players[i].green = playerObj.green;
                     PlayerManager.players[i].orange = playerObj.orange;
                     PlayerManager.players[i].purple = playerObj.purple;
+                    PlayerManager.players[i].stolenObjId = playerObj.stolenObjId;
 
                 }
             }
