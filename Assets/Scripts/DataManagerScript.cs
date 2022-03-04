@@ -41,7 +41,7 @@ public static class DataManagerScript
                 {
                     file.WriteLine(PlayerManager.players[i].name);
                 }
-                file.WriteLine("levelID" + ";" + "tryCounter" + ";" + "taskColor" + ";" + "timeSuccess" + ";" + "hintUsed");
+                file.WriteLine("AssignedTo" + ";" + "tryCounter" + ";" + "taskColor" + ";" + "timeSuccess" + ";" + "hintUsed");
             }
 
             if (!File.Exists(Application.persistentDataPath + "/vfc_data.txt"))
@@ -55,7 +55,7 @@ public static class DataManagerScript
                 {
                     file.WriteLine(PlayerManager.players[i].name);
                 }
-                file.WriteLine("tryCounter" + ";" + "taskColor" + ";" + "timeSuccess" + ";" + "levelCount" + ";" + "hintUsed");
+                file.WriteLine("AssignedTo" + ";" + "tryCounter" + ";" + "taskColor" + ";" + "timeSuccess" + ";" + "levelCount" + ";" + "hintUsed");
             }
 
             if (!File.Exists(Application.persistentDataPath + "/vsm_data.txt"))
@@ -69,7 +69,7 @@ public static class DataManagerScript
                 {
                     file.WriteLine(PlayerManager.players[i].name);
                 }
-                file.WriteLine("errorCounter" + ";" + "timeSuccess" + ";" + "levelCount" + ";" + "hintUsed");
+                file.WriteLine("AssignedTo" + ";" + "errorCounter" + ";" + "timeSuccess" + ";" + "levelCount" + ";" + "hintUsed");
             }
         }
         catch (Exception ex)
@@ -103,13 +103,13 @@ public static class DataManagerScript
     /// <param name="taskColor"></param>
     /// <param name="timeSuccess"></param>
     /// <returns></returns>
-    public static void AddColorData(int assigned, int levelID, int tryCounter, string taskColor, float timeSuccess, bool hint)
+    public static void AddColorData(int assigned, int tryCounter, string taskColor, float timeSuccess, bool hint)
     {
         try
         {
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath + "/color_data.txt", true))
             {
-                file.WriteLine(assigned + ";" + levelID + ";" + tryCounter + ";" + taskColor + ";" + timeSuccess + ";" + hint);
+                file.WriteLine(assigned + ";" + tryCounter + ";" + taskColor + ";" + timeSuccess + ";" + hint);
             }
 
         }

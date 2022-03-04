@@ -49,9 +49,11 @@ public class RewardsScript : MonoBehaviour
         newReward.GetComponent<SpriteRenderer>().enabled = true;
         newReward.GetComponent<SpriteRenderer>().color = StoredColors.stolenObj;
 
+        FindObjectOfType<AudioManager>().PlayNoOverlay("AllCorrect");
+
         ScreenshotHandler.TakeScreenshot_Static(Screen.width, Screen.height);
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(4);
         SceneManager.LoadScene("ThemeSelection"); 
 
     }

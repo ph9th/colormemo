@@ -9,7 +9,7 @@ public class SceneChange : MonoBehaviour
     public static int maxLevel = 2;
     public static int levelCount = 1;
     private string sceneName;
-    public static bool error = false;
+    public static bool error = false; //For VSM and VFCM Levels
     public static int buildID;
     public static bool[] levelBool = new bool[40]; //Array storing bool values for each level (build index); index set to true once played to avoid repeating levels
     public static int themeID = 0;
@@ -139,7 +139,15 @@ public IEnumerator LoadDelay(string sceneName, int seconds)
     }
     public IEnumerator LoadLevel()
     {
-        yield return new WaitForSeconds(3);
+        if(SceneManager.GetActiveScene().name == "ObjectStolen")
+        {
+            yield return new WaitForSeconds(5);
+        }
+        else
+        {
+            yield return new WaitForSeconds(3);
+        }
+        
 
         //Load new level until maxLevel is reached
         if (levelCount <= maxLevel)

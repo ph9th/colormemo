@@ -151,22 +151,29 @@ public class ColorObject : MonoBehaviour
                     }
 
                 }
-            }
 
-            if (!(tryCounter > 1)) {
-                StartCoroutine(SceneChanger.LoadDelay("Rewards" , 3));
+                if (!(tryCounter > 1))
+                {
+                    StartCoroutine(SceneChanger.LoadDelay("Rewards", 3));
+                }
             }
             else
             {
+                if (SceneChange.maxLevel > 2)
+                {
+                    SceneChange.maxLevel--;
+                }
                 StartCoroutine(SceneChanger.LoadDelay("ThemeSelection", 3));
             }
+
         }
-        //keep number of levels the same
+        //decrease number of levels
         else
         {
             SceneChange.error = true;
-            
-            if(witchGone == false)
+           
+
+            if (witchGone == false)
             {
                 FindObjectOfType<AudioManager>().PlayNoOverlay("WitchBeBack");
                 GameObject.Find("witch").GetComponent<Animator>().ResetTrigger("Fly");
@@ -205,7 +212,7 @@ public class ColorObject : MonoBehaviour
                 //record color data in Data manager
                 int levelID = SceneManager.GetActiveScene().buildIndex;
                 float timeSuccess = timer;
-                DataManagerScript.AddColorData(colorTaskAssign, levelID, tryCounter, taskColorScript.ColorToString(curTaskColor), timeSuccess, ButtonScript.hint);
+                DataManagerScript.AddColorData(colorTaskAssign, tryCounter, taskColorScript.ColorToString(curTaskColor), timeSuccess, ButtonScript.hint);
 
                 PlayerManager.IncreaseColorCount(colorTaskAssign, taskColorScript.ColorToString(curTaskColor), 1, 0);
 

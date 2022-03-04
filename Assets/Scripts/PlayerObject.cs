@@ -19,7 +19,7 @@ public class PlayerObject
 
         this.name = name;
         this.maxLevel = 0;
-        this.stolenObjId = 1;
+        this.stolenObjId = 0;
 
         for (int i = 0; i < 3; i++)
         {

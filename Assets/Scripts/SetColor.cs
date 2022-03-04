@@ -22,30 +22,16 @@ public class SetColor : MonoBehaviour
 
         setObjColor();
     }
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
         
+       
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     void setObjColor()
     {
-        //
-        if( repeatColor.Equals(new Color32(0, 0, 0, 255)) )
-        {
-            taskColor = randomColor();
-        }
-        else
-        {
-            //taskColor = repeatColor;
-            repeatColor = new Color32(0, 0, 0, 255);
-        }
+
+        taskColor = randomColor();
     }
 
     Color randomColor()
@@ -55,6 +41,11 @@ public class SetColor : MonoBehaviour
         // yellow only yellow, green, orange
         // 
         Color[] colorList = new Color[3];
+
+        float[] prob = new float[3];
+        prob[0] = 0.2f;
+        prob[1] = 0.4f;
+        prob[2] = 0.4f;
 
         //Set colors according to which player's turn it is
         int assignedTo;
@@ -73,6 +64,7 @@ public class SetColor : MonoBehaviour
             colorList[0] = colors[0];
             colorList[1] = colors[4];
             colorList[2] = colors[5];
+
         }
         else if (assignedTo == 1)
         {
@@ -89,10 +81,42 @@ public class SetColor : MonoBehaviour
             colorList[2] = colors[5];
         }
 
-        return colorList[Random.Range(0, 2)];
+        int c = (int)Choose(prob);
+
+        return colorList[c];
 
 
     }
+
+    //choose color based on probability
+    float Choose(float[] probs)
+    {
+        float total = 0;
+
+        foreach (float elem in probs)
+        {
+            total += elem;
+        }
+
+        float randomPoint = Random.value * total;
+
+        for (int i = 0; i < probs.Length; i++)
+        {
+            if (randomPoint < probs[i])
+            {
+                Debug.Log("i: " + i);
+                return i;
+            }
+            else
+            {
+                randomPoint -= probs[i];
+            }
+        }
+        Debug.Log("probs.Length: " + probs.Length);
+        return probs.Length - 1;
+    }
+
+
 
     public string ColorToString(Color color)
     {
