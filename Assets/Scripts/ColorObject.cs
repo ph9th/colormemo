@@ -56,9 +56,7 @@ public class ColorObject : MonoBehaviour
         penColor = colorManager.GetComponent<GetColor>().penColor;
     
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
-
         {
-
             Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
@@ -116,7 +114,7 @@ public class ColorObject : MonoBehaviour
     {
         if (CompareColors(penColor, StoredColors.stolenObj))
         {
-           
+
             FindObjectOfType<AudioManager>().PlayNoOverlay("WellDone");
             //Debug.Log("GOOD! Stolen Object was this color!");
 
@@ -124,6 +122,16 @@ public class ColorObject : MonoBehaviour
             float timeSuccess = timer;
             int maxLevel = SceneChange.maxLevel;
             DataManagerScript.AddVFCData(VFCMScript.vfcmTaskAssign, tryCounter, taskColorScript.ColorToString(StoredColors.stolenObj), timeSuccess, maxLevel, ButtonScript.hint);
+
+            //assign next vfcm task to next player
+            if (VFCMScript.vfcmTaskAssign < 2)
+            {
+                VFCMScript.vfcmTaskAssign++;
+            }
+            else
+            {
+                VFCMScript.vfcmTaskAssign = 0;
+            }
 
             PlayerManager.players[VFCMScript.vfcmTaskAssign].maxLevel = maxLevel;
 
@@ -140,7 +148,7 @@ public class ColorObject : MonoBehaviour
             {
                 SceneChange.maxLevel++;
                 StolenObjectScript.stolenObjId++;
-                Debug.Log("stolenObjId++: " + StolenObjectScript.stolenObjId);
+                //Debug.Log("stolenObjId++: " + StolenObjectScript.stolenObjId);
 
                 //Update values for each player
                 for(int i = 0; i<3; i++)
@@ -202,6 +210,8 @@ public class ColorObject : MonoBehaviour
         {
             if (!CharacterScript.success)
             {
+                
+
                 FindObjectOfType<AudioManager>().PlayNoOverlay("Super");
                 //Debug.Log("CORRECT COLOR!");
 
@@ -214,8 +224,6 @@ public class ColorObject : MonoBehaviour
                 float timeSuccess = timer;
                 DataManagerScript.AddColorData(colorTaskAssign, tryCounter, taskColorScript.ColorToString(curTaskColor), timeSuccess, ButtonScript.hint);
 
-                PlayerManager.IncreaseColorCount(colorTaskAssign, taskColorScript.ColorToString(curTaskColor), 1, 0);
-
                 //assign next level to next avatar
                 if (colorTaskAssign < 2)
                 {
@@ -226,6 +234,7 @@ public class ColorObject : MonoBehaviour
                     colorTaskAssign = 0;
                 }
 
+                PlayerManager.IncreaseColorCount(colorTaskAssign, taskColorScript.ColorToString(curTaskColor), 1, 0);
 
                 //load next level
                 StartCoroutine(SceneChanger.LoadLevel());

@@ -19,6 +19,7 @@ public class SetColor : MonoBehaviour
         colors[3] = new Color32(24, 196, 8, 255); //green
         colors[4] = new Color32(255, 154, 23, 255); //orange
         colors[5] = new Color32(181, 27, 242, 255); //purple
+        colors[6] = new Color32(48, 33, 0, 255); //brown
 
         setObjColor();
     }
@@ -39,13 +40,15 @@ public class SetColor : MonoBehaviour
         //choose colors based on who the task is assigned to;
         // red can only paint red, orange, purple
         // yellow only yellow, green, orange
-        // 
         Color[] colorList = new Color[3];
+
+        //Color[] colorList = new Color[4]; //with brown
 
         float[] prob = new float[3];
         prob[0] = 0.2f;
         prob[1] = 0.4f;
         prob[2] = 0.4f;
+        //prob[3] = 0.2f; //brown
 
         //Set colors according to which player's turn it is
         int assignedTo;
@@ -64,6 +67,7 @@ public class SetColor : MonoBehaviour
             colorList[0] = colors[0];
             colorList[1] = colors[4];
             colorList[2] = colors[5];
+            //colorList[3] = colors[6]; //brown
 
         }
         else if (assignedTo == 1)
@@ -72,6 +76,7 @@ public class SetColor : MonoBehaviour
             colorList[0] = colors[1];
             colorList[1] = colors[3];
             colorList[2] = colors[4];
+            //colorList[3] = colors[6]; //brown
         }
         else if (assignedTo == 2)
         {
@@ -79,8 +84,10 @@ public class SetColor : MonoBehaviour
             colorList[0] = colors[2];
             colorList[1] = colors[3];
             colorList[2] = colors[5];
+            //colorList[3] = colors[6]; //brown
         }
 
+        //choose color based on probability
         int c = (int)Choose(prob);
 
         return colorList[c];
@@ -88,7 +95,7 @@ public class SetColor : MonoBehaviour
 
     }
 
-    //choose color based on probability
+    
     float Choose(float[] probs)
     {
         float total = 0;
@@ -104,7 +111,6 @@ public class SetColor : MonoBehaviour
         {
             if (randomPoint < probs[i])
             {
-                Debug.Log("i: " + i);
                 return i;
             }
             else
@@ -112,7 +118,7 @@ public class SetColor : MonoBehaviour
                 randomPoint -= probs[i];
             }
         }
-        Debug.Log("probs.Length: " + probs.Length);
+       
         return probs.Length - 1;
     }
 
@@ -143,6 +149,10 @@ public class SetColor : MonoBehaviour
         else if (color.Equals(colors[5]))
         {
             return "purple";
+        }
+        else if (color.Equals(colors[6]))
+        {
+            return "brown";
         }
         else
         {

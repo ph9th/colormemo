@@ -9,7 +9,7 @@ public class GetColor : MonoBehaviour
 {
     public Color penColor;
 
-    readonly string getURL = "http://192.168.178.21/GetColor.php";
+    public static string getURL = "";
 
     Color[] colors = new Color[9];
 
@@ -23,13 +23,14 @@ public class GetColor : MonoBehaviour
         colors[3] = new Color32(24, 196, 8, 255); //green
         colors[4] = new Color32(255, 154, 23, 255); //orange
         colors[5] = new Color32(181, 27, 242, 255); //purple
+        colors[6] = new Color32(48, 33, 0, 255); //brown
     }
 
     // Start is called before the first frame update
     private void Start()
     {
         StartCoroutine(SimpleGetRequest());
-        InvokeRepeating("CheckForUpdate", 1.0f, 2.0f);
+        InvokeRepeating("CheckForUpdate", 1.0f, 1.0f);
     }
 
     IEnumerator SimpleGetRequest()
@@ -72,6 +73,10 @@ public class GetColor : MonoBehaviour
         else if (colortext.CompareTo("purple") == 0)
         {
             return colors[5];
+        }
+        else if (colortext.CompareTo("brown") == 0)
+        {
+            return colors[6];
         }
         else
         {

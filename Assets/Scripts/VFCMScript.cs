@@ -27,15 +27,6 @@ public class VFCMScript : MonoBehaviour
         
         StartCoroutine(FindObjectOfType<AudioManager>().PlayDelay("WhatColor", 7));
 
-        //assign next vfcm task to next player
-        if (vfcmTaskAssign < 2)
-        {
-            vfcmTaskAssign++;
-        }
-        else
-        {
-            vfcmTaskAssign = 0;
-        }
 
     }
 

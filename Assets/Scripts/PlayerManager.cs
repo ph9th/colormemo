@@ -98,6 +98,7 @@ public class PlayerManager : MonoBehaviour
             throw new System.ApplicationException("Data error:", ex);
         }
     }
+
     public IEnumerator CreatePlayer()
     {
         panel.SetActive(true);
@@ -109,7 +110,6 @@ public class PlayerManager : MonoBehaviour
         {
             yield return null;
         }
-
 
         submitted = false;
         string name = inputField.text;
@@ -147,6 +147,7 @@ public class PlayerManager : MonoBehaviour
 
     }
 
+
     public static void IncreaseColorCount(int assigned, string color, int counter, int error)
     {
         PlayerObject player = players[assigned];
@@ -171,20 +172,10 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    //swap(ref array[0], ref array[1]);
-    /*static void swap(ref PlayerObject a, ref PlayerObject b)
-    {
-        PlayerObject temp = a;
-        a = b;
-        b = temp;
-    }*/
 
-    IEnumerator Wait()
-    {
-        yield return new WaitForSeconds(5);
-    }
 
-   
 
-   
+
+
+
 }

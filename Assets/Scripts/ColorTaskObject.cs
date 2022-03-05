@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-
-
 public class ColorTaskObject : MonoBehaviour
 {
     
@@ -24,12 +22,6 @@ public class ColorTaskObject : MonoBehaviour
         {
             StoredColors.stolenObj = taskColor;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
 

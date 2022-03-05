@@ -22,8 +22,6 @@ public static class SaveSystem
 
     public static void Save ()
     {
-       
-
         try
             {
             

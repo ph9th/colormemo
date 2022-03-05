@@ -10,9 +10,6 @@ public static class DataManagerScript
 
     public static void AddHeadings()
     {
-       
-
-
         try
         {
             if (!File.Exists(Application.persistentDataPath + "/data.txt"))
@@ -21,7 +18,7 @@ public static class DataManagerScript
             }
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath + "/data.txt", true))
             {
-                file.WriteLine("Date & Time: " + System.DateTime.Now);
+                file.WriteLine("\r\n" + "Date & Time: " + System.DateTime.Now);
                 for (int i = 0; i< 3; i++)
                 {
                     file.WriteLine(PlayerManager.players[i].name);
@@ -36,7 +33,7 @@ public static class DataManagerScript
             }
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath +  "/color_data.txt", true))
             {
-                file.WriteLine("Date & Time: " + System.DateTime.Now);
+                file.WriteLine("\r\n" +"Date & Time: " + System.DateTime.Now);
                 for (int i = 0; i < 3; i++)
                 {
                     file.WriteLine(PlayerManager.players[i].name);
@@ -50,7 +47,7 @@ public static class DataManagerScript
             }
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath + "/vfc_data.txt", true))
             {
-                file.WriteLine("Date & Time: " + System.DateTime.Now);
+                file.WriteLine("\r\n" + "Date & Time: " + System.DateTime.Now);
                 for (int i = 0; i < 3; i++)
                 {
                     file.WriteLine(PlayerManager.players[i].name);
@@ -64,7 +61,7 @@ public static class DataManagerScript
             }
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath + "/vsm_data.txt", true))
             {
-                file.WriteLine("Date & Time: " + System.DateTime.Now);
+                file.WriteLine("\r\n" + "Date & Time: " + System.DateTime.Now);
                 for (int i = 0; i < 3; i++)
                 {
                     file.WriteLine(PlayerManager.players[i].name);

@@ -6,7 +6,7 @@ using System.Linq;
 
 public class VSMScript : MonoBehaviour
 {
-    public static int vsmTaskAssign = 0;
+    public static int vsmTaskAssign = 2;
     public static List<GameObject> characters = new List<GameObject>();
 
     public static List<string> levelOrder = new List<string>();
@@ -37,28 +37,20 @@ public class VSMScript : MonoBehaviour
     void Start()
     {
         errorCounter = 0;
-        if (vsmTaskAssign < 2)
-        {
-            vsmTaskAssign++;
-        }
-        else
-        {
-            vsmTaskAssign = 0;
-        }
 
         GameObject.Find("Finger").GetComponent<SpriteRenderer>().enabled = false;
 
         DisplayCharacters(levelOrder);
 
-        if (ColorObject.colorTaskAssign == 0)
+        if (vsmTaskAssign == 0)
         {
             FindObjectOfType<AudioManager>().Play("RedBear");
         }
-        else if (ColorObject.colorTaskAssign == 1)
+        else if (vsmTaskAssign == 1)
         {
             FindObjectOfType<AudioManager>().Play("YellowBear");
         }
-        else if (ColorObject.colorTaskAssign == 2)
+        else if (vsmTaskAssign == 2)
         {
             FindObjectOfType<AudioManager>().Play("BlueBear");
         }

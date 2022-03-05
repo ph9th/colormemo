@@ -39,13 +39,10 @@ public class BearScript : MonoBehaviour
             _renderer.flipX = true;
         }
         walk = true;
-
-        
     }
 
     private void Start()
     {
-            
             bear.transform.Translate(new Vector3(moveX, 0, 0));
             anim = bear.GetComponent<Animator>();
             anim.SetTrigger("Walk");
@@ -56,7 +53,6 @@ public class BearScript : MonoBehaviour
     {
         if (walk)
         {
-
             switch (direction)
             {
                 case 'L':
@@ -67,7 +63,6 @@ public class BearScript : MonoBehaviour
                     }
                     else
                     {
-                        //bear.transform.position += new Vector3(1  * speed, 0, 0) ;
                         bear.transform.Translate(speed * Time.deltaTime * Vector3.right);
                     }
                     break;
@@ -81,15 +76,11 @@ public class BearScript : MonoBehaviour
                     }
                     else
                     {
-                        //bear.transform.position -= new Vector3(1 * Time.deltaTime * speed, 0, 0);
                         bear.transform.Translate(speed * Time.deltaTime * Vector3.left);
                     }
                     break;
             }
-
-
-        }
-        
+        } 
     }
 }
  

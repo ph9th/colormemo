@@ -57,6 +57,16 @@ public class VSMPlayScript : MonoBehaviour
             if (orderCounter == VSMScript.levelOrder.Count)
             {
                 DataManagerScript.AddVSMData(VSMScript.vsmTaskAssign, VSMScript.errorCounter, timer, SceneChange.maxLevel, ButtonScript.hint);
+                //assign next task to next color
+                if (VSMScript.vsmTaskAssign < 2)
+                {
+                    VSMScript.vsmTaskAssign++;
+                }
+                else
+                {
+                    VSMScript.vsmTaskAssign = 0;
+                }
+
                 SceneManager.LoadScene("ObjectFound");
             } else
             {

@@ -358,6 +358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 711534658}
   - component: {fileID: 711534659}
+  - component: {fileID: 711534660}
   m_Layer: 0
   m_Name: SceneChanger
   m_TagString: Untagged
@@ -389,6 +390,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 657b8af0258df154283379657901ad22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &711534660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711534657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6f1d8ec70c2575459591faa8969f7d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!20 &742477589 stripped
