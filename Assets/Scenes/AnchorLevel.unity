@@ -334,7 +334,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792768159}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 294, y: 0, z: -0.50874346}
+  m_LocalPosition: {x: 294, y: 55, z: -0.50874346}
   m_LocalScale: {x: 107.48914, y: 107.48914, z: 107.48914}
   m_Children:
   - {fileID: 1328471725}
@@ -1017,7 +1017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 407647475968380874, guid: 512e3d73666268b4c9dc5fce0dbbb3c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -590
+      value: -527
       objectReference: {fileID: 0}
     - target: {fileID: 407647475968380874, guid: 512e3d73666268b4c9dc5fce0dbbb3c3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1157,7 +1157,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2691500875607223630, guid: c9b270d9b6afc674fade4d61b80358fd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 2691500875607223630, guid: c9b270d9b6afc674fade4d61b80358fd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1242,6 +1242,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1163242314794637427, guid: aaa02edfe1c14ed4d8be01349c7c2d20, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4012380681090303499, guid: aaa02edfe1c14ed4d8be01349c7c2d20, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9245283
+      objectReference: {fileID: 0}
+    - target: {fileID: 4012380681090303499, guid: aaa02edfe1c14ed4d8be01349c7c2d20, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7731754
+      objectReference: {fileID: 0}
+    - target: {fileID: 4012380681090303499, guid: aaa02edfe1c14ed4d8be01349c7c2d20, type: 3}
+      propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5129962975518255191, guid: aaa02edfe1c14ed4d8be01349c7c2d20, type: 3}

@@ -19,12 +19,12 @@ public class ButtonScript : MonoBehaviour
     string sceneName;
 
     public static bool hint;
-
+    public static bool vsmhint;
 
     // Start is called before the first frame update
     void Start()
     {
-        hint = false;
+        vsmhint = false;
         sceneName = SceneManager.GetActiveScene().name;
 
         if ( Constants.humanWorldStart <= SceneManager.GetActiveScene().buildIndex && SceneManager.GetActiveScene().buildIndex <= Constants.waterWorldEnd || sceneName == "ObjectFound" || sceneName == "IntroductionLevel")
@@ -36,7 +36,14 @@ public class ButtonScript : MonoBehaviour
             colorManager = GameObject.Find("ColorManager");
             taskColorScript = colorManager.GetComponent<SetColor>();
             taskColor = colorManager.GetComponent<SetColor>().taskColor;
+
+            if (hint == true)
+            {
+                this.GetComponent<Image>().enabled = false;
+            }
         }
+
+        
 
     }
 
@@ -286,11 +293,17 @@ public class ButtonScript : MonoBehaviour
             animRed.SetTrigger("Active");
             animBlue.SetTrigger("Active");
         }
+
+        if (hint == true)
+        {
+            this.GetComponent<Image>().enabled = false;
+        }
+
     }
 
     public void VSMHelp()
     {
-        hint = true;
+        vsmhint = true;
         GameObject hand = GameObject.Find("Hand");
         GameObject finger = GameObject.Find("Finger");
      
@@ -302,6 +315,11 @@ public class ButtonScript : MonoBehaviour
         GameObject.Find("Finger").GetComponent<SpriteRenderer>().enabled = true;
         hand.transform.position = new Vector3(xPos, 750, 0);
         anim.SetTrigger("Help");
+
+        if(vsmhint == true)
+        {
+            this.GetComponent<Image>().enabled = false;
+        }
          
     }
 }

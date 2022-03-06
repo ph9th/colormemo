@@ -89,6 +89,7 @@ public class SceneChange : MonoBehaviour
             VSMScript.characters.Clear();
             VSMScript.levelOrder.Clear();
             curPlayedLevels.Clear();
+            ButtonScript.hint = false;
 
         }
 
