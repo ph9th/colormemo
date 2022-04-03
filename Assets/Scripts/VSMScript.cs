@@ -1,24 +1,20 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using System.Linq;
 
 public class VSMScript : MonoBehaviour
 {
-    public static int vsmTaskAssign = 2;
-    public static List<GameObject> characters = new List<GameObject>();
-
-    public static List<string> levelOrder = new List<string>();
+    public static List<string> levelOrder { get; set; }
+    public static List<GameObject> characters { get; set; }
     string prefabFolder;
-
-    public static int errorCounter;
+    public static int ErrorCounter { get; set; }
+    public static int vsmTaskAssign { get; set; }
 
     // Start is called before the first frame update
 
     private void Awake()
     {
-        switch (SceneChange.themeID)
+        //Specify folder for prefabs based on theme
+        switch (SceneChange.ThemeID)
         {
             case 0:
                 prefabFolder = "Children";
@@ -29,6 +25,12 @@ public class VSMScript : MonoBehaviour
             case 2:
                 prefabFolder = "Water";
                 break;
+            case 3:
+                prefabFolder = "Space";
+                break;
+            case 4:
+                prefabFolder = "Arctic";
+                break;
             default:
                 Debug.LogWarning("Unknown theme ID");
                 break;
@@ -36,7 +38,7 @@ public class VSMScript : MonoBehaviour
     }
     void Start()
     {
-        errorCounter = 0;
+        ErrorCounter = 0;
 
         GameObject.Find("Finger").GetComponent<SpriteRenderer>().enabled = false;
 
@@ -60,7 +62,9 @@ public class VSMScript : MonoBehaviour
 
     }
 
-   void DisplayCharacters(List<string> array)
+    /// <summary>Displays the characters for VSM task.</summary>
+    /// <param name="array">The array.</param>
+    void DisplayCharacters (List<string> array)
     {
         for (int i = 0; i< array.Count; i++)
         {
@@ -74,7 +78,10 @@ public class VSMScript : MonoBehaviour
 
     }
 
-  
+
+    /// <summary>Reorders the elements ina list in a random order.</summary>
+    /// <param name="list">The list to choose from.</param>
+    /// <returns>The reordered list.<br /></returns>
     public List<GameObject> getRandomElement(List<GameObject> list)
     {
 
@@ -93,11 +100,11 @@ public class VSMScript : MonoBehaviour
             list.RemoveAt(randomNumber);
         }
 
-
         return newList;
     }
 
-
+    /// <summary>Instantiates the characters.</summary>
+    /// <param name="randomList">The randomly reordered list.</param>
     public void InstantiateCharacters (List<GameObject> randomList)
     {
         int counter = 1;
@@ -105,7 +112,8 @@ public class VSMScript : MonoBehaviour
 
         foreach (GameObject character in randomList)
         {
-            Instantiate(character, new Vector2(((Screen.width - 100) / (randomList.Count + 1)) * counter, Screen.height / 2), Quaternion.identity);
+            Instantiate(character, new Vector2(((Screen.width) / (randomList.Count + 1)) * counter, Screen.height / 2), Quaternion.identity);
+ 
             counter++;
             
         }

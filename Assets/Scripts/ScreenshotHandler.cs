@@ -1,26 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
 
-
-
+/// <summary>Contains methods to handle Screenshot capturing.</summary>
 public class ScreenshotHandler : MonoBehaviour
 {
     private static ScreenshotHandler instance;
-
     private Camera myCamera;
     private bool takeScreenshot;
     private string sceneName;
-    private string path0, path1, path2;
 
     private void Awake()
     {
         instance = this;
         myCamera = gameObject.GetComponent<Camera>();
         sceneName = SceneManager.GetActiveScene().name;
+    }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+            print("space key was pressed");
+            TakeScreenshot_Static(Screen.width, Screen.height);
+
+        }
     }
 
     private void OnPostRender()
@@ -29,19 +33,15 @@ public class ScreenshotHandler : MonoBehaviour
         {
             takeScreenshot = false;
             RenderTexture renderTexture = myCamera.targetTexture;
-
             Texture2D renderResult = new Texture2D(renderTexture.width, renderTexture.height, TextureFormat.ARGB32, false);
-            Rect rect = new Rect(0, 0, renderTexture.width, renderTexture.height);
-            renderResult.ReadPixels(rect, 0, 0);
-
-            scale(renderResult, 1920, 1200);
-
+            Rect rect = new Rect(1, 1, renderTexture.width-1, renderTexture.height-1);
+            
+            renderResult.ReadPixels(rect, 1, 1);
             byte[] byteArray = renderResult.EncodeToJPG();
 
             for (int i = 0; i< 3; i++)
             {
-
-                string path = Application.persistentDataPath + "/Screenshots/" + PlayerManager.players[i].name;
+                string path = Application.persistentDataPath + "/Screenshots/" + PlayerManager.Players[i].name;
                 //check if folder exists
                 if (!Directory.Exists(path))
                 {
@@ -49,14 +49,24 @@ public class ScreenshotHandler : MonoBehaviour
                     Directory.CreateDirectory(path);
                 }
 
-                System.IO.File.WriteAllBytes(path + "/" + "Rewards.jpg", byteArray);
-                Debug.Log("Saved Screenshot");
+                //Check where to save screenshot to - Coloring Page or Reward
+                if(TrimString(sceneName, 2) == "ColoringPage")
+                {
+                    File.WriteAllBytes(path + "/" + sceneName + ".jpg", byteArray);
+                }
+                else
+                {
+                    File.WriteAllBytes(path + "/" + "Rewards.jpg", byteArray);
+                }
             }
-
-
             RenderTexture.ReleaseTemporary(renderTexture);
             myCamera.targetTexture = null;
         }
+    }
+
+    public string TrimString(string stringToTrim, int x)
+    {
+        return stringToTrim.Substring(0, stringToTrim.Length - x);
     }
 
     private void TakeScreenshot(int width, int height)
@@ -69,36 +79,4 @@ public class ScreenshotHandler : MonoBehaviour
     {
         instance.TakeScreenshot(width, height);
     }
-
-    public static void scale(Texture2D tex, int width, int height, FilterMode mode = FilterMode.Trilinear)
-    {
-        Rect texR = new Rect(0, 0, width, height);
-        _gpu_scale(tex, width, height, mode);
-
-        // Update new texture
-        tex.Resize(width, height);
-        tex.ReadPixels(texR, 0, 0, true);
-        tex.Apply(true);    //Remove this if you hate us applying textures for you :)
-    }
-
-    static void _gpu_scale(Texture2D src, int width, int height, FilterMode fmode)
-    {
-        //We need the source texture in VRAM because we render with it
-        src.filterMode = fmode;
-        src.Apply(true);
-
-        //Using RTT for best quality and performance. Thanks, Unity 5
-        RenderTexture rtt = new RenderTexture(width, height, 32);
-
-        //Set the RTT in order to render to it
-        Graphics.SetRenderTarget(rtt);
-
-        //Setup 2D matrix in range 0..1, so nobody needs to care about sized
-        GL.LoadPixelMatrix(0, 1, 1, 0);
-
-        //Then clear & draw the texture to fill the entire RTT.
-        GL.Clear(true, true, new Color(0, 0, 0, 0));
-        Graphics.DrawTexture(new Rect(0, 0, 1, 1), src);
-    }
-
 }

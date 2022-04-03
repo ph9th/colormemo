@@ -1,19 +1,14 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
-using UnityEngine.UI;
-
 
 public class GetColor : MonoBehaviour
 {
     public Color penColor;
 
-    public static string getURL = "";
+    public static string getURL { get; set; }
 
-    Color[] colors = new Color[9];
-
-    
+    readonly Color[] colors = new Color[6];
 
     private void Awake()
     {
@@ -23,31 +18,38 @@ public class GetColor : MonoBehaviour
         colors[3] = new Color32(24, 196, 8, 255); //green
         colors[4] = new Color32(255, 154, 23, 255); //orange
         colors[5] = new Color32(181, 27, 242, 255); //purple
-        colors[6] = new Color32(48, 33, 0, 255); //brown
     }
 
     // Start is called before the first frame update
     private void Start()
     {
         StartCoroutine(SimpleGetRequest());
-        InvokeRepeating("CheckForUpdate", 1.0f, 1.0f);
+        InvokeRepeating("CheckForUpdate", 1.0f, 0.5f);
     }
 
     IEnumerator SimpleGetRequest()
     {
-        UnityWebRequest www = UnityWebRequest.Get(getURL);
-        yield return www.SendWebRequest();
+        using (UnityWebRequest www = UnityWebRequest.Get(getURL))
+        {
+            yield return www.SendWebRequest();
 
-        if ((www.result == UnityWebRequest.Result.ConnectionError) || (www.result == UnityWebRequest.Result.ProtocolError)) 
-        {
-            Debug.LogError(www.error);
-        }
-        else
-        {
-            penColor = StringToColor(www.downloadHandler.text);
+            if ((www.result == UnityWebRequest.Result.ConnectionError) || (www.result == UnityWebRequest.Result.ProtocolError))
+            {
+                Debug.LogError(www.error);
+                penColor = StringToColor("");
+            }
+            else
+            {
+                penColor = StringToColor(www.downloadHandler.text);
+            }
         }
     }
 
+    /// <summary>Converts color name string to a Color.</summary>
+    /// <param name="colortext">The color name string.</param>
+    /// <returns>
+    ///   <br />
+    /// </returns>
     Color StringToColor (string colortext)
     {
        if (colortext.CompareTo("red") == 0)
@@ -74,23 +76,14 @@ public class GetColor : MonoBehaviour
         {
             return colors[5];
         }
-        else if (colortext.CompareTo("brown") == 0)
-        {
-            return colors[6];
-        }
         else
         {
-            //Debug.Log("other color " + colortext);
-            return new Color(0, 0, 0, 0);
-            
+            return new Color(0, 0, 0, 255);
         }
     }
 
-    
-
     void CheckForUpdate ()
     {
-        //Debug.Log("Check for updates");
         StartCoroutine(SimpleGetRequest());
     }
 

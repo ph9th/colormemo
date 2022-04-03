@@ -1,50 +1,43 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
-using System.IO;
-using TMPro;
 using UnityEngine.UI;
 
 public class ButtonScript : MonoBehaviour
 {
-    GameObject button;
     Animator animRed;
     Animator animYellow;
     Animator animBlue;
-    GameObject colorManager;
     SetColor taskColorScript;
-    Color32 taskColor;
+    Color32 TaskColor;
     string sceneName;
 
-    public static bool hint;
-    public static bool vsmhint;
+    public static bool VsmHint { get; set; }
+    public static bool Hint { get; set; }
 
     // Start is called before the first frame update
     void Start()
     {
-        vsmhint = false;
         sceneName = SceneManager.GetActiveScene().name;
+        int curBuildID = SceneManager.GetActiveScene().buildIndex;
 
-        if ( Constants.humanWorldStart <= SceneManager.GetActiveScene().buildIndex && SceneManager.GetActiveScene().buildIndex <= Constants.waterWorldEnd || sceneName == "ObjectFound" || sceneName == "IntroductionLevel")
+        if ( Constants.vfcmLevel <= curBuildID && curBuildID <= Constants.arcticWorldEnd)
         {
             animRed = GameObject.Find("Red").GetComponent<Animator>();
             animYellow = GameObject.Find("Yellow").GetComponent<Animator>();
             animBlue = GameObject.Find("Blue").GetComponent<Animator>();
 
-            colorManager = GameObject.Find("ColorManager");
+            GameObject colorManager = GameObject.Find("ColorManager");
             taskColorScript = colorManager.GetComponent<SetColor>();
-            taskColor = colorManager.GetComponent<SetColor>().taskColor;
+            TaskColor = colorManager.GetComponent<SetColor>().TaskColor;
 
-            if (hint == true)
+            // Hide hint button if it has been used
+            if (Hint)
             {
                 this.GetComponent<Image>().enabled = false;
             }
         }
-
-        
-
     }
 
     public void Quit()
@@ -52,81 +45,58 @@ public class ButtonScript : MonoBehaviour
         Application.Quit();
     }
 
+    /// <summary>Sets the theme based on which theme button was clicked.</summary>
     public void SetTheme()
     {
         FindObjectOfType<AudioManager>().Play("Click");
         string buttonName = EventSystem.current.currentSelectedGameObject.name;
         if (buttonName == "HumanWorld")
         {
-            SceneChange.themeID = 0; //HumanWorld themeID = 0
+            SceneChange.ThemeID = 0; //HumanWorld ThemeID = 0
             SceneManager.LoadScene("ObjectStolen");
         }
         else if (buttonName == "Forest")
         {
-            SceneChange.themeID = 1; //Forest themeID = 1
+            SceneChange.ThemeID = 1; //Forest ThemeID = 1
             SceneManager.LoadScene("ObjectStolen");
         }
         else if (buttonName == "Water")
         {
-            SceneChange.themeID = 2; //Water themeID = 1
+            SceneChange.ThemeID = 2; //Water ThemeID = 2
             SceneManager.LoadScene("ObjectStolen");
         }
-        else if (buttonName == "ThemeButton")
+        else if (buttonName == "Space")
         {
-            SceneManager.LoadScene("ThemeSelection");
+            SceneChange.ThemeID = 3; //Space ThemeID = 3
+            SceneManager.LoadScene("ObjectStolen");
+        }
+        else if (buttonName == "Arctic")
+        {
+            SceneChange.ThemeID = 4; //Arctic ThemeID = 4
+            SceneManager.LoadScene("ObjectStolen");
         }
     }
-
 
     //Loading and Switching Scenes
     public void LoadStart()
     {
-        FindObjectOfType<AudioManager>().Play("Click");
-        string buttonName = EventSystem.current.currentSelectedGameObject.name;
-        if (buttonName == "HumanWorld")
-        {
-            SceneChange.themeID = 0; //HumanWorld themeID = 0
-            SceneManager.LoadScene("ObjectStolen");
-        }
-        else if (buttonName == "Forest")
-        {
-            SceneChange.themeID = 1; //Forest themeID = 1
-            SceneManager.LoadScene("ObjectStolen");
-        }
-        else if (buttonName == "Water")
-        {
-            SceneChange.themeID = 2; //Water themeID = 1
-            SceneManager.LoadScene("ObjectStolen");
-        }
-        else if(buttonName == "ThemeButton")
-        {
-            SceneManager.LoadScene("ThemeSelection");
-        }    
+        SceneManager.LoadScene("ThemeSelection");
     }
 
-    public void GoToIntro()
-    {
-        FindObjectOfType<AudioManager>().Play("Click");
-        SceneManager.LoadScene("IntroductionLevel");
-    }
-
+    /// <summary>Loads Player Selection Screen.</summary>
     public void GoToPlayers()
     {
         FindObjectOfType<AudioManager>().Play("Click");
         SceneManager.LoadScene("PlayerSelection");
     }
 
-    public void GoToPlayerStats()
-    {
-        FindObjectOfType<AudioManager>().Play("Click");
-        SceneManager.LoadScene("PlayerStats");
-    }
-
+    /// <summary>Loads Menu Screen.</summary>
     public void GoToMenu()
     {
         FindObjectOfType<AudioManager>().Play("Click");
         SceneManager.LoadScene("MenuScreen");
     }
+    /// <summary>Loads Reward Room Screen.</summary>
     public void GoToAchievements()
     {
 
@@ -134,6 +104,15 @@ public class ButtonScript : MonoBehaviour
         SceneManager.LoadScene("RewardsRoom");
     }
 
+    /// <summary>Loads Coloring Picture Frame Room Screen.</summary>
+    public void GoToFrameHall()
+    {
+
+        FindObjectOfType<AudioManager>().Play("Click");
+        SceneManager.LoadScene("Achievements");
+    }
+
+    /// <summary>Loads a Coloring picture screen based on which coloring picture was clicked.</summary>
     public void GoToColoringBook()
     {
         FindObjectOfType<AudioManager>().Play("Click");
@@ -150,110 +129,12 @@ public class ButtonScript : MonoBehaviour
         SceneManager.LoadScene("ColoringPage" + buttonName);
     }
 
-    //Player Management
-    public void SaveData()
-    {
-        DataManagerScript.AddSessionData();
-    }
-
-    public void SavePlayer()
-    {
-        FindObjectOfType<AudioManager>().Play("Click");
-
-        SaveSystem.Save();
-        SaveData();
-    }
-
-    public void AddPlayer()
-    {
-        FindObjectOfType<AudioManager>().Play("Click");
-        StartCoroutine( GameObject.Find("PlayerManager").GetComponent<PlayerManager>().CreatePlayer());
-    }
-
-   public void Submit()
-    {
-        Debug.Log("Submit new Player");
-        FindObjectOfType<AudioManager>().Play("Click");
-        PlayerManager.submitted = true;
-
-    }
-
-    public void PlayerSelectionDone()
-    {
-        FindObjectOfType<AudioManager>().Play("Click");
-
-        if (PlayerSlot.playerCount == 1)
-        {
-            string yellow = PlayerSlot.yellowSlotName;
-
-            SelectPlayer(0, yellow);
-            SelectPlayer(1, yellow);
-            SelectPlayer(2, yellow);
-
-            SceneManager.LoadScene("MenuScreen");
-            DataManagerScript.AddHeadings();
-
-        }
-        else if(PlayerSlot.playerCount == 3)
-        {
-            string red = PlayerSlot.redSlotName;
-            string yellow = PlayerSlot.yellowSlotName;
-            string blue = PlayerSlot.blueSlotName;
-
-            if (red != null && yellow != null && blue != null)
-            {
-                SelectPlayer(0, red);
-                SelectPlayer(1, yellow);
-                SelectPlayer(2, blue);
-
-                SceneManager.LoadScene("MenuScreen");
-                DataManagerScript.AddHeadings();
-
-            }
-            else
-            {
-                Debug.LogWarning("Select 3 Players.");
-            }
-        }
-        else
-        {
-            Debug.LogWarning("PlayerCount Error");
-        }
-
-    }
-
-    public void SetOnePlayer()
-    {
-        PlayerSlot.playerCount = 1;
-        GameObject.Find("Blue").GetComponent<SpriteRenderer>().enabled = false;
-        GameObject.Find("Red").GetComponent<SpriteRenderer>().enabled = false;
-        GameObject.Find("BlueSlot").GetComponent<Image>().enabled = false;
-        GameObject.Find("RedSlot").GetComponent<Image>().enabled = false;
-
-    }
-
-    public void SetThreePlayers()
-    {
-        PlayerSlot.playerCount = 3;
-        GameObject.Find("Blue").GetComponent<SpriteRenderer>().enabled = true;
-        GameObject.Find("Red").GetComponent<SpriteRenderer>().enabled = true;
-        GameObject.Find("BlueSlot").GetComponent<Image>().enabled = true;
-        GameObject.Find("RedSlot").GetComponent<Image>().enabled = true;
-    }
-
-    public void SelectPlayer (int playerArrayID, string name)
-    {
-        PlayerManager.players[playerArrayID] = new PlayerObject(name);
-        SaveSystem.LoadPlayer(name);
-    }
-
-    
     //Level Help
+    /// <summary>Shows help for coloring task.</summary>
     public void ColorHelp()
     {
-        hint = true;
+        Hint = true;
         FindObjectOfType<AudioManager>().Play("Click");
-        //Debug.Log("help");
         string color; 
 
         if(sceneName == "ObjectFound")
@@ -262,48 +143,56 @@ public class ButtonScript : MonoBehaviour
         }
         else
         {
-            color = taskColorScript.ColorToString(taskColor);
+            color = taskColorScript.ColorToString(TaskColor);
         }
-
         //Replace default sprites with bears holding wands
         if (color == "red")
         {
             animRed.SetTrigger("Active");
+            FindObjectOfType<AudioManager>().PlayNoOverlay("Red");
+           
         }
         else if (color == "yellow")
         {
             animYellow.SetTrigger("Active");
+            FindObjectOfType<AudioManager>().PlayNoOverlay("Yellow");
         }
         else if (color == "blue")
         {
             animBlue.SetTrigger("Active");
+
+            FindObjectOfType<AudioManager>().PlayNoOverlay("Blue");
         }
         else if (color == "green")
         {
             animBlue.SetTrigger("Active");
             animYellow.SetTrigger("Active");
+            FindObjectOfType<AudioManager>().PlayNoOverlay("Green");
+
         }
         else if (color == "orange")
         {
             animRed.SetTrigger("Active");
             animYellow.SetTrigger("Active");
+            FindObjectOfType<AudioManager>().PlayNoOverlay("Orange");
         }
         else if (color == "purple")
         {
             animRed.SetTrigger("Active");
             animBlue.SetTrigger("Active");
+            FindObjectOfType<AudioManager>().PlayNoOverlay("Purple");
         }
 
-        if (hint == true)
+        if (Hint)
         {
             this.GetComponent<Image>().enabled = false;
         }
-
     }
 
+    /// <summary>VSM help; displays an animated hand above the correct gameObject's position .</summary>
     public void VSMHelp()
     {
-        vsmhint = true;
+        VsmHint = true;
         GameObject hand = GameObject.Find("Hand");
         GameObject finger = GameObject.Find("Finger");
      
@@ -316,10 +205,24 @@ public class ButtonScript : MonoBehaviour
         hand.transform.position = new Vector3(xPos, 750, 0);
         anim.SetTrigger("Help");
 
-        if(vsmhint == true)
+        if(VsmHint)
         {
             this.GetComponent<Image>().enabled = false;
-        }
-         
+        } 
     }
+    /// <summary>Takes Screenshot of current scene.</summary>
+    public void Screenshot()
+    {
+        FindObjectOfType<AudioManager>().Play("Screenshot");
+        ScreenshotHandler.TakeScreenshot_Static(Screen.width, Screen.height);
+        StartCoroutine(ScreenshotDelay());
+    }
+
+    /// <summary>Takes Screenshot of current scene with a delay of one second.</summary>
+    private IEnumerator ScreenshotDelay()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("ThemeSelection");
+    }
+
 }

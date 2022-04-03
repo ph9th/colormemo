@@ -4,21 +4,19 @@ using UnityEngine;
 using System.IO;
 using UnityEngine.SceneManagement;
 
+/// <summary>Displays the reward collection (png file) for one player.</summary>
 public class RewardsRoomScript : MonoBehaviour
 {
-    GameObject bg;
     // Start is called before the first frame update
     void Start()
     {
-        bg = GameObject.Find("background");
+        GameObject bg = GameObject.Find("background");
         string screenshotPath = Application.persistentDataPath + "/Screenshots/";
 
-        if (File.Exists(screenshotPath + PlayerManager.players[1].name + "/" + "Rewards.jpg"))
+        if (File.Exists(screenshotPath + PlayerManager.Players[1].name + "/" + "Rewards.jpg"))
         {
-            Texture2D SpriteTexture = LoadImage(screenshotPath + PlayerManager.players[1].name + "/" + "Rewards.jpg");
+            Texture2D SpriteTexture = LoadImage(screenshotPath + PlayerManager.Players[1].name + "/" + "Rewards.jpg");
             Sprite bgSprite = Sprite.Create(SpriteTexture, new Rect(0, 0, SpriteTexture.width, SpriteTexture.height), new Vector2(0.5f, 0.5f));
-
-            //Debug.Log("texture: " + texture);
 
             bg.GetComponent<SpriteRenderer>().sprite = bgSprite;
         }

@@ -1,37 +1,33 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
+/// <summary>Handles animations and sprites of the VFCM task.</summary>
 public class FoundObjectScript : MonoBehaviour
 {
-    public static Sprite stolenObjSprite;
-
+    public static Sprite StolenObjSprite { get; set; }
 
     private void Awake()
     {
-        this.GetComponent<SpriteRenderer>().sprite = stolenObjSprite;
-        
+        this.GetComponent<SpriteRenderer>().sprite = StolenObjSprite;
     }
-    // Start is called before the first frame update
+
+    
     IEnumerator Start()
     {
+        //Play animation for evil character.
         if(this.name == "objectFound")
         {
             ResetCollider(this.gameObject);
-
             GameObject.Find("witch").GetComponent<Animator>().SetTrigger("Challenge");
             yield return new WaitForSeconds(1);
             GameObject.Find("witch").GetComponent<Animator>().ResetTrigger("Challenge");
             GameObject.Find("witch").GetComponent<Animator>().SetTrigger("Idle");
         }
-    
     }
 
     void ResetCollider(GameObject obj)
     {
         DestroyImmediate(obj.GetComponent<BoxCollider2D>());
-
         obj.AddComponent<BoxCollider2D>();
     }
 }

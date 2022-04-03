@@ -1,39 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class ColorTaskObject : MonoBehaviour
 {
-    
-    SpriteRenderer obj;
-    GameObject colorManager;
-    Color32 taskColor;
+    Color32 TaskColor;
 
     void Start()
     {
-        obj = GetComponent<SpriteRenderer>();
-        colorManager = GameObject.Find("ColorManager");
-        taskColor = colorManager.GetComponent<SetColor>().taskColor;
+        SpriteRenderer obj = GetComponent<SpriteRenderer>();
+        GameObject colorManager = GameObject.Find("ColorManager");
+        TaskColor = colorManager.GetComponent<SetColor>().TaskColor;
         ColorObj(obj);
 
         if (SceneManager.GetActiveScene().name == "ObjectStolen")
         {
-            StoredColors.stolenObj = taskColor;
+            //Get the color the players had to memorize.
+            StoredColors.stolenObj = TaskColor;
         }
     }
 
-
     /// <summary>
-    /// Color the object in the set task color.
+    /// Colors the object in the given task color.
     /// </summary>
-    /// <param name="obj"> object to be colored</param>
+    /// <param name="obj"> Object to be colored.</param>
     /// <returns></returns>
     void ColorObj(SpriteRenderer obj)
     {
-        obj.color = taskColor;
+        obj.color = TaskColor;
     }
 
-  
 }

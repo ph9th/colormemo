@@ -1,40 +1,34 @@
-using System.Collections;
-using System.IO;
-using System.Linq;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.UI;
 
-
+/// <summary>Contains method to choose and replace the sprite for the stolen object.</summary>
 public class StolenObjectScript : MonoBehaviour
 {
-    private Object[] textures;
-    private GameObject stolenObj;
     public static Sprite sprite;
+    /// <summary>The ID of the stolen object (= number of rewards collected).</summary>
+    /// <value>The stolen object ID.</value>
+    public static int StolenObjId { get; set; }
 
-    public static int stolenObjId;
-
+    /// <summary>Sets the sprite for the stolen object in the beginning scene of every iteration.</summary>
     void Start()
     {
-        //Get smallest stolenObjId among all players
-        stolenObjId = PlayerManager.players[0].stolenObjId;
+        //Get smallest StolenObjId among all Players
+        StolenObjId = PlayerManager.Players[0].StolenObjId;
 
         for (int i = 1; i < 3; i++)
         {
-            if (PlayerManager.players[i].stolenObjId < stolenObjId)
+            if (PlayerManager.Players[i].StolenObjId < StolenObjId)
             {
-                stolenObjId = PlayerManager.players[i].stolenObjId;
+                StolenObjId = PlayerManager.Players[i].StolenObjId;
             }
         }
-        Debug.Log("stolenObjId: " + stolenObjId);
 
         DataManagerScript.completedIterations = DataManagerScript.completedIterations + 1;
 
-        stolenObj = this.gameObject;
-        textures = Resources.LoadAll("Prefabs/VFCMObjects", typeof(Texture2D));
+        GameObject stolenObj = this.gameObject;
+        Object[] textures = Resources.LoadAll("Prefabs/VFCMObjects", typeof(Texture2D));
 
         // change texture
-        Texture2D texture = (Texture2D)textures[stolenObjId];
+        Texture2D texture = (Texture2D)textures[StolenObjId];
 
         sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
 
@@ -42,7 +36,7 @@ public class StolenObjectScript : MonoBehaviour
         stolenObj.GetComponent<SpriteRenderer>().sprite = sprite;
 
         //store sprite for VFCM Level
-        FoundObjectScript.stolenObjSprite = this.GetComponent<SpriteRenderer>().sprite;
+        FoundObjectScript.StolenObjSprite = this.GetComponent<SpriteRenderer>().sprite;
 
         
     }

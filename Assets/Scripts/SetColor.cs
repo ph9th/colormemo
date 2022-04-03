@@ -1,15 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
 
 public class SetColor : MonoBehaviour
 {
-    public Color taskColor;
-    Color[] colors = new Color[9];
-    public static Color32 repeatColor = new Color32(0, 0, 0, 255);
+    public Color TaskColor;
+    readonly Color[] colors = new Color[6];
 
     private void Awake()
     {
@@ -19,25 +14,20 @@ public class SetColor : MonoBehaviour
         colors[3] = new Color32(24, 196, 8, 255); //green
         colors[4] = new Color32(255, 154, 23, 255); //orange
         colors[5] = new Color32(181, 27, 242, 255); //purple
-        colors[6] = new Color32(48, 33, 0, 255); //brown
 
         setObjColor();
     }
 
-    private void Start()
-    {
-        
-       
-    }
     void setObjColor()
     {
-
-        taskColor = randomColor();
+        TaskColor = randomColor();
     }
 
+    /// <summary>Chooses random color.</summary>
+    /// <returns>The chosen color.<br /></returns>
     Color randomColor()
     {
-        //choose colors based on who the task is assigned to;
+        // choose colors based on who the task is assigned to
         // red can only paint red, orange, purple
         // yellow only yellow, green, orange
         Color[] colorList = new Color[3];
@@ -48,7 +38,6 @@ public class SetColor : MonoBehaviour
         prob[0] = 0.2f;
         prob[1] = 0.4f;
         prob[2] = 0.4f;
-        //prob[3] = 0.2f; //brown
 
         //Set colors according to which player's turn it is
         int assignedTo;
@@ -56,46 +45,37 @@ public class SetColor : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "ObjectStolen")
         {
             assignedTo = VFCMScript.vfcmTaskAssign;
-        } else
+        }
+        else
         {
-            assignedTo = ColorObject.colorTaskAssign;
+            assignedTo = ColorObject.ColorTaskAssign;
         }
 
         if (assignedTo == 0)
         {
-            Debug.Log("Red Turn");
             colorList[0] = colors[0];
             colorList[1] = colors[4];
             colorList[2] = colors[5];
-            //colorList[3] = colors[6]; //brown
 
         }
         else if (assignedTo == 1)
         {
-            Debug.Log("Yellow Turn");
             colorList[0] = colors[1];
             colorList[1] = colors[3];
             colorList[2] = colors[4];
-            //colorList[3] = colors[6]; //brown
         }
         else if (assignedTo == 2)
         {
-            Debug.Log("Blue Turn");
             colorList[0] = colors[2];
             colorList[1] = colors[3];
             colorList[2] = colors[5];
-            //colorList[3] = colors[6]; //brown
         }
 
         //choose color based on probability
         int c = (int)Choose(prob);
-
         return colorList[c];
-
-
     }
 
-    
     float Choose(float[] probs)
     {
         float total = 0;
@@ -118,12 +98,12 @@ public class SetColor : MonoBehaviour
                 randomPoint -= probs[i];
             }
         }
-       
         return probs.Length - 1;
     }
 
-
-
+    /// <summary>Return color as color name string.</summary>
+    /// <param name="color">The color.</param>
+    /// <returns>The color name as a string.</returns>
     public string ColorToString(Color color)
     {
         if (color.Equals(colors[0]))
@@ -159,5 +139,4 @@ public class SetColor : MonoBehaviour
             return "other color";
         }
     }
-
 }

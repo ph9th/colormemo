@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d3c6375e9c5d241b9ad76898a5e3ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskColor: {r: 0, g: 0, b: 0, a: 0}
+  TaskColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &544560179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -417,6 +417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1127784163}
   - component: {fileID: 1127784162}
+  - component: {fileID: 1127784164}
   m_Layer: 0
   m_Name: background
   m_TagString: Untagged
@@ -489,6 +490,18 @@ Transform:
   m_Father: {fileID: 599267029}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1127784164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127784161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8a4380852c51b40abcf38da3c257e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1132001595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -578,16 +591,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7172877930323076766, guid: 7b388bd8be88d194c992256af58ef3f6, type: 3}
       propertyPath: m_Size.x
-      value: 3.44
+      value: 4.56
       objectReference: {fileID: 0}
     - target: {fileID: 7172877930323076766, guid: 7b388bd8be88d194c992256af58ef3f6, type: 3}
       propertyPath: m_Size.y
-      value: 2.26
+      value: 3.02
       objectReference: {fileID: 0}
     - target: {fileID: 7172877930323076766, guid: 7b388bd8be88d194c992256af58ef3f6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: caf95e7518560dd47954daf7241423af, type: 3}
+      objectReference: {fileID: 21300000, guid: 226d1767d184f7d48886133d85c8a259, type: 3}
     - target: {fileID: 7172877930323076766, guid: 7b388bd8be88d194c992256af58ef3f6, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -645,7 +658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 407647475968380874, guid: 512e3d73666268b4c9dc5fce0dbbb3c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -415
+      value: -519
       objectReference: {fileID: 0}
     - target: {fileID: 407647475968380874, guid: 512e3d73666268b4c9dc5fce0dbbb3c3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -885,5 +898,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2349914526750163719, guid: 637543d207fe77d48abc0a4a1d7dc957, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 24cd444736637194683d5aa0da5a326c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 637543d207fe77d48abc0a4a1d7dc957, type: 3}

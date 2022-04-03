@@ -1,22 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
-using UnityEngine.Animations;
-
 public class PlayerSlot : MonoBehaviour, IDropHandler
 {
-    public static string redSlotName;
-    public static string yellowSlotName;
-    public static string blueSlotName;
+    public static string redSlotName { get; set; }
+    public static string yellowSlotName { get; set; }
+    public static string blueSlotName { get; set; }
+    public static int playerCount { get; set; }
 
-    public static int playerCount = 3;
+    private void Awake()
+    {
+        playerCount = 3;
+    }
 
-
+    /// <summary>Called when [drop].
+    /// Assigns players to a color (red, yellow, blue).</summary>
+    /// <param name="eventData">The event data.</param>
     public void OnDrop(PointerEventData eventData)
     {
- 
         if(eventData.pointerDrag != null)
         {
             eventData.pointerDrag.GetComponent<RectTransform>().position = GetComponent<RectTransform>().position;
@@ -41,5 +42,4 @@ public class PlayerSlot : MonoBehaviour, IDropHandler
         }
     }
 
- 
 }

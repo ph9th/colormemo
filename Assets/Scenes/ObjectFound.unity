@@ -319,7 +319,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 405565031}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -362, y: 139, z: 0}
+  m_LocalPosition: {x: -263, y: 63, z: 0}
   m_LocalScale: {x: 69.39378, y: 57.248974, z: 52.69443}
   m_Children:
   - {fileID: 1561326673}
@@ -351,7 +351,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 456135796}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -422,11 +422,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 407647475968380874, guid: 512e3d73666268b4c9dc5fce0dbbb3c3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1052
+      value: -966
       objectReference: {fileID: 0}
     - target: {fileID: 407647475968380874, guid: 512e3d73666268b4c9dc5fce0dbbb3c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -391
+      value: -487
       objectReference: {fileID: 0}
     - target: {fileID: 407647475968380874, guid: 512e3d73666268b4c9dc5fce0dbbb3c3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -806,6 +806,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1127784163}
   - component: {fileID: 1127784162}
+  - component: {fileID: 1127784164}
   m_Layer: 0
   m_Name: background
   m_TagString: Untagged
@@ -878,6 +879,18 @@ Transform:
   m_Father: {fileID: 599267029}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1127784164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127784161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8a4380852c51b40abcf38da3c257e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1138988208
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1092,7 +1105,7 @@ SpriteRenderer:
   m_Size: {x: 5.51, y: 6.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1561326673
@@ -1145,7 +1158,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886223870}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -1293,7 +1306,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950885577}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1

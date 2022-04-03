@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System;
 
 
 public class ColorObject : MonoBehaviour
@@ -16,39 +12,29 @@ public class ColorObject : MonoBehaviour
     SceneChange SceneChanger;
     float timer;
     Color32 lastTryColor = new Color(0,0,0,255);
-    public static int colorTaskAssign = 0;
+    public static int ColorTaskAssign { get; set; }
     int tryCounter;
     bool witchGone = false;
 
     void Start()
     {
-        //Debug.Log("assigned to: " + colorTaskAssign);
-        // 
         obj = GetComponent<SpriteRenderer>();
         colorManager = GameObject.Find("ColorManager");
-        SceneChanger = GameObject.Find("SceneManager").GetComponent<SceneChange>();
-        
+        SceneChanger = GameObject.Find("SceneManager").GetComponent<SceneChange>();   
         taskColorScript = colorManager.GetComponent<SetColor>();
-
-        curTaskColor = taskColorScript.taskColor;
+        curTaskColor = taskColorScript.TaskColor;
         tryCounter = 0;
-
-        
     }
 
     void Update()
     {
         ColorThisObject(obj);
-
         timer += Time.deltaTime;
-     
-
-
     }
 
 
     /// <summary>
-    /// color object if there is touch input
+    /// Colors object on touch input.
     /// </summary>
     /// <param name="obj"></param>
     void ColorThisObject(SpriteRenderer obj)
@@ -59,31 +45,26 @@ public class ColorObject : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit) && hit.collider != null)
             {
-                if (hit.collider != null)
+                FindObjectOfType<AudioManager>().Play("Magic");
+                obj.color = penColor; //color object with pen color
+
+                //Increase try counter for every new coloring try
+                if (!CompareColors(penColor, lastTryColor))
                 {
-                    FindObjectOfType<AudioManager>().Play("Magic");
-                    obj.color = penColor; //color object with pen color
-
-                    //Increase try counter for every new coloring try
-                    if (!CompareColors(penColor, lastTryColor))
-                    {
-                        tryCounter++;
-                    }
-                    lastTryColor = obj.color; //store used color to check if equal to the color of next touch input
-
-                    if (SceneManager.GetActiveScene().name == "ObjectFound")
-                    {
-                        CheckObjFoundColor();
-                    }
-                    else
-                    {
-                        CheckColor();
-                    }
+                    tryCounter++;
                 }
-            }
-            
+                lastTryColor = obj.color; //store used color to check if equal to the color of next touch input
+                if (SceneManager.GetActiveScene().name == "ObjectFound")
+                {
+                    CheckObjFoundColor();
+                }
+                else
+                {
+                    CheckColor();
+                }   
+            }  
         }
     }
 
@@ -107,21 +88,20 @@ public class ColorObject : MonoBehaviour
     }
 
     /// <summary>
-    /// Check only for Level 'Object Found' if the color is correct.
+    /// Checks only for Scene 'Object Found' (VFCM task) if the color is correct.
     /// </summary>
     /// <returns></returns>
     void CheckObjFoundColor()
     {
         if (CompareColors(penColor, StoredColors.stolenObj))
         {
-
             FindObjectOfType<AudioManager>().PlayNoOverlay("WellDone");
-            //Debug.Log("GOOD! Stolen Object was this color!");
 
             //store data
             float timeSuccess = timer;
-            int maxLevel = SceneChange.maxLevel;
-            DataManagerScript.AddVFCData(VFCMScript.vfcmTaskAssign, tryCounter, taskColorScript.ColorToString(StoredColors.stolenObj), timeSuccess, maxLevel, ButtonScript.hint);
+            int MaxLevel = SceneChange.MaxLevel;
+            bool hint = ButtonScript.Hint;
+            DataManagerScript.AddVFCData(VFCMScript.vfcmTaskAssign, tryCounter, taskColorScript.ColorToString(StoredColors.stolenObj), timeSuccess, MaxLevel, hint);
 
             //assign next vfcm task to next player
             if (VFCMScript.vfcmTaskAssign < 2)
@@ -132,124 +112,94 @@ public class ColorObject : MonoBehaviour
             {
                 VFCMScript.vfcmTaskAssign = 0;
             }
-
-            PlayerManager.players[VFCMScript.vfcmTaskAssign].maxLevel = maxLevel;
-
+            PlayerManager.Players[VFCMScript.vfcmTaskAssign].MaxLevel = MaxLevel;
             GameObject.Find("witch").GetComponent<Animator>().ResetTrigger("Fly");
-
-            if (witchGone == false)
+            if (!witchGone)
             {
                 FindObjectOfType<AudioManager>().PlayNoOverlay("WitchBeBack");
             }
             GameObject.Find("witch").GetComponent<Animator>().SetTrigger("Correct");
 
-            //if no error was made, number of levels will increase in the next iteration
-            if (SceneChange.error == false)
+
+            //if no Error was made in both vsm and vfcm level, number of levels will increase in the next iteration
+            if (!SceneChange.Error)
             {
-                SceneChange.maxLevel++;
-                StolenObjectScript.stolenObjId++;
-                //Debug.Log("stolenObjId++: " + StolenObjectScript.stolenObjId);
+                SceneChange.MaxLevel++;
+                StolenObjectScript.StolenObjId++;
 
                 //Update values for each player
                 for(int i = 0; i<3; i++)
                 {
-                    if(StolenObjectScript.stolenObjId > PlayerManager.players[i].stolenObjId)
+                    if(StolenObjectScript.StolenObjId > PlayerManager.Players[i].StolenObjId)
                     {
-                        PlayerManager.players[i].stolenObjId = StolenObjectScript.stolenObjId;
+                        PlayerManager.Players[i].StolenObjId = StolenObjectScript.StolenObjId;
                     }
 
                 }
 
-                if (!(tryCounter > 1))
+                if (tryCounter <= 1)
                 {
                     StartCoroutine(SceneChanger.LoadDelay("Rewards", 3));
                 }
             }
             else
             {
-                if (SceneChange.maxLevel > 2)
+                if (SceneChange.MaxLevel > 2)
                 {
-                    SceneChange.maxLevel--;
+                    SceneChange.MaxLevel--; 
                 }
                 StartCoroutine(SceneChanger.LoadDelay("ThemeSelection", 3));
             }
-
         }
-        //decrease number of levels
+        //decrease number of levels if error made
         else
         {
-            SceneChange.error = true;
-           
-
-            if (witchGone == false)
-            {
-                FindObjectOfType<AudioManager>().PlayNoOverlay("WitchBeBack");
-                GameObject.Find("witch").GetComponent<Animator>().ResetTrigger("Fly");
-                GameObject.Find("witch").GetComponent<Animator>().SetTrigger("Error");
-                FindObjectOfType<AudioManager>().PlayDelay("Wrong", 2);
-                witchGone = true;
-            }
-            else
-            {
-                FindObjectOfType<AudioManager>().PlayNoOverlay("Wrong");
-            }
-            
-            //Debug.Log("Stolen Object was not this color!");
+            SceneChange.Error = true;
+            FindObjectOfType<AudioManager>().PlayNoOverlay("Wrong");
         }
     }
 
 
     /// <summary>
-    /// Check if the color is correct. If yes, record data in DataManager and Load next level.
+    /// Checks if the color is correct. If yes, records data in DataManager and loads next level.
     /// </summary>
     /// <returns></returns>
     void CheckColor()
     {
         //correct color
-        if (CompareColors(penColor, taskColorScript.taskColor))
+        if (CompareColors(penColor, taskColorScript.TaskColor))
         {
-            if (!CharacterScript.success)
+            if (!CharacterScript.Success)
             {
-                
-
                 FindObjectOfType<AudioManager>().PlayNoOverlay("Super");
-                //Debug.Log("CORRECT COLOR!");
-
-                SceneChange.levelCount++;
+                SceneChange.LevelCount++;
                 SceneChange.SetOrder();
-                CharacterScript.success = true;
+                CharacterScript.Success = true;
+                bool hint = ButtonScript.Hint;
 
                 //record color data in Data manager
-                int levelID = SceneManager.GetActiveScene().buildIndex;
                 float timeSuccess = timer;
-                DataManagerScript.AddColorData(colorTaskAssign, tryCounter, taskColorScript.ColorToString(curTaskColor), timeSuccess, ButtonScript.hint);
+                DataManagerScript.AddColorData(ColorTaskAssign, tryCounter, taskColorScript.ColorToString(curTaskColor), timeSuccess, hint);
 
-                //assign next level to next avatar
-                if (colorTaskAssign < 2)
+                //assign next level to next player
+                if (ColorTaskAssign < 2)
                 {
-                    colorTaskAssign++;
+                    ColorTaskAssign++;
                 }
                 else
                 {
-                    colorTaskAssign = 0;
+                    ColorTaskAssign = 0;
                 }
-
-                PlayerManager.IncreaseColorCount(colorTaskAssign, taskColorScript.ColorToString(curTaskColor), 1, 0);
-
+                PlayerManager.IncreaseColorCount(ColorTaskAssign, taskColorScript.ColorToString(curTaskColor), 1, 0);
                 //load next level
                 StartCoroutine(SceneChanger.LoadLevel());
+                //StartCoroutine( SceneChanger.LoadDelay("TransitionScene", 1));
             }
-            
-
         }
         else
         {
-            //SetColor.repeatColor = taskColorScript.taskColor;
-
-            PlayerManager.IncreaseColorCount(colorTaskAssign, taskColorScript.ColorToString(curTaskColor), 1, 1);
-
+            PlayerManager.IncreaseColorCount(ColorTaskAssign, taskColorScript.ColorToString(curTaskColor), 1, 1);
             FindObjectOfType<AudioManager>().PlayNoOverlay("Wrong");
-            //Debug.Log("WRONG COLOR!");
         }
     }
 

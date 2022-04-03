@@ -6,25 +6,24 @@ using UnityEngine.UI;
 using TMPro;
 using System.IO;
 
+/// <summary>Contains methods for managing players.</summary>
 public class PlayerManager : MonoBehaviour
 {
-     GameObject buttonPrefab;
-     GameObject Content;
+    GameObject buttonPrefab;
+    GameObject Content;
+    GameObject panel;
+    TMP_InputField inputField;
     List<string> names;
-
     int x = 400;
     int y = 900;
     int counter = 0;
-
-     TMP_InputField inputField;
     [HideInInspector]
-    public static bool submitted = false;
-     GameObject panel;
+    public static bool Submitted { get; set; }
 
+    /// <summary>Gets or sets the Players array.</summary>
+    /// <value>The Players array.</value>
+    public static PlayerObject[] Players { get; set; }  //index 0: red bear, index 1: yellow bear, index 2: blue bear
 
-    public static PlayerObject[] players = new PlayerObject[3] ; //index 0: red bear, index 1: yellow bear, index 2: blue bear
-
-    // Start is called before the first frame update
     private void Awake()
     {
         //load prefabs
@@ -32,19 +31,19 @@ public class PlayerManager : MonoBehaviour
         Content = GameObject.Find("Content");
         panel = GameObject.Find("Panel");
         inputField = panel.GetComponentInChildren<TMP_InputField>();
-
-        //PlayerInitalise();
-
         names = new List<string>();
         names = ReadNames(names);
     }
     void Start()
     {
+        Submitted = false;
+        Players = new PlayerObject[3];
         panel.SetActive(false);
         DisplayNames(names);
     }
 
-
+    /// <summary>Displays the existing player names.</summary>
+    /// <param name="names">The names.</param>
     void DisplayNames(List<string> names)
     {
         
@@ -55,10 +54,10 @@ public class PlayerManager : MonoBehaviour
             button.transform.position = new Vector3(x, y, -5);
             button.GetComponentInChildren<TextMeshProUGUI>().text = name;
             
-            y = y - 150;
+            y -= 150;
             if(counter == 3)
             {
-                x = x + 500;
+                x += 500;
                 y = 800;
                 counter = 0;
             }
@@ -69,22 +68,25 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    /// <summary>Reads the player names from the text file.</summary>
+    /// <param name="names">The names.</param>
+    /// <returns>
+    ///   <br />
+    /// </returns>
+    /// <exception cref="System.ApplicationException">Data Error:</exception>
     List<string> ReadNames(List<string> names)
     {
         int counter = 0;
-
         try
         {
             if (!File.Exists(Application.persistentDataPath + "/playerNames.txt"))
             {
-                File.CreateText(Application.persistentDataPath + "/playerNames.txt"); 
+                File.CreateText(Application.persistentDataPath + "/playerNames.txt").Close(); 
             }
-
             // Read the file and display it line by line.  
             foreach (string line in System.IO.File.ReadLines(Application.persistentDataPath + "/playerNames.txt"))
             {
                 System.Console.WriteLine(line);
-
                 names.Add(line);
                 counter++;
             }
@@ -95,37 +97,33 @@ public class PlayerManager : MonoBehaviour
         }
         catch (Exception ex)
         {
-            throw new System.ApplicationException("Data error:", ex);
+            throw new ApplicationException("Data Error:", ex);
         }
     }
 
+    /// <summary>Creates a new player.</summary>
+    /// <exception cref="System.ApplicationException">Data Error:</exception>
     public IEnumerator CreatePlayer()
     {
         panel.SetActive(true);
-
-
         yield return new WaitForSeconds(2);
-
-        while (!submitted)
+        while (!Submitted)
         {
             yield return null;
         }
-
-        submitted = false;
+        Submitted = false;
         string name = inputField.text;
         GameObject.Find("Panel").SetActive(false);
 
-
         try
         {
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath + "/playerNames.txt", true))
-            {
-                file.WriteLine(name);
-            }
+            using System.IO.StreamWriter file = new System.IO.StreamWriter(Application.persistentDataPath + "/playerNames.txt", true);
+            file.WriteLine(name);
+            file.Close();
         }
         catch (Exception ex)
         {
-            throw new System.ApplicationException("Data error:", ex);
+            throw new ApplicationException("Data Error:", ex);
         }
 
         GameObject button = Instantiate(buttonPrefab);
@@ -133,10 +131,11 @@ public class PlayerManager : MonoBehaviour
         button.transform.position = new Vector3(x, y, -5);
         button.GetComponentInChildren<TextMeshProUGUI>().text = name;
 
-        y = y - 150;
+        // Adds the new name button to the current name button list.
+        y -= 150;
         if (counter == 3)
         {
-            x = x + 500;
+            x += 500;
             y = 800;
             counter = 0;
         }
@@ -144,38 +143,34 @@ public class PlayerManager : MonoBehaviour
         {
             counter++;
         }
-
     }
 
-
-    public static void IncreaseColorCount(int assigned, string color, int counter, int error)
+    /// <summary>Calculates color error count (for green, orange, purple).</summary>
+    /// <param name="assigned">The player who made the mistake.</param>
+    /// <param name="color">The color.</param>
+    /// <param name="counter">The counter.</param>
+    /// <param name="Error">The error.</param>
+    public static void IncreaseColorCount(int assigned, string color, int counter, int Error)
     {
-        PlayerObject player = players[assigned];
+        PlayerObject player = Players[assigned];
 
         switch (color)
         {
             case "green":
                 player.green[0] = player.green[0] + counter;
-                player.green[1] = player.green[1] + error;
+                player.green[1] = player.green[1] + Error;
                 player.green[2] = player.green[1] / player.green[0];
                 break;
             case "orange":
                 player.orange[0] = player.orange[0] + counter;
-                player.orange[1] = player.orange[1] + error;
+                player.orange[1] = player.orange[1] + Error;
                 player.orange[2] = player.orange[1] / player.orange[0];
                 break;
             case "purple":
                 player.purple[0] = player.purple[0] + counter;
-                player.purple[1] = player.purple[1] + error;
+                player.purple[1] = player.purple[1] + Error;
                 player.purple[2] = player.purple[1] / player.purple[0];
                 break;
         }
     }
-
-
-
-
-
-
-
 }

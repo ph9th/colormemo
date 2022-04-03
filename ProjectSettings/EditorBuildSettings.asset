@@ -21,17 +21,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Achievements.unity
     guid: 3bbef026ff8b02c4796ae0e8ab5eabb9
   - enabled: 1
-    path: Assets/Scenes/IntroductionLevel.unity
-    guid: f0b14e8506bf0f542be15b72c18f283e
-  - enabled: 1
     path: Assets/Scenes/ObjectStolen.unity
     guid: c308e9d8721d92d4db5257f0db9e534d
   - enabled: 1
     path: Assets/Scenes/VSMLevel.unity
     guid: 76f04597ad9bcda4cbf7d5a64026a33f
-  - enabled: 0
-    path: Assets/Scenes/VCMLevel.unity
-    guid: 2c1a06f20a55db44688377ed289fefe8
   - enabled: 1
     path: Assets/Scenes/ObjectFound.unity
     guid: 60290818d446e704880a5fe1c46057d3
@@ -65,9 +59,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Amusement2Level.unity
     guid: 88053a00afdb0094cac189db1bc5fdde
-  - enabled: 1
-    path: Assets/Scenes/HouseLevel.unity
-    guid: 96b13cd80c64fb24b8b2673b44c74ee8
   - enabled: 1
     path: Assets/Scenes/ButterflyLevel.unity
     guid: 3c11c47f4da225b48a79d8413ce5bfe0
@@ -120,12 +111,75 @@ EditorBuildSettings:
     path: Assets/Scenes/CoralLevel.unity
     guid: a23f706486f5b9448aa436d7562400da
   - enabled: 1
-    path: Assets/Scenes/PlayerStats.unity
-    guid: 7850da18538dbea48a17ccc31274e5f4
+    path: Assets/Scenes/ShuttleLevel.unity
+    guid: ab35d333525cc474b94f2139d25eb865
+  - enabled: 1
+    path: Assets/Scenes/UfoLevel.unity
+    guid: dd1449e591c58074999b0ec650163752
+  - enabled: 1
+    path: Assets/Scenes/StarLevel.unity
+    guid: 30c32464583102b49a338a58ef86cffb
+  - enabled: 1
+    path: Assets/Scenes/CometLevel.unity
+    guid: eb61a1f5dc7c7a94babc2d8861ae599c
+  - enabled: 1
+    path: Assets/Scenes/SaturnLevel.unity
+    guid: fcc13ee5345b1bf4588558ccab8d83d9
+  - enabled: 1
+    path: Assets/Scenes/SantaLevel.unity
+    guid: 74499d972803b7246b011f41f8e4a1c5
+  - enabled: 1
+    path: Assets/Scenes/PolarLevel.unity
+    guid: caef3802c7f041c4aaef45e6577ae338
+  - enabled: 1
+    path: Assets/Scenes/PenguinLevel.unity
+    guid: dde589959f25b0d478cbfce27f2cde7a
+  - enabled: 1
+    path: Assets/Scenes/InuitLevel.unity
+    guid: 91a94709c4b43ae4994cb68107dcf248
+  - enabled: 1
+    path: Assets/Scenes/SnowmanLevel.unity
+    guid: 1b7020723a6a19e40aac26acfa0c60c6
   - enabled: 1
     path: Assets/Scenes/Rewards.unity
     guid: 9ca849a3cf3e5904f8826fe3d5cb4bbc
   - enabled: 1
     path: Assets/Scenes/RewardsRoom.unity
     guid: 4a0d8c3466bb9954ea2635d0937f48a9
+  - enabled: 1
+    path: Assets/Scenes/TransitionScene.unity
+    guid: 9cbe9e1c30d988b4ba5f99c660d63d46
+  - enabled: 1
+    path: Assets/Scenes/ColoringPage01.unity
+    guid: 949943e8fe5ca844c8913595bf3ade4d
+  - enabled: 1
+    path: Assets/Scenes/ColoringPage02.unity
+    guid: 22a1ab7e52883a54f9734a276c0159d6
+  - enabled: 1
+    path: Assets/Scenes/ColoringPage03.unity
+    guid: ba45ca979988a6747b10ec6381b328d6
+  - enabled: 1
+    path: Assets/Scenes/ColoringPage04.unity
+    guid: 3cd3392be0ee4514ba6bccc54b80abcc
+  - enabled: 1
+    path: Assets/Scenes/ColoringPage05.unity
+    guid: ba214da7ea808b64da96c84ea13739a9
+  - enabled: 1
+    path: Assets/Scenes/ColoringPage06.unity
+    guid: 5433c8909edb8d043820f287de75ce9d
+  - enabled: 1
+    path: Assets/Scenes/ColoringPage07.unity
+    guid: 2aac763f3e39ce34394024e49ee375c1
+  - enabled: 1
+    path: Assets/Scenes/ColoringPage08.unity
+    guid: 24b6a4e2f6f56bd4f98f90891b2f2cee
+  - enabled: 1
+    path: Assets/Scenes/ColoringPage09.unity
+    guid: 71b30429825a4024e85c39a0073a296f
+  - enabled: 1
+    path: Assets/Scenes/ColoringPage10.unity
+    guid: 2f55b35ccd2c50f4e8b81de48196af02
+  - enabled: 1
+    path: Assets/Scenes/ColoringPage11.unity
+    guid: 7829db3b229bf044980f008b1dc7004e
   m_configObjects: {}

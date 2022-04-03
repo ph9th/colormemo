@@ -1,23 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System;
 
+/// <summary>Contains methods handling the VSM task.</summary>
 public class VSMPlayScript : MonoBehaviour
 {
-    public static int orderCounter = 0; //
-    SceneChange SceneChanger;
-
+    public static int orderCounter { get; set; }
     float timer;
 
     // Start is called before the first frame update
     void Start()
     {
-        SceneChanger = GameObject.Find("SceneManager").GetComponent<SceneChange>();
         orderCounter = 0;
-
-        
     }
 
     // Update is called once per frame
@@ -27,16 +20,14 @@ public class VSMPlayScript : MonoBehaviour
     }
 
     /// <summary>
-    /// Remove last x characters from given string
+    /// Removes last x characters from given string.
     /// </summary>
-    /// <param name="stringToTrim">String to be trimmed</param>
-    /// <param name="x"> Number of characters to remove</param>
-    /// <returns>Trimmed string</returns>
+    /// <param name="stringToTrim">String to be trimmed.</param>
+    /// <param name="x"> Number of characters to remove.</param>
+    /// <returns>Trimmed string.</returns>
     public string TrimString (string stringToTrim, int x)
     {
         return stringToTrim.Substring(0, stringToTrim.Length - x);
-    
-     
     }
 
     //select sprite on mouse click
@@ -44,19 +35,16 @@ public class VSMPlayScript : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("Magic");
         if (TrimString(this.gameObject.name, 7 ) == TrimString(VSMScript.levelOrder[orderCounter], 5))
-        {
-            //Debug.Log("order correct");
-            
+        { 
             GameObject.Find("Finger").GetComponent<SpriteRenderer>().enabled = false;
             FindObjectOfType<AudioManager>().PlayNoOverlay("RightAnswer");
             orderCounter = orderCounter + 1;
             this.gameObject.SetActive(false);
-
-            
+            bool hint = ButtonScript.Hint;
 
             if (orderCounter == VSMScript.levelOrder.Count)
             {
-                DataManagerScript.AddVSMData(VSMScript.vsmTaskAssign, VSMScript.errorCounter, timer, SceneChange.maxLevel, ButtonScript.hint);
+                DataManagerScript.AddVSMData(VSMScript.vsmTaskAssign, VSMScript.ErrorCounter, timer, SceneChange.MaxLevel, hint);
                 //assign next task to next color
                 if (VSMScript.vsmTaskAssign < 2)
                 {
@@ -66,21 +54,18 @@ public class VSMPlayScript : MonoBehaviour
                 {
                     VSMScript.vsmTaskAssign = 0;
                 }
-
                 SceneManager.LoadScene("ObjectFound");
-            } else
+            }
+            else
             {
                 FindObjectOfType<AudioManager>().PlayNoOverlay("WhoNext");
-            }
-            
-            
-        } else
+            }   
+        }
+        else
         {
-            VSMScript.errorCounter++;
-            SceneChange.error = true;
+            VSMScript.ErrorCounter++;
+            SceneChange.Error = true;
             FindObjectOfType<AudioManager>().PlayNoOverlay("SomeoneElse");
         }
-
     }
-
 }
