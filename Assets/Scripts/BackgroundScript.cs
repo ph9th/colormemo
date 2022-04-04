@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>Handles the changes of background images.</summary>
 public class BackgroundScript : MonoBehaviour
 {
 

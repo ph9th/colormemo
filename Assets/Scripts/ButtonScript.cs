@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+/// <summary>Contains methods for UI buttons.</summary>
 public class ButtonScript : MonoBehaviour
 {
     Animator animRed;

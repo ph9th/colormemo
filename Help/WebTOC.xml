@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="b4e29396-b7c9-41cd-aa23-8629bbd4e67d" Title="global Namespace" Url="html/N-global.htm">
+    <HelpTOCNode Id="e0bde19d-635b-48d3-be04-835ae88f56b7" Title="AudioManager Class" Url="html/T-global.AudioManager.htm">
+      <HelpTOCNode Title="AudioManager Members" Url="html/AllMembers.T-global.AudioManager.htm" />
+      <HelpTOCNode Id="1d21e5fa-c246-487e-b353-79ed2447c5be" Title="AudioManager Fields" Url="html/Fields.T-global.AudioManager.htm">
+        <HelpTOCNode Title="instance Field" Url="html/F-global.AudioManager.instance.htm" />
+        <HelpTOCNode Title="mixerGroup Field" Url="html/F-global.AudioManager.mixerGroup.htm" />
+        <HelpTOCNode Title="sounds Field" Url="html/F-global.AudioManager.sounds.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="ea8e7a7b-9682-459a-94a9-b478dc06cfcc" Title="AudioManager Methods" Url="html/Methods.T-global.AudioManager.htm">
+        <HelpTOCNode Title="IsPlaying Method " Url="html/M-global.AudioManager.IsPlaying.htm" />
+        <HelpTOCNode Title="Mute Method " Url="html/M-global.AudioManager.Mute.htm" />
+        <HelpTOCNode Title="Pause Method " Url="html/M-global.AudioManager.Pause.htm" />
+        <HelpTOCNode Title="PauseAll Method " Url="html/M-global.AudioManager.PauseAll.htm" />
+        <HelpTOCNode Title="Play Method " Url="html/M-global.AudioManager.Play.htm" />
+        <HelpTOCNode Title="PlayDelay Method " Url="html/M-global.AudioManager.PlayDelay.htm" />
+        <HelpTOCNode Title="PlayNoOverlay Method " Url="html/M-global.AudioManager.PlayNoOverlay.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="AudioManager Properties" Url="html/Properties.T-global.AudioManager.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="f6f4ec4f-a438-4bd2-82d6-cb60d71bb596" Title="BackgroundScript Class" Url="html/T-global.BackgroundScript.htm">
+      <HelpTOCNode Title="BackgroundScript Members" Url="html/AllMembers.T-global.BackgroundScript.htm" />
+      <HelpTOCNode Title="BackgroundScript Methods" Url="html/Methods.T-global.BackgroundScript.htm" />
+      <HelpTOCNode Title="BackgroundScript Properties" Url="html/Properties.T-global.BackgroundScript.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="f25ca5d1-36e3-4a65-9c8c-15ff5e14be2d" Title="BearScript Class" Url="html/T-global.BearScript.htm">
+      <HelpTOCNode Title="BearScript Members" Url="html/AllMembers.T-global.BearScript.htm" />
+      <HelpTOCNode Title="BearScript Methods" Url="html/Methods.T-global.BearScript.htm" />
+      <HelpTOCNode Title="BearScript Properties" Url="html/Properties.T-global.BearScript.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="f62984f8-ac8d-4992-9655-5b468780400e" Title="ButtonScript Class" Url="html/T-global.ButtonScript.htm">
+      <HelpTOCNode Title="ButtonScript Members" Url="html/AllMembers.T-global.ButtonScript.htm" />
+      <HelpTOCNode Id="832537b6-8170-412d-8033-5074f2334b93" Title="ButtonScript Methods" Url="html/Methods.T-global.ButtonScript.htm">
+        <HelpTOCNode Title="ColorHelp Method " Url="html/M-global.ButtonScript.ColorHelp.htm" />
+        <HelpTOCNode Title="GoToAchievements Method " Url="html/M-global.ButtonScript.GoToAchievements.htm" />
+        <HelpTOCNode Title="GoToColoringBook Method " Url="html/M-global.ButtonScript.GoToColoringBook.htm" />
+        <HelpTOCNode Title="GoToFrameHall Method " Url="html/M-global.ButtonScript.GoToFrameHall.htm" />
+        <HelpTOCNode Title="GoToMenu Method " Url="html/M-global.ButtonScript.GoToMenu.htm" />
+        <HelpTOCNode Title="GoToPlayers Method " Url="html/M-global.ButtonScript.GoToPlayers.htm" />
+        <HelpTOCNode Title="LoadStart Method " Url="html/M-global.ButtonScript.LoadStart.htm" />
+        <HelpTOCNode Title="Quit Method " Url="html/M-global.ButtonScript.Quit.htm" />
+        <HelpTOCNode Title="Screenshot Method " Url="html/M-global.ButtonScript.Screenshot.htm" />
+        <HelpTOCNode Title="SetTheme Method " Url="html/M-global.ButtonScript.SetTheme.htm" />
+        <HelpTOCNode Title="VSMHelp Method " Url="html/M-global.ButtonScript.VSMHelp.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="2d63fe78-cea6-4ff9-a4f8-0d15c7f60173" Title="ButtonScript Properties" Url="html/Properties.T-global.ButtonScript.htm">
+        <HelpTOCNode Title="Hint Property " Url="html/P-global.ButtonScript.Hint.htm" />
+        <HelpTOCNode Title="VsmHint Property " Url="html/P-global.ButtonScript.VsmHint.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="2f4f6713-68ce-4ce6-b71b-c03d45f40a43" Title="CharacterScript Class" Url="html/T-global.CharacterScript.htm">
+      <HelpTOCNode Title="CharacterScript Members" Url="html/AllMembers.T-global.CharacterScript.htm" />
+      <HelpTOCNode Title="CharacterScript Methods" Url="html/Methods.T-global.CharacterScript.htm" />
+      <HelpTOCNode Id="d6cdbeeb-353b-46e7-aba6-e37b0b03c1d7" Title="CharacterScript Properties" Url="html/Properties.T-global.CharacterScript.htm">
+        <HelpTOCNode Title="Success Property " Url="html/P-global.CharacterScript.Success.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="76f19f30-c873-4911-8e93-13b309a628a6" Title="ColoringPageScript Class" Url="html/T-global.ColoringPageScript.htm">
+      <HelpTOCNode Title="ColoringPageScript Members" Url="html/AllMembers.T-global.ColoringPageScript.htm" />
+      <HelpTOCNode Title="ColoringPageScript Methods" Url="html/Methods.T-global.ColoringPageScript.htm" />
+      <HelpTOCNode Title="ColoringPageScript Properties" Url="html/Properties.T-global.ColoringPageScript.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="a907fa43-a641-42d0-93f0-94a2d21f124c" Title="ColorObject Class" Url="html/T-global.ColorObject.htm">
+      <HelpTOCNode Title="ColorObject Members" Url="html/AllMembers.T-global.ColorObject.htm" />
+      <HelpTOCNode Title="ColorObject Methods" Url="html/Methods.T-global.ColorObject.htm" />
+      <HelpTOCNode Id="c9d9d683-f8c8-428f-9c9f-bc6075005926" Title="ColorObject Properties" Url="html/Properties.T-global.ColorObject.htm">
+        <HelpTOCNode Title="ColorTaskAssign Property " Url="html/P-global.ColorObject.ColorTaskAssign.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="c2456fd6-e08d-42d5-9c13-77b7ddeb8850" Title="ColorTaskObject Class" Url="html/T-global.ColorTaskObject.htm">
+      <HelpTOCNode Title="ColorTaskObject Members" Url="html/AllMembers.T-global.ColorTaskObject.htm" />
+      <HelpTOCNode Title="ColorTaskObject Methods" Url="html/Methods.T-global.ColorTaskObject.htm" />
+      <HelpTOCNode Title="ColorTaskObject Properties" Url="html/Properties.T-global.ColorTaskObject.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="26b193e8-0ca9-4038-b226-c4771cecb4f9" Title="Constants Class" Url="html/T-global.Constants.htm">
+      <HelpTOCNode Title="Constants Members" Url="html/AllMembers.T-global.Constants.htm" />
+      <HelpTOCNode Id="8363d63f-b68a-4d3e-8dc4-9caad127deed" Title="Constants Fields" Url="html/Fields.T-global.Constants.htm">
+        <HelpTOCNode Title="arcticWorldEnd Field" Url="html/F-global.Constants.arcticWorldEnd.htm" />
+        <HelpTOCNode Title="arcticWorldStart Field" Url="html/F-global.Constants.arcticWorldStart.htm" />
+        <HelpTOCNode Title="forestWorldEnd Field" Url="html/F-global.Constants.forestWorldEnd.htm" />
+        <HelpTOCNode Title="forestWorldStart Field" Url="html/F-global.Constants.forestWorldStart.htm" />
+        <HelpTOCNode Title="humanWorldEnd Field" Url="html/F-global.Constants.humanWorldEnd.htm" />
+        <HelpTOCNode Title="humanWorldStart Field" Url="html/F-global.Constants.humanWorldStart.htm" />
+        <HelpTOCNode Title="sceneCount Field" Url="html/F-global.Constants.sceneCount.htm" />
+        <HelpTOCNode Title="spaceWorldEnd Field" Url="html/F-global.Constants.spaceWorldEnd.htm" />
+        <HelpTOCNode Title="spaceWorldStart Field" Url="html/F-global.Constants.spaceWorldStart.htm" />
+        <HelpTOCNode Title="vfcmLevel Field" Url="html/F-global.Constants.vfcmLevel.htm" />
+        <HelpTOCNode Title="waterWorldEnd Field" Url="html/F-global.Constants.waterWorldEnd.htm" />
+        <HelpTOCNode Title="waterWorldStart Field" Url="html/F-global.Constants.waterWorldStart.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Constants Methods" Url="html/Methods.T-global.Constants.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="2a5d1368-e4d5-48db-9f45-058577ced70b" Title="DataManagerScript Class" Url="html/T-global.DataManagerScript.htm">
+      <HelpTOCNode Title="DataManagerScript Members" Url="html/AllMembers.T-global.DataManagerScript.htm" />
+      <HelpTOCNode Id="93ec9d54-0513-4414-8dde-086522ef0b3d" Title="DataManagerScript Methods" Url="html/Methods.T-global.DataManagerScript.htm">
+        <HelpTOCNode Title="AddColorData Method " Url="html/M-global.DataManagerScript.AddColorData.htm" />
+        <HelpTOCNode Title="AddHeadings Method " Url="html/M-global.DataManagerScript.AddHeadings.htm" />
+        <HelpTOCNode Title="AddSessionData Method " Url="html/M-global.DataManagerScript.AddSessionData.htm" />
+        <HelpTOCNode Title="AddVFCData Method " Url="html/M-global.DataManagerScript.AddVFCData.htm" />
+        <HelpTOCNode Title="AddVSMData Method " Url="html/M-global.DataManagerScript.AddVSMData.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="340cdf1e-04de-4db2-94ff-09594164d243" Title="DataManagerScript Properties" Url="html/Properties.T-global.DataManagerScript.htm">
+        <HelpTOCNode Title="completedIterations Property " Url="html/P-global.DataManagerScript.completedIterations.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="0f4cc851-cc3c-451c-8f54-baf3c4822587" Title="DragDrop Class" Url="html/T-global.DragDrop.htm">
+      <HelpTOCNode Title="DragDrop Members" Url="html/AllMembers.T-global.DragDrop.htm" />
+      <HelpTOCNode Id="208a153f-e660-4a9b-a849-8d95d59f7b3b" Title="DragDrop Methods" Url="html/Methods.T-global.DragDrop.htm">
+        <HelpTOCNode Title="OnBeginDrag Method " Url="html/M-global.DragDrop.OnBeginDrag.htm" />
+        <HelpTOCNode Title="OnDrag Method " Url="html/M-global.DragDrop.OnDrag.htm" />
+        <HelpTOCNode Title="OnDrop Method " Url="html/M-global.DragDrop.OnDrop.htm" />
+        <HelpTOCNode Title="OnEndDrag Method " Url="html/M-global.DragDrop.OnEndDrag.htm" />
+        <HelpTOCNode Title="OnPointerDown Method " Url="html/M-global.DragDrop.OnPointerDown.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="DragDrop Properties" Url="html/Properties.T-global.DragDrop.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="31064147-ee58-4f46-9169-d618bc0839f9" Title="FileHandler Class" Url="html/T-global.FileHandler.htm">
+      <HelpTOCNode Title="FileHandler Members" Url="html/AllMembers.T-global.FileHandler.htm" />
+      <HelpTOCNode Id="e6f0e6dd-a320-43d9-b1e9-c60d791e3a72" Title="FileHandler Methods" Url="html/Methods.T-global.FileHandler.htm">
+        <HelpTOCNode Title="DeleteGameFiles Method " Url="html/M-global.FileHandler.DeleteGameFiles.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="FileHandler Properties" Url="html/Properties.T-global.FileHandler.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="59d24d14-4551-4de7-8eb4-48613ee0761a" Title="FoundObjectScript Class" Url="html/T-global.FoundObjectScript.htm">
+      <HelpTOCNode Title="FoundObjectScript Members" Url="html/AllMembers.T-global.FoundObjectScript.htm" />
+      <HelpTOCNode Title="FoundObjectScript Methods" Url="html/Methods.T-global.FoundObjectScript.htm" />
+      <HelpTOCNode Id="f72cba42-ddd8-43cc-bdcf-13a7a1fcb07c" Title="FoundObjectScript Properties" Url="html/Properties.T-global.FoundObjectScript.htm">
+        <HelpTOCNode Title="StolenObjSprite Property " Url="html/P-global.FoundObjectScript.StolenObjSprite.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="e003c709-bc08-4d87-87b2-2e087f9b20c5" Title="FramesScript Class" Url="html/T-global.FramesScript.htm">
+      <HelpTOCNode Title="FramesScript Members" Url="html/AllMembers.T-global.FramesScript.htm" />
+      <HelpTOCNode Title="FramesScript Methods" Url="html/Methods.T-global.FramesScript.htm" />
+      <HelpTOCNode Title="FramesScript Properties" Url="html/Properties.T-global.FramesScript.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="e7801367-8cbc-4dee-b72f-889327048d40" Title="GetColor Class" Url="html/T-global.GetColor.htm">
+      <HelpTOCNode Title="GetColor Members" Url="html/AllMembers.T-global.GetColor.htm" />
+      <HelpTOCNode Id="dd41f886-6494-445b-9da7-5fb316d04bae" Title="GetColor Fields" Url="html/Fields.T-global.GetColor.htm">
+        <HelpTOCNode Title="penColor Field" Url="html/F-global.GetColor.penColor.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="GetColor Methods" Url="html/Methods.T-global.GetColor.htm" />
+      <HelpTOCNode Id="82e2140d-89af-499e-b9ed-d4e0e3401013" Title="GetColor Properties" Url="html/Properties.T-global.GetColor.htm">
+        <HelpTOCNode Title="getURL Property " Url="html/P-global.GetColor.getURL.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="bad2e879-25b6-48bc-94da-7333bf74e61d" Title="PlayerManager Class" Url="html/T-global.PlayerManager.htm">
+      <HelpTOCNode Title="PlayerManager Members" Url="html/AllMembers.T-global.PlayerManager.htm" />
+      <HelpTOCNode Id="72f91f61-a04a-44f0-9fa1-8da02afe8ae0" Title="PlayerManager Methods" Url="html/Methods.T-global.PlayerManager.htm">
+        <HelpTOCNode Title="CreatePlayer Method " Url="html/M-global.PlayerManager.CreatePlayer.htm" />
+        <HelpTOCNode Title="IncreaseColorCount Method " Url="html/M-global.PlayerManager.IncreaseColorCount.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="d09868c3-c741-4e9c-a454-93780aca7c32" Title="PlayerManager Properties" Url="html/Properties.T-global.PlayerManager.htm">
+        <HelpTOCNode Title="Players Property " Url="html/P-global.PlayerManager.Players.htm" />
+        <HelpTOCNode Title="Submitted Property " Url="html/P-global.PlayerManager.Submitted.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="6a2aaecf-b398-410d-a191-43a593980914" Title="PlayerObject Class" Url="html/T-global.PlayerObject.htm">
+      <HelpTOCNode Title="PlayerObject Members" Url="html/AllMembers.T-global.PlayerObject.htm" />
+      <HelpTOCNode Title="PlayerObject Constructor " Url="html/M-global.PlayerObject.-ctor.htm" />
+      <HelpTOCNode Id="ce070afc-2d63-454c-a9a2-d46fe78d7a09" Title="PlayerObject Fields" Url="html/Fields.T-global.PlayerObject.htm">
+        <HelpTOCNode Title="green Field" Url="html/F-global.PlayerObject.green.htm" />
+        <HelpTOCNode Title="MaxLevel Field" Url="html/F-global.PlayerObject.MaxLevel.htm" />
+        <HelpTOCNode Title="name Field" Url="html/F-global.PlayerObject.name.htm" />
+        <HelpTOCNode Title="orange Field" Url="html/F-global.PlayerObject.orange.htm" />
+        <HelpTOCNode Title="purple Field" Url="html/F-global.PlayerObject.purple.htm" />
+        <HelpTOCNode Title="StolenObjId Field" Url="html/F-global.PlayerObject.StolenObjId.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="PlayerObject Methods" Url="html/Methods.T-global.PlayerObject.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="89ff829d-8068-4ad8-8ce6-5fbb44b7ed9d" Title="PlayerSelectionButtons Class" Url="html/T-global.PlayerSelectionButtons.htm">
+      <HelpTOCNode Title="PlayerSelectionButtons Members" Url="html/AllMembers.T-global.PlayerSelectionButtons.htm" />
+      <HelpTOCNode Id="9db998ae-76c2-4662-84ab-2a7228b8d2c8" Title="PlayerSelectionButtons Methods" Url="html/Methods.T-global.PlayerSelectionButtons.htm">
+        <HelpTOCNode Title="AddPlayer Method " Url="html/M-global.PlayerSelectionButtons.AddPlayer.htm" />
+        <HelpTOCNode Title="PlayerSelectionDone Method " Url="html/M-global.PlayerSelectionButtons.PlayerSelectionDone.htm" />
+        <HelpTOCNode Title="SaveData Method " Url="html/M-global.PlayerSelectionButtons.SaveData.htm" />
+        <HelpTOCNode Title="SavePlayer Method " Url="html/M-global.PlayerSelectionButtons.SavePlayer.htm" />
+        <HelpTOCNode Title="SelectPlayer Method " Url="html/M-global.PlayerSelectionButtons.SelectPlayer.htm" />
+        <HelpTOCNode Title="SetOnePlayer Method " Url="html/M-global.PlayerSelectionButtons.SetOnePlayer.htm" />
+        <HelpTOCNode Title="SetThreePlayers Method " Url="html/M-global.PlayerSelectionButtons.SetThreePlayers.htm" />
+        <HelpTOCNode Title="Submit Method " Url="html/M-global.PlayerSelectionButtons.Submit.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="PlayerSelectionButtons Properties" Url="html/Properties.T-global.PlayerSelectionButtons.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="d443b3e4-a77f-470c-92b1-85a2d54982da" Title="PlayerSlot Class" Url="html/T-global.PlayerSlot.htm">
+      <HelpTOCNode Title="PlayerSlot Members" Url="html/AllMembers.T-global.PlayerSlot.htm" />
+      <HelpTOCNode Id="282edf99-6cb7-460b-81e4-0a2c9f3b5c95" Title="PlayerSlot Methods" Url="html/Methods.T-global.PlayerSlot.htm">
+        <HelpTOCNode Title="OnDrop Method " Url="html/M-global.PlayerSlot.OnDrop.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="b876d0c9-f3fd-4145-b6c8-ca471e46540f" Title="PlayerSlot Properties" Url="html/Properties.T-global.PlayerSlot.htm">
+        <HelpTOCNode Title="blueSlotName Property " Url="html/P-global.PlayerSlot.blueSlotName.htm" />
+        <HelpTOCNode Title="playerCount Property " Url="html/P-global.PlayerSlot.playerCount.htm" />
+        <HelpTOCNode Title="redSlotName Property " Url="html/P-global.PlayerSlot.redSlotName.htm" />
+        <HelpTOCNode Title="yellowSlotName Property " Url="html/P-global.PlayerSlot.yellowSlotName.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="204ab0d5-fb8b-4a89-82d9-29b5f6cdba7e" Title="PlayerStatsScript Class" Url="html/T-global.PlayerStatsScript.htm">
+      <HelpTOCNode Title="PlayerStatsScript Members" Url="html/AllMembers.T-global.PlayerStatsScript.htm" />
+      <HelpTOCNode Id="ee484cd7-9725-473c-bbe0-7cd0286d4b01" Title="PlayerStatsScript Fields" Url="html/Fields.T-global.PlayerStatsScript.htm">
+        <HelpTOCNode Title="Player1 Field" Url="html/F-global.PlayerStatsScript.Player1.htm" />
+        <HelpTOCNode Title="Player2 Field" Url="html/F-global.PlayerStatsScript.Player2.htm" />
+        <HelpTOCNode Title="Player3 Field" Url="html/F-global.PlayerStatsScript.Player3.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="PlayerStatsScript Methods" Url="html/Methods.T-global.PlayerStatsScript.htm" />
+      <HelpTOCNode Title="PlayerStatsScript Properties" Url="html/Properties.T-global.PlayerStatsScript.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="1bf41316-5ab0-4f2c-b7cb-5e7ff6b25cbc" Title="RewardsRoomScript Class" Url="html/T-global.RewardsRoomScript.htm">
+      <HelpTOCNode Title="RewardsRoomScript Members" Url="html/AllMembers.T-global.RewardsRoomScript.htm" />
+      <HelpTOCNode Title="RewardsRoomScript Methods" Url="html/Methods.T-global.RewardsRoomScript.htm" />
+      <HelpTOCNode Title="RewardsRoomScript Properties" Url="html/Properties.T-global.RewardsRoomScript.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="d89d2a35-7d82-478a-acac-9dbf04877977" Title="RewardsScript Class" Url="html/T-global.RewardsScript.htm">
+      <HelpTOCNode Title="RewardsScript Members" Url="html/AllMembers.T-global.RewardsScript.htm" />
+      <HelpTOCNode Title="RewardsScript Methods" Url="html/Methods.T-global.RewardsScript.htm" />
+      <HelpTOCNode Title="RewardsScript Properties" Url="html/Properties.T-global.RewardsScript.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="c473f67a-827f-465c-9036-0b02f79638af" Title="SaveSystem Class" Url="html/T-global.SaveSystem.htm">
+      <HelpTOCNode Title="SaveSystem Members" Url="html/AllMembers.T-global.SaveSystem.htm" />
+      <HelpTOCNode Id="609df854-8225-4887-b68d-5a7f199a8b9b" Title="SaveSystem Fields" Url="html/Fields.T-global.SaveSystem.htm">
+        <HelpTOCNode Title="PLAYER_FOLDER Field" Url="html/F-global.SaveSystem.PLAYER_FOLDER.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="710a2672-4658-4903-b3ba-0759d10b1f32" Title="SaveSystem Methods" Url="html/Methods.T-global.SaveSystem.htm">
+        <HelpTOCNode Title="Init Method " Url="html/M-global.SaveSystem.Init.htm" />
+        <HelpTOCNode Title="LoadPlayer Method " Url="html/M-global.SaveSystem.LoadPlayer.htm" />
+        <HelpTOCNode Title="LoadSinglePlayer Method " Url="html/M-global.SaveSystem.LoadSinglePlayer.htm" />
+        <HelpTOCNode Title="Save Method " Url="html/M-global.SaveSystem.Save.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="dc756768-1875-4de3-9d98-92764dac60fa" Title="SceneChange Class" Url="html/T-global.SceneChange.htm">
+      <HelpTOCNode Title="SceneChange Members" Url="html/AllMembers.T-global.SceneChange.htm" />
+      <HelpTOCNode Id="66ab85a3-305f-4602-afe7-1d38b0b2a4b1" Title="SceneChange Methods" Url="html/Methods.T-global.SceneChange.htm">
+        <HelpTOCNode Title="InitialiseGame Method " Url="html/M-global.SceneChange.InitialiseGame.htm" />
+        <HelpTOCNode Title="LoadDelay Method " Url="html/M-global.SceneChange.LoadDelay.htm" />
+        <HelpTOCNode Title="LoadLevel Method " Url="html/M-global.SceneChange.LoadLevel.htm" />
+        <HelpTOCNode Title="SetOrder Method " Url="html/M-global.SceneChange.SetOrder.htm" />
+        <HelpTOCNode Title="Start Method " Url="html/M-global.SceneChange.Start.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="c300ed62-f0bc-4a2d-bced-078013795917" Title="SceneChange Properties" Url="html/Properties.T-global.SceneChange.htm">
+        <HelpTOCNode Title="BuildID Property " Url="html/P-global.SceneChange.BuildID.htm" />
+        <HelpTOCNode Title="CurPlayedLevels Property " Url="html/P-global.SceneChange.CurPlayedLevels.htm" />
+        <HelpTOCNode Title="Error Property " Url="html/P-global.SceneChange.Error.htm" />
+        <HelpTOCNode Title="LevelBool Property " Url="html/P-global.SceneChange.LevelBool.htm" />
+        <HelpTOCNode Title="LevelCount Property " Url="html/P-global.SceneChange.LevelCount.htm" />
+        <HelpTOCNode Title="MaxLevel Property " Url="html/P-global.SceneChange.MaxLevel.htm" />
+        <HelpTOCNode Title="ThemeID Property " Url="html/P-global.SceneChange.ThemeID.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="0e107c1f-c14a-4efe-885f-d1b2f2704c33" Title="ScreenshotHandler Class" Url="html/T-global.ScreenshotHandler.htm">
+      <HelpTOCNode Title="ScreenshotHandler Members" Url="html/AllMembers.T-global.ScreenshotHandler.htm" />
+      <HelpTOCNode Id="c558e540-20e8-46f3-844c-16a9389cf0c4" Title="ScreenshotHandler Methods" Url="html/Methods.T-global.ScreenshotHandler.htm">
+        <HelpTOCNode Title="TakeScreenshot_Static Method " Url="html/M-global.ScreenshotHandler.TakeScreenshot_Static.htm" />
+        <HelpTOCNode Title="TrimString Method " Url="html/M-global.ScreenshotHandler.TrimString.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="ScreenshotHandler Properties" Url="html/Properties.T-global.ScreenshotHandler.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="1cef6bce-a2e1-42b0-a1b1-f529c4b98e84" Title="SetColor Class" Url="html/T-global.SetColor.htm">
+      <HelpTOCNode Title="SetColor Members" Url="html/AllMembers.T-global.SetColor.htm" />
+      <HelpTOCNode Id="7164e2e4-043c-4446-8eac-5dadcceaab73" Title="SetColor Fields" Url="html/Fields.T-global.SetColor.htm">
+        <HelpTOCNode Title="TaskColor Field" Url="html/F-global.SetColor.TaskColor.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="b693f209-9a35-4059-8ada-803188a7effc" Title="SetColor Methods" Url="html/Methods.T-global.SetColor.htm">
+        <HelpTOCNode Title="ColorToString Method " Url="html/M-global.SetColor.ColorToString.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="SetColor Properties" Url="html/Properties.T-global.SetColor.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="7f81eeee-5ab9-4022-bf34-22e4bd109502" Title="SetUrlScript Class" Url="html/T-global.SetUrlScript.htm">
+      <HelpTOCNode Title="SetUrlScript Members" Url="html/AllMembers.T-global.SetUrlScript.htm" />
+      <HelpTOCNode Title="SetUrlScript Methods" Url="html/Methods.T-global.SetUrlScript.htm" />
+      <HelpTOCNode Title="SetUrlScript Properties" Url="html/Properties.T-global.SetUrlScript.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="9dbfdb0c-1147-4e75-951e-151067854f60" Title="Sound Class" Url="html/T-global.Sound.htm">
+      <HelpTOCNode Title="Sound Members" Url="html/AllMembers.T-global.Sound.htm" />
+      <HelpTOCNode Id="86d0ebe9-2351-46b0-a3fc-efe807c0502f" Title="Sound Fields" Url="html/Fields.T-global.Sound.htm">
+        <HelpTOCNode Title="clip Field" Url="html/F-global.Sound.clip.htm" />
+        <HelpTOCNode Title="loop Field" Url="html/F-global.Sound.loop.htm" />
+        <HelpTOCNode Title="mixerGroup Field" Url="html/F-global.Sound.mixerGroup.htm" />
+        <HelpTOCNode Title="name Field" Url="html/F-global.Sound.name.htm" />
+        <HelpTOCNode Title="source Field" Url="html/F-global.Sound.source.htm" />
+        <HelpTOCNode Title="volume Field" Url="html/F-global.Sound.volume.htm" />
+        <HelpTOCNode Title="volumeVariance Field" Url="html/F-global.Sound.volumeVariance.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Sound Methods" Url="html/Methods.T-global.Sound.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="1a280762-1c62-45a7-923f-43dff738078b" Title="StolenObjectScript Class" Url="html/T-global.StolenObjectScript.htm">
+      <HelpTOCNode Title="StolenObjectScript Members" Url="html/AllMembers.T-global.StolenObjectScript.htm" />
+      <HelpTOCNode Id="44a97bfe-d607-43c9-bf61-c50aaa057e86" Title="StolenObjectScript Fields" Url="html/Fields.T-global.StolenObjectScript.htm">
+        <HelpTOCNode Title="sprite Field" Url="html/F-global.StolenObjectScript.sprite.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="StolenObjectScript Methods" Url="html/Methods.T-global.StolenObjectScript.htm" />
+      <HelpTOCNode Id="bc75b2f0-9b59-4de3-8c30-d5d3cbe01312" Title="StolenObjectScript Properties" Url="html/Properties.T-global.StolenObjectScript.htm">
+        <HelpTOCNode Title="StolenObjId Property " Url="html/P-global.StolenObjectScript.StolenObjId.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="245be3d5-9bc7-41dd-a79a-540968c5ec64" Title="StoredColors Class" Url="html/T-global.StoredColors.htm">
+      <HelpTOCNode Title="StoredColors Members" Url="html/AllMembers.T-global.StoredColors.htm" />
+      <HelpTOCNode Title="StoredColors Methods" Url="html/Methods.T-global.StoredColors.htm" />
+      <HelpTOCNode Id="4df2e475-427b-4463-a999-7d4eb0303371" Title="StoredColors Properties" Url="html/Properties.T-global.StoredColors.htm">
+        <HelpTOCNode Title="stolenObj Property " Url="html/P-global.StoredColors.stolenObj.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="3bbe9d28-b867-41bc-a35a-5b8cac5fe25c" Title="TransitionScript Class" Url="html/T-global.TransitionScript.htm">
+      <HelpTOCNode Title="TransitionScript Members" Url="html/AllMembers.T-global.TransitionScript.htm" />
+      <HelpTOCNode Title="TransitionScript Methods" Url="html/Methods.T-global.TransitionScript.htm" />
+      <HelpTOCNode Title="TransitionScript Properties" Url="html/Properties.T-global.TransitionScript.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="8d4c9a2e-f334-4590-8a88-19705a6a9e5c" Title="VFCMScript Class" Url="html/T-global.VFCMScript.htm">
+      <HelpTOCNode Title="VFCMScript Members" Url="html/AllMembers.T-global.VFCMScript.htm" />
+      <HelpTOCNode Title="VFCMScript Methods" Url="html/Methods.T-global.VFCMScript.htm" />
+      <HelpTOCNode Id="5c734e02-185f-450b-91b9-68d6120a1bac" Title="VFCMScript Properties" Url="html/Properties.T-global.VFCMScript.htm">
+        <HelpTOCNode Title="vfcmTaskAssign Property " Url="html/P-global.VFCMScript.vfcmTaskAssign.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f1f1585e-62ed-419e-8081-e6ffde7547cc" Title="VSMPlayScript Class" Url="html/T-global.VSMPlayScript.htm">
+      <HelpTOCNode Title="VSMPlayScript Members" Url="html/AllMembers.T-global.VSMPlayScript.htm" />
+      <HelpTOCNode Id="604653ab-9343-47b7-af35-a0e06fc0d4a0" Title="VSMPlayScript Methods" Url="html/Methods.T-global.VSMPlayScript.htm">
+        <HelpTOCNode Title="TrimString Method " Url="html/M-global.VSMPlayScript.TrimString.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="aac07688-4722-440e-94b1-1c13369d9257" Title="VSMPlayScript Properties" Url="html/Properties.T-global.VSMPlayScript.htm">
+        <HelpTOCNode Title="orderCounter Property " Url="html/P-global.VSMPlayScript.orderCounter.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="e353f5ee-25f8-428d-958d-41feb7c14117" Title="VSMScript Class" Url="html/T-global.VSMScript.htm">
+      <HelpTOCNode Title="VSMScript Members" Url="html/AllMembers.T-global.VSMScript.htm" />
+      <HelpTOCNode Id="06b67262-4197-41ff-93f2-dcd1babcb053" Title="VSMScript Methods" Url="html/Methods.T-global.VSMScript.htm">
+        <HelpTOCNode Title="getRandomElement Method " Url="html/M-global.VSMScript.getRandomElement.htm" />
+        <HelpTOCNode Title="InstantiateCharacters Method " Url="html/M-global.VSMScript.InstantiateCharacters.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="5cef8b64-b873-4d68-9068-9a9c2d7c20aa" Title="VSMScript Properties" Url="html/Properties.T-global.VSMScript.htm">
+        <HelpTOCNode Title="characters Property " Url="html/P-global.VSMScript.characters.htm" />
+        <HelpTOCNode Title="ErrorCounter Property " Url="html/P-global.VSMScript.ErrorCounter.htm" />
+        <HelpTOCNode Title="levelOrder Property " Url="html/P-global.VSMScript.levelOrder.htm" />
+        <HelpTOCNode Title="vsmTaskAssign Property " Url="html/P-global.VSMScript.vsmTaskAssign.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

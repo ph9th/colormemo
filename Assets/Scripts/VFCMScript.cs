@@ -10,6 +10,7 @@ public class VFCMScript : MonoBehaviour
     /// <summary>Starts the audio clips for the VFCM task.</summary>
     void Start()
     {
+        ButtonScript.Hint = false;
         StartCoroutine(FindObjectOfType<AudioManager>().PlayDelay("WitchChallenge", 2));
         //Assign task to a player
         if (vfcmTaskAssign == 0)

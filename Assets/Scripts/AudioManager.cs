@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
+/// <summary>Contains methods to manage audio/sounds in the game.</summary>
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;

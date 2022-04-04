@@ -1,5 +1,6 @@
 using UnityEngine;
 
+/// <summary>Handles the touch inputs for coloring pictures.</summary>
 public class ColoringPageScript : MonoBehaviour
 {
     SpriteRenderer obj;

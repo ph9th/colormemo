@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+
+  <HelpKINode Title="AddColorData method" Url="html/M-global.DataManagerScript.AddColorData.htm" />
+  <HelpKINode Title="AddHeadings method" Url="html/M-global.DataManagerScript.AddHeadings.htm" />
+  <HelpKINode Title="AddPlayer method" Url="html/M-global.PlayerSelectionButtons.AddPlayer.htm" />
+  <HelpKINode Title="AddSessionData method" Url="html/M-global.DataManagerScript.AddSessionData.htm" />
+  <HelpKINode Title="AddVFCData method" Url="html/M-global.DataManagerScript.AddVFCData.htm" />
+  <HelpKINode Title="AddVSMData method" Url="html/M-global.DataManagerScript.AddVSMData.htm" />
+  <HelpKINode Title="arcticWorldEnd field" Url="html/F-global.Constants.arcticWorldEnd.htm" />
+  <HelpKINode Title="arcticWorldStart field" Url="html/F-global.Constants.arcticWorldStart.htm" />
+  <HelpKINode Title="AudioManager class" Url="html/AllMembers.T-global.AudioManager.htm" />
+  <HelpKINode Title="AudioManager class" Url="html/T-global.AudioManager.htm" />
+  <HelpKINode Title="AudioManager class">
+    <HelpKINode Title="about AudioManager class" Url="html/T-global.AudioManager.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.AudioManager.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.AudioManager.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.AudioManager.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.AudioManager.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AudioManager.instance field" Url="html/F-global.AudioManager.instance.htm" />
+  <HelpKINode Title="AudioManager.IsPlaying method" Url="html/M-global.AudioManager.IsPlaying.htm" />
+  <HelpKINode Title="AudioManager.mixerGroup field" Url="html/F-global.AudioManager.mixerGroup.htm" />
+  <HelpKINode Title="AudioManager.Mute method" Url="html/M-global.AudioManager.Mute.htm" />
+  <HelpKINode Title="AudioManager.Pause method" Url="html/M-global.AudioManager.Pause.htm" />
+  <HelpKINode Title="AudioManager.PauseAll method" Url="html/M-global.AudioManager.PauseAll.htm" />
+  <HelpKINode Title="AudioManager.Play method" Url="html/M-global.AudioManager.Play.htm" />
+  <HelpKINode Title="AudioManager.PlayDelay method" Url="html/M-global.AudioManager.PlayDelay.htm" />
+  <HelpKINode Title="AudioManager.PlayNoOverlay method" Url="html/M-global.AudioManager.PlayNoOverlay.htm" />
+  <HelpKINode Title="AudioManager.sounds field" Url="html/F-global.AudioManager.sounds.htm" />
+  <HelpKINode Title="BackgroundScript class" Url="html/AllMembers.T-global.BackgroundScript.htm" />
+  <HelpKINode Title="BackgroundScript class" Url="html/T-global.BackgroundScript.htm" />
+  <HelpKINode Title="BackgroundScript class">
+    <HelpKINode Title="about BackgroundScript class" Url="html/T-global.BackgroundScript.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.BackgroundScript.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.BackgroundScript.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.BackgroundScript.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BearScript class" Url="html/AllMembers.T-global.BearScript.htm" />
+  <HelpKINode Title="BearScript class" Url="html/T-global.BearScript.htm" />
+  <HelpKINode Title="BearScript class">
+    <HelpKINode Title="about BearScript class" Url="html/T-global.BearScript.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.BearScript.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.BearScript.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.BearScript.htm" />
+  </HelpKINode>
+  <HelpKINode Title="blueSlotName property" Url="html/P-global.PlayerSlot.blueSlotName.htm" />
+  <HelpKINode Title="BuildID property" Url="html/P-global.SceneChange.BuildID.htm" />
+  <HelpKINode Title="ButtonScript class" Url="html/AllMembers.T-global.ButtonScript.htm" />
+  <HelpKINode Title="ButtonScript class" Url="html/T-global.ButtonScript.htm" />
+  <HelpKINode Title="ButtonScript class">
+    <HelpKINode Title="about ButtonScript class" Url="html/T-global.ButtonScript.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.ButtonScript.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.ButtonScript.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.ButtonScript.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ButtonScript.ColorHelp method" Url="html/M-global.ButtonScript.ColorHelp.htm" />
+  <HelpKINode Title="ButtonScript.GoToAchievements method" Url="html/M-global.ButtonScript.GoToAchievements.htm" />
+  <HelpKINode Title="ButtonScript.GoToColoringBook method" Url="html/M-global.ButtonScript.GoToColoringBook.htm" />
+  <HelpKINode Title="ButtonScript.GoToFrameHall method" Url="html/M-global.ButtonScript.GoToFrameHall.htm" />
+  <HelpKINode Title="ButtonScript.GoToMenu method" Url="html/M-global.ButtonScript.GoToMenu.htm" />
+  <HelpKINode Title="ButtonScript.GoToPlayers method" Url="html/M-global.ButtonScript.GoToPlayers.htm" />
+  <HelpKINode Title="ButtonScript.Hint property" Url="html/P-global.ButtonScript.Hint.htm" />
+  <HelpKINode Title="ButtonScript.LoadStart method" Url="html/M-global.ButtonScript.LoadStart.htm" />
+  <HelpKINode Title="ButtonScript.Quit method" Url="html/M-global.ButtonScript.Quit.htm" />
+  <HelpKINode Title="ButtonScript.Screenshot method" Url="html/M-global.ButtonScript.Screenshot.htm" />
+  <HelpKINode Title="ButtonScript.SetTheme method" Url="html/M-global.ButtonScript.SetTheme.htm" />
+  <HelpKINode Title="ButtonScript.VSMHelp method" Url="html/M-global.ButtonScript.VSMHelp.htm" />
+  <HelpKINode Title="ButtonScript.VsmHint property" Url="html/P-global.ButtonScript.VsmHint.htm" />
+  <HelpKINode Title="characters property" Url="html/P-global.VSMScript.characters.htm" />
+  <HelpKINode Title="CharacterScript class" Url="html/AllMembers.T-global.CharacterScript.htm" />
+  <HelpKINode Title="CharacterScript class" Url="html/T-global.CharacterScript.htm" />
+  <HelpKINode Title="CharacterScript class">
+    <HelpKINode Title="about CharacterScript class" Url="html/T-global.CharacterScript.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.CharacterScript.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.CharacterScript.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.CharacterScript.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CharacterScript.Success property" Url="html/P-global.CharacterScript.Success.htm" />
+  <HelpKINode Title="clip field" Url="html/F-global.Sound.clip.htm" />
+  <HelpKINode Title="ColorHelp method" Url="html/M-global.ButtonScript.ColorHelp.htm" />
+  <HelpKINode Title="ColoringPageScript class" Url="html/AllMembers.T-global.ColoringPageScript.htm" />
+  <HelpKINode Title="ColoringPageScript class" Url="html/T-global.ColoringPageScript.htm" />
+  <HelpKINode Title="ColoringPageScript class">
+    <HelpKINode Title="about ColoringPageScript class" Url="html/T-global.ColoringPageScript.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.ColoringPageScript.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.ColoringPageScript.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.ColoringPageScript.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ColorObject class" Url="html/AllMembers.T-global.ColorObject.htm" />
+  <HelpKINode Title="ColorObject class" Url="html/T-global.ColorObject.htm" />
+  <HelpKINode Title="ColorObject class">
+    <HelpKINode Title="about ColorObject class" Url="html/T-global.ColorObject.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.ColorObject.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.ColorObject.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.ColorObject.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ColorObject.ColorTaskAssign property" Url="html/P-global.ColorObject.ColorTaskAssign.htm" />
+  <HelpKINode Title="ColorTaskAssign property" Url="html/P-global.ColorObject.ColorTaskAssign.htm" />
+  <HelpKINode Title="ColorTaskObject class" Url="html/AllMembers.T-global.ColorTaskObject.htm" />
+  <HelpKINode Title="ColorTaskObject class" Url="html/T-global.ColorTaskObject.htm" />
+  <HelpKINode Title="ColorTaskObject class">
+    <HelpKINode Title="about ColorTaskObject class" Url="html/T-global.ColorTaskObject.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.ColorTaskObject.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.ColorTaskObject.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.ColorTaskObject.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ColorToString method" Url="html/M-global.SetColor.ColorToString.htm" />
+  <HelpKINode Title="completedIterations property" Url="html/P-global.DataManagerScript.completedIterations.htm" />
+  <HelpKINode Title="Constants class" Url="html/AllMembers.T-global.Constants.htm" />
+  <HelpKINode Title="Constants class" Url="html/T-global.Constants.htm" />
+  <HelpKINode Title="Constants class">
+    <HelpKINode Title="about Constants class" Url="html/T-global.Constants.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.Constants.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.Constants.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.Constants.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Constants.arcticWorldEnd field" Url="html/F-global.Constants.arcticWorldEnd.htm" />
+  <HelpKINode Title="Constants.arcticWorldStart field" Url="html/F-global.Constants.arcticWorldStart.htm" />
+  <HelpKINode Title="Constants.forestWorldEnd field" Url="html/F-global.Constants.forestWorldEnd.htm" />
+  <HelpKINode Title="Constants.forestWorldStart field" Url="html/F-global.Constants.forestWorldStart.htm" />
+  <HelpKINode Title="Constants.humanWorldEnd field" Url="html/F-global.Constants.humanWorldEnd.htm" />
+  <HelpKINode Title="Constants.humanWorldStart field" Url="html/F-global.Constants.humanWorldStart.htm" />
+  <HelpKINode Title="Constants.sceneCount field" Url="html/F-global.Constants.sceneCount.htm" />
+  <HelpKINode Title="Constants.spaceWorldEnd field" Url="html/F-global.Constants.spaceWorldEnd.htm" />
+  <HelpKINode Title="Constants.spaceWorldStart field" Url="html/F-global.Constants.spaceWorldStart.htm" />
+  <HelpKINode Title="Constants.vfcmLevel field" Url="html/F-global.Constants.vfcmLevel.htm" />
+  <HelpKINode Title="Constants.waterWorldEnd field" Url="html/F-global.Constants.waterWorldEnd.htm" />
+  <HelpKINode Title="Constants.waterWorldStart field" Url="html/F-global.Constants.waterWorldStart.htm" />
+  <HelpKINode Title="CreatePlayer method" Url="html/M-global.PlayerManager.CreatePlayer.htm" />
+  <HelpKINode Title="CurPlayedLevels property" Url="html/P-global.SceneChange.CurPlayedLevels.htm" />
+  <HelpKINode Title="DataManagerScript class" Url="html/AllMembers.T-global.DataManagerScript.htm" />
+  <HelpKINode Title="DataManagerScript class" Url="html/T-global.DataManagerScript.htm" />
+  <HelpKINode Title="DataManagerScript class">
+    <HelpKINode Title="about DataManagerScript class" Url="html/T-global.DataManagerScript.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.DataManagerScript.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.DataManagerScript.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.DataManagerScript.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DataManagerScript.AddColorData method" Url="html/M-global.DataManagerScript.AddColorData.htm" />
+  <HelpKINode Title="DataManagerScript.AddHeadings method" Url="html/M-global.DataManagerScript.AddHeadings.htm" />
+  <HelpKINode Title="DataManagerScript.AddSessionData method" Url="html/M-global.DataManagerScript.AddSessionData.htm" />
+  <HelpKINode Title="DataManagerScript.AddVFCData method" Url="html/M-global.DataManagerScript.AddVFCData.htm" />
+  <HelpKINode Title="DataManagerScript.AddVSMData method" Url="html/M-global.DataManagerScript.AddVSMData.htm" />
+  <HelpKINode Title="DataManagerScript.completedIterations property" Url="html/P-global.DataManagerScript.completedIterations.htm" />
+  <HelpKINode Title="DeleteGameFiles method" Url="html/M-global.FileHandler.DeleteGameFiles.htm" />
+  <HelpKINode Title="DragDrop class" Url="html/AllMembers.T-global.DragDrop.htm" />
+  <HelpKINode Title="DragDrop class" Url="html/T-global.DragDrop.htm" />
+  <HelpKINode Title="DragDrop class">
+    <HelpKINode Title="about DragDrop class" Url="html/T-global.DragDrop.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.DragDrop.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.DragDrop.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.DragDrop.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DragDrop.OnBeginDrag method" Url="html/M-global.DragDrop.OnBeginDrag.htm" />
+  <HelpKINode Title="DragDrop.OnDrag method" Url="html/M-global.DragDrop.OnDrag.htm" />
+  <HelpKINode Title="DragDrop.OnDrop method" Url="html/M-global.DragDrop.OnDrop.htm" />
+  <HelpKINode Title="DragDrop.OnEndDrag method" Url="html/M-global.DragDrop.OnEndDrag.htm" />
+  <HelpKINode Title="DragDrop.OnPointerDown method" Url="html/M-global.DragDrop.OnPointerDown.htm" />
+  <HelpKINode Title="Error property" Url="html/P-global.SceneChange.Error.htm" />
+  <HelpKINode Title="ErrorCounter property" Url="html/P-global.VSMScript.ErrorCounter.htm" />
+  <HelpKINode Title="FileHandler class" Url="html/AllMembers.T-global.FileHandler.htm" />
+  <HelpKINode Title="FileHandler class" Url="html/T-global.FileHandler.htm" />
+  <HelpKINode Title="FileHandler class">
+    <HelpKINode Title="about FileHandler class" Url="html/T-global.FileHandler.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.FileHandler.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.FileHandler.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.FileHandler.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FileHandler.DeleteGameFiles method" Url="html/M-global.FileHandler.DeleteGameFiles.htm" />
+  <HelpKINode Title="forestWorldEnd field" Url="html/F-global.Constants.forestWorldEnd.htm" />
+  <HelpKINode Title="forestWorldStart field" Url="html/F-global.Constants.forestWorldStart.htm" />
+  <HelpKINode Title="FoundObjectScript class" Url="html/AllMembers.T-global.FoundObjectScript.htm" />
+  <HelpKINode Title="FoundObjectScript class" Url="html/T-global.FoundObjectScript.htm" />
+  <HelpKINode Title="FoundObjectScript class">
+    <HelpKINode Title="about FoundObjectScript class" Url="html/T-global.FoundObjectScript.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.FoundObjectScript.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.FoundObjectScript.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.FoundObjectScript.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FoundObjectScript.StolenObjSprite property" Url="html/P-global.FoundObjectScript.StolenObjSprite.htm" />
+  <HelpKINode Title="FramesScript class" Url="html/AllMembers.T-global.FramesScript.htm" />
+  <HelpKINode Title="FramesScript class" Url="html/T-global.FramesScript.htm" />
+  <HelpKINode Title="FramesScript class">
+    <HelpKINode Title="about FramesScript class" Url="html/T-global.FramesScript.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.FramesScript.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.FramesScript.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.FramesScript.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetColor class" Url="html/AllMembers.T-global.GetColor.htm" />
+  <HelpKINode Title="GetColor class" Url="html/T-global.GetColor.htm" />
+  <HelpKINode Title="GetColor class">
+    <HelpKINode Title="about GetColor class" Url="html/T-global.GetColor.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.GetColor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.GetColor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.GetColor.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.GetColor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetColor.getURL property" Url="html/P-global.GetColor.getURL.htm" />
+  <HelpKINode Title="GetColor.penColor field" Url="html/F-global.GetColor.penColor.htm" />
+  <HelpKINode Title="getRandomElement method" Url="html/M-global.VSMScript.getRandomElement.htm" />
+  <HelpKINode Title="getURL property" Url="html/P-global.GetColor.getURL.htm" />
+  <HelpKINode Title="global namespace" Url="html/N-global.htm" />
+  <HelpKINode Title="global.AudioManager class" Url="html/AllMembers.T-global.AudioManager.htm" />
+  <HelpKINode Title="global.AudioManager class" Url="html/T-global.AudioManager.htm" />
+  <HelpKINode Title="global.BackgroundScript class" Url="html/AllMembers.T-global.BackgroundScript.htm" />
+  <HelpKINode Title="global.BackgroundScript class" Url="html/T-global.BackgroundScript.htm" />
+  <HelpKINode Title="global.BearScript class" Url="html/AllMembers.T-global.BearScript.htm" />
+  <HelpKINode Title="global.BearScript class" Url="html/T-global.BearScript.htm" />
+  <HelpKINode Title="global.ButtonScript class" Url="html/AllMembers.T-global.ButtonScript.htm" />
+  <HelpKINode Title="global.ButtonScript class" Url="html/T-global.ButtonScript.htm" />
+  <HelpKINode Title="global.CharacterScript class" Url="html/AllMembers.T-global.CharacterScript.htm" />
+  <HelpKINode Title="global.CharacterScript class" Url="html/T-global.CharacterScript.htm" />
+  <HelpKINode Title="global.ColoringPageScript class" Url="html/AllMembers.T-global.ColoringPageScript.htm" />
+  <HelpKINode Title="global.ColoringPageScript class" Url="html/T-global.ColoringPageScript.htm" />
+  <HelpKINode Title="global.ColorObject class" Url="html/AllMembers.T-global.ColorObject.htm" />
+  <HelpKINode Title="global.ColorObject class" Url="html/T-global.ColorObject.htm" />
+  <HelpKINode Title="global.ColorTaskObject class" Url="html/AllMembers.T-global.ColorTaskObject.htm" />
+  <HelpKINode Title="global.ColorTaskObject class" Url="html/T-global.ColorTaskObject.htm" />
+  <HelpKINode Title="global.Constants class" Url="html/AllMembers.T-global.Constants.htm" />
+  <HelpKINode Title="global.Constants class" Url="html/T-global.Constants.htm" />
+  <HelpKINode Title="global.DataManagerScript class" Url="html/AllMembers.T-global.DataManagerScript.htm" />
+  <HelpKINode Title="global.DataManagerScript class" Url="html/T-global.DataManagerScript.htm" />
+  <HelpKINode Title="global.DragDrop class" Url="html/AllMembers.T-global.DragDrop.htm" />
+  <HelpKINode Title="global.DragDrop class" Url="html/T-global.DragDrop.htm" />
+  <HelpKINode Title="global.FileHandler class" Url="html/AllMembers.T-global.FileHandler.htm" />
+  <HelpKINode Title="global.FileHandler class" Url="html/T-global.FileHandler.htm" />
+  <HelpKINode Title="global.FoundObjectScript class" Url="html/AllMembers.T-global.FoundObjectScript.htm" />
+  <HelpKINode Title="global.FoundObjectScript class" Url="html/T-global.FoundObjectScript.htm" />
+  <HelpKINode Title="global.FramesScript class" Url="html/AllMembers.T-global.FramesScript.htm" />
+  <HelpKINode Title="global.FramesScript class" Url="html/T-global.FramesScript.htm" />
+  <HelpKINode Title="global.GetColor class" Url="html/AllMembers.T-global.GetColor.htm" />
+  <HelpKINode Title="global.GetColor class" Url="html/T-global.GetColor.htm" />
+  <HelpKINode Title="global.PlayerManager class" Url="html/AllMembers.T-global.PlayerManager.htm" />
+  <HelpKINode Title="global.PlayerManager class" Url="html/T-global.PlayerManager.htm" />
+  <HelpKINode Title="global.PlayerObject class" Url="html/AllMembers.T-global.PlayerObject.htm" />
+  <HelpKINode Title="global.PlayerObject class" Url="html/T-global.PlayerObject.htm" />
+  <HelpKINode Title="global.PlayerSelectionButtons class" Url="html/AllMembers.T-global.PlayerSelectionButtons.htm" />
+  <HelpKINode Title="global.PlayerSelectionButtons class" Url="html/T-global.PlayerSelectionButtons.htm" />
+  <HelpKINode Title="global.PlayerSlot class" Url="html/AllMembers.T-global.PlayerSlot.htm" />
+  <HelpKINode Title="global.PlayerSlot class" Url="html/T-global.PlayerSlot.htm" />
+  <HelpKINode Title="global.PlayerStatsScript class" Url="html/AllMembers.T-global.PlayerStatsScript.htm" />
+  <HelpKINode Title="global.PlayerStatsScript class" Url="html/T-global.PlayerStatsScript.htm" />
+  <HelpKINode Title="global.RewardsRoomScript class" Url="html/AllMembers.T-global.RewardsRoomScript.htm" />
+  <HelpKINode Title="global.RewardsRoomScript class" Url="html/T-global.RewardsRoomScript.htm" />
+  <HelpKINode Title="global.RewardsScript class" Url="html/AllMembers.T-global.RewardsScript.htm" />
+  <HelpKINode Title="global.RewardsScript class" Url="html/T-global.RewardsScript.htm" />
+  <HelpKINode Title="global.SaveSystem class" Url="html/AllMembers.T-global.SaveSystem.htm" />
+  <HelpKINode Title="global.SaveSystem class" Url="html/T-global.SaveSystem.htm" />
+  <HelpKINode Title="global.SceneChange class" Url="html/AllMembers.T-global.SceneChange.htm" />
+  <HelpKINode Title="global.SceneChange class" Url="html/T-global.SceneChange.htm" />
+  <HelpKINode Title="global.ScreenshotHandler class" Url="html/AllMembers.T-global.ScreenshotHandler.htm" />
+  <HelpKINode Title="global.ScreenshotHandler class" Url="html/T-global.ScreenshotHandler.htm" />
+  <HelpKINode Title="global.SetColor class" Url="html/AllMembers.T-global.SetColor.htm" />
+  <HelpKINode Title="global.SetColor class" Url="html/T-global.SetColor.htm" />
+  <HelpKINode Title="global.SetUrlScript class" Url="html/AllMembers.T-global.SetUrlScript.htm" />
+  <HelpKINode Title="global.SetUrlScript class" Url="html/T-global.SetUrlScript.htm" />
+  <HelpKINode Title="global.Sound class" Url="html/AllMembers.T-global.Sound.htm" />
+  <HelpKINode Title="global.Sound class" Url="html/T-global.Sound.htm" />
+  <HelpKINode Title="global.StolenObjectScript class" Url="html/AllMembers.T-global.StolenObjectScript.htm" />
+  <HelpKINode Title="global.StolenObjectScript class" Url="html/T-global.StolenObjectScript.htm" />
+  <HelpKINode Title="global.StoredColors class" Url="html/AllMembers.T-global.StoredColors.htm" />
+  <HelpKINode Title="global.StoredColors class" Url="html/T-global.StoredColors.htm" />
+  <HelpKINode Title="global.TransitionScript class" Url="html/AllMembers.T-global.TransitionScript.htm" />
+  <HelpKINode Title="global.TransitionScript class" Url="html/T-global.TransitionScript.htm" />
+  <HelpKINode Title="global.VFCMScript class" Url="html/AllMembers.T-global.VFCMScript.htm" />
+  <HelpKINode Title="global.VFCMScript class" Url="html/T-global.VFCMScript.htm" />
+  <HelpKINode Title="global.VSMPlayScript class" Url="html/AllMembers.T-global.VSMPlayScript.htm" />
+  <HelpKINode Title="global.VSMPlayScript class" Url="html/T-global.VSMPlayScript.htm" />
+  <HelpKINode Title="global.VSMScript class" Url="html/AllMembers.T-global.VSMScript.htm" />
+  <HelpKINode Title="global.VSMScript class" Url="html/T-global.VSMScript.htm" />
+  <HelpKINode Title="GoToAchievements method" Url="html/M-global.ButtonScript.GoToAchievements.htm" />
+  <HelpKINode Title="GoToColoringBook method" Url="html/M-global.ButtonScript.GoToColoringBook.htm" />
+  <HelpKINode Title="GoToFrameHall method" Url="html/M-global.ButtonScript.GoToFrameHall.htm" />
+  <HelpKINode Title="GoToMenu method" Url="html/M-global.ButtonScript.GoToMenu.htm" />
+  <HelpKINode Title="GoToPlayers method" Url="html/M-global.ButtonScript.GoToPlayers.htm" />
+  <HelpKINode Title="green field" Url="html/F-global.PlayerObject.green.htm" />
+  <HelpKINode Title="Hint property" Url="html/P-global.ButtonScript.Hint.htm" />
+  <HelpKINode Title="humanWorldEnd field" Url="html/F-global.Constants.humanWorldEnd.htm" />
+  <HelpKINode Title="humanWorldStart field" Url="html/F-global.Constants.humanWorldStart.htm" />
+  <HelpKINode Title="IncreaseColorCount method" Url="html/M-global.PlayerManager.IncreaseColorCount.htm" />
+  <HelpKINode Title="Init method" Url="html/M-global.SaveSystem.Init.htm" />
+  <HelpKINode Title="InitialiseGame method" Url="html/M-global.SceneChange.InitialiseGame.htm" />
+  <HelpKINode Title="instance field" Url="html/F-global.AudioManager.instance.htm" />
+  <HelpKINode Title="InstantiateCharacters method" Url="html/M-global.VSMScript.InstantiateCharacters.htm" />
+  <HelpKINode Title="IsPlaying method" Url="html/M-global.AudioManager.IsPlaying.htm" />
+  <HelpKINode Title="LevelBool property" Url="html/P-global.SceneChange.LevelBool.htm" />
+  <HelpKINode Title="LevelCount property" Url="html/P-global.SceneChange.LevelCount.htm" />
+  <HelpKINode Title="levelOrder property" Url="html/P-global.VSMScript.levelOrder.htm" />
+  <HelpKINode Title="LoadDelay method" Url="html/M-global.SceneChange.LoadDelay.htm" />
+  <HelpKINode Title="LoadLevel method" Url="html/M-global.SceneChange.LoadLevel.htm" />
+  <HelpKINode Title="LoadPlayer method" Url="html/M-global.SaveSystem.LoadPlayer.htm" />
+  <HelpKINode Title="LoadSinglePlayer method" Url="html/M-global.SaveSystem.LoadSinglePlayer.htm" />
+  <HelpKINode Title="LoadStart method" Url="html/M-global.ButtonScript.LoadStart.htm" />
+  <HelpKINode Title="loop field" Url="html/F-global.Sound.loop.htm" />
+  <HelpKINode Title="MaxLevel field" Url="html/F-global.PlayerObject.MaxLevel.htm" />
+  <HelpKINode Title="MaxLevel property" Url="html/P-global.SceneChange.MaxLevel.htm" />
+  <HelpKINode Title="mixerGroup field" Url="html/F-global.AudioManager.mixerGroup.htm" />
+  <HelpKINode Title="mixerGroup field" Url="html/F-global.Sound.mixerGroup.htm" />
+  <HelpKINode Title="Mute method" Url="html/M-global.AudioManager.Mute.htm" />
+  <HelpKINode Title="name field" Url="html/F-global.PlayerObject.name.htm" />
+  <HelpKINode Title="name field" Url="html/F-global.Sound.name.htm" />
+  <HelpKINode Title="OnBeginDrag method" Url="html/M-global.DragDrop.OnBeginDrag.htm" />
+  <HelpKINode Title="OnDrag method" Url="html/M-global.DragDrop.OnDrag.htm" />
+  <HelpKINode Title="OnDrop method" Url="html/M-global.DragDrop.OnDrop.htm" />
+  <HelpKINode Title="OnDrop method" Url="html/M-global.PlayerSlot.OnDrop.htm" />
+  <HelpKINode Title="OnEndDrag method" Url="html/M-global.DragDrop.OnEndDrag.htm" />
+  <HelpKINode Title="OnPointerDown method" Url="html/M-global.DragDrop.OnPointerDown.htm" />
+  <HelpKINode Title="orange field" Url="html/F-global.PlayerObject.orange.htm" />
+  <HelpKINode Title="orderCounter property" Url="html/P-global.VSMPlayScript.orderCounter.htm" />
+  <HelpKINode Title="Pause method" Url="html/M-global.AudioManager.Pause.htm" />
+  <HelpKINode Title="PauseAll method" Url="html/M-global.AudioManager.PauseAll.htm" />
+  <HelpKINode Title="penColor field" Url="html/F-global.GetColor.penColor.htm" />
+  <HelpKINode Title="Play method" Url="html/M-global.AudioManager.Play.htm" />
+  <HelpKINode Title="PlayDelay method" Url="html/M-global.AudioManager.PlayDelay.htm" />
+  <HelpKINode Title="Player1 field" Url="html/F-global.PlayerStatsScript.Player1.htm" />
+  <HelpKINode Title="Player2 field" Url="html/F-global.PlayerStatsScript.Player2.htm" />
+  <HelpKINode Title="Player3 field" Url="html/F-global.PlayerStatsScript.Player3.htm" />
+  <HelpKINode Title="playerCount property" Url="html/P-global.PlayerSlot.playerCount.htm" />
+  <HelpKINode Title="PlayerManager class" Url="html/AllMembers.T-global.PlayerManager.htm" />
+  <HelpKINode Title="PlayerManager class" Url="html/T-global.PlayerManager.htm" />
+  <HelpKINode Title="PlayerManager class">
+    <HelpKINode Title="about PlayerManager class" Url="html/T-global.PlayerManager.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.PlayerManager.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.PlayerManager.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.PlayerManager.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PlayerManager.CreatePlayer method" Url="html/M-global.PlayerManager.CreatePlayer.htm" />
+  <HelpKINode Title="PlayerManager.IncreaseColorCount method" Url="html/M-global.PlayerManager.IncreaseColorCount.htm" />
+  <HelpKINode Title="PlayerManager.Players property" Url="html/P-global.PlayerManager.Players.htm" />
+  <HelpKINode Title="PlayerManager.Submitted property" Url="html/P-global.PlayerManager.Submitted.htm" />
+  <HelpKINode Title="PlayerObject class" Url="html/AllMembers.T-global.PlayerObject.htm" />
+  <HelpKINode Title="PlayerObject class" Url="html/T-global.PlayerObject.htm" />
+  <HelpKINode Title="PlayerObject class">
+    <HelpKINode Title="about PlayerObject class" Url="html/T-global.PlayerObject.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.PlayerObject.htm" />
+    <HelpKINode Title="constructor" Url="html/M-global.PlayerObject.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.PlayerObject.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.PlayerObject.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PlayerObject.green field" Url="html/F-global.PlayerObject.green.htm" />
+  <HelpKINode Title="PlayerObject.MaxLevel field" Url="html/F-global.PlayerObject.MaxLevel.htm" />
+  <HelpKINode Title="PlayerObject.name field" Url="html/F-global.PlayerObject.name.htm" />
+  <HelpKINode Title="PlayerObject.orange field" Url="html/F-global.PlayerObject.orange.htm" />
+  <HelpKINode Title="PlayerObject.PlayerObject constructor" Url="html/M-global.PlayerObject.-ctor.htm" />
+  <HelpKINode Title="PlayerObject.purple field" Url="html/F-global.PlayerObject.purple.htm" />
+  <HelpKINode Title="PlayerObject.StolenObjId field" Url="html/F-global.PlayerObject.StolenObjId.htm" />
+  <HelpKINode Title="Players property" Url="html/P-global.PlayerManager.Players.htm" />
+  <HelpKINode Title="PlayerSelectionButtons class" Url="html/AllMembers.T-global.PlayerSelectionButtons.htm" />
+  <HelpKINode Title="PlayerSelectionButtons class" Url="html/T-global.PlayerSelectionButtons.htm" />
+  <HelpKINode Title="PlayerSelectionButtons class">
+    <HelpKINode Title="about PlayerSelectionButtons class" Url="html/T-global.PlayerSelectionButtons.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.PlayerSelectionButtons.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.PlayerSelectionButtons.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.PlayerSelectionButtons.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PlayerSelectionButtons.AddPlayer method" Url="html/M-global.PlayerSelectionButtons.AddPlayer.htm" />
+  <HelpKINode Title="PlayerSelectionButtons.PlayerSelectionDone method" Url="html/M-global.PlayerSelectionButtons.PlayerSelectionDone.htm" />
+  <HelpKINode Title="PlayerSelectionButtons.SaveData method" Url="html/M-global.PlayerSelectionButtons.SaveData.htm" />
+  <HelpKINode Title="PlayerSelectionButtons.SavePlayer method" Url="html/M-global.PlayerSelectionButtons.SavePlayer.htm" />
+  <HelpKINode Title="PlayerSelectionButtons.SelectPlayer method" Url="html/M-global.PlayerSelectionButtons.SelectPlayer.htm" />
+  <HelpKINode Title="PlayerSelectionButtons.SetOnePlayer method" Url="html/M-global.PlayerSelectionButtons.SetOnePlayer.htm" />
+  <HelpKINode Title="PlayerSelectionButtons.SetThreePlayers method" Url="html/M-global.PlayerSelectionButtons.SetThreePlayers.htm" />
+  <HelpKINode Title="PlayerSelectionButtons.Submit method" Url="html/M-global.PlayerSelectionButtons.Submit.htm" />
+  <HelpKINode Title="PlayerSelectionDone method" Url="html/M-global.PlayerSelectionButtons.PlayerSelectionDone.htm" />
+  <HelpKINode Title="PlayerSlot class" Url="html/AllMembers.T-global.PlayerSlot.htm" />
+  <HelpKINode Title="PlayerSlot class" Url="html/T-global.PlayerSlot.htm" />
+  <HelpKINode Title="PlayerSlot class">
+    <HelpKINode Title="about PlayerSlot class" Url="html/T-global.PlayerSlot.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.PlayerSlot.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.PlayerSlot.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.PlayerSlot.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PlayerSlot.blueSlotName property" Url="html/P-global.PlayerSlot.blueSlotName.htm" />
+  <HelpKINode Title="PlayerSlot.OnDrop method" Url="html/M-global.PlayerSlot.OnDrop.htm" />
+  <HelpKINode Title="PlayerSlot.playerCount property" Url="html/P-global.PlayerSlot.playerCount.htm" />
+  <HelpKINode Title="PlayerSlot.redSlotName property" Url="html/P-global.PlayerSlot.redSlotName.htm" />
+  <HelpKINode Title="PlayerSlot.yellowSlotName property" Url="html/P-global.PlayerSlot.yellowSlotName.htm" />
+  <HelpKINode Title="PlayerStatsScript class" Url="html/AllMembers.T-global.PlayerStatsScript.htm" />
+  <HelpKINode Title="PlayerStatsScript class" Url="html/T-global.PlayerStatsScript.htm" />
+  <HelpKINode Title="PlayerStatsScript class">
+    <HelpKINode Title="about PlayerStatsScript class" Url="html/T-global.PlayerStatsScript.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.PlayerStatsScript.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.PlayerStatsScript.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.PlayerStatsScript.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.PlayerStatsScript.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PlayerStatsScript.Player1 field" Url="html/F-global.PlayerStatsScript.Player1.htm" />
+  <HelpKINode Title="PlayerStatsScript.Player2 field" Url="html/F-global.PlayerStatsScript.Player2.htm" />
+  <HelpKINode Title="PlayerStatsScript.Player3 field" Url="html/F-global.PlayerStatsScript.Player3.htm" />
+  <HelpKINode Title="PLAYER_FOLDER field" Url="html/F-global.SaveSystem.PLAYER_FOLDER.htm" />
+  <HelpKINode Title="PlayNoOverlay method" Url="html/M-global.AudioManager.PlayNoOverlay.htm" />
+  <HelpKINode Title="purple field" Url="html/F-global.PlayerObject.purple.htm" />
+  <HelpKINode Title="Quit method" Url="html/M-global.ButtonScript.Quit.htm" />
+  <HelpKINode Title="redSlotName property" Url="html/P-global.PlayerSlot.redSlotName.htm" />
+  <HelpKINode Title="RewardsRoomScript class" Url="html/AllMembers.T-global.RewardsRoomScript.htm" />
+  <HelpKINode Title="RewardsRoomScript class" Url="html/T-global.RewardsRoomScript.htm" />
+  <HelpKINode Title="RewardsRoomScript class">
+    <HelpKINode Title="about RewardsRoomScript class" Url="html/T-global.RewardsRoomScript.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.RewardsRoomScript.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.RewardsRoomScript.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.RewardsRoomScript.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RewardsScript class" Url="html/AllMembers.T-global.RewardsScript.htm" />
+  <HelpKINode Title="RewardsScript class" Url="html/T-global.RewardsScript.htm" />
+  <HelpKINode Title="RewardsScript class">
+    <HelpKINode Title="about RewardsScript class" Url="html/T-global.RewardsScript.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.RewardsScript.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.RewardsScript.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.RewardsScript.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Save method" Url="html/M-global.SaveSystem.Save.htm" />
+  <HelpKINode Title="SaveData method" Url="html/M-global.PlayerSelectionButtons.SaveData.htm" />
+  <HelpKINode Title="SavePlayer method" Url="html/M-global.PlayerSelectionButtons.SavePlayer.htm" />
+  <HelpKINode Title="SaveSystem class" Url="html/AllMembers.T-global.SaveSystem.htm" />
+  <HelpKINode Title="SaveSystem class" Url="html/T-global.SaveSystem.htm" />
+  <HelpKINode Title="SaveSystem class">
+    <HelpKINode Title="about SaveSystem class" Url="html/T-global.SaveSystem.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.SaveSystem.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.SaveSystem.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.SaveSystem.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SaveSystem.Init method" Url="html/M-global.SaveSystem.Init.htm" />
+  <HelpKINode Title="SaveSystem.LoadPlayer method" Url="html/M-global.SaveSystem.LoadPlayer.htm" />
+  <HelpKINode Title="SaveSystem.LoadSinglePlayer method" Url="html/M-global.SaveSystem.LoadSinglePlayer.htm" />
+  <HelpKINode Title="SaveSystem.PLAYER_FOLDER field" Url="html/F-global.SaveSystem.PLAYER_FOLDER.htm" />
+  <HelpKINode Title="SaveSystem.Save method" Url="html/M-global.SaveSystem.Save.htm" />
+  <HelpKINode Title="SceneChange class" Url="html/AllMembers.T-global.SceneChange.htm" />
+  <HelpKINode Title="SceneChange class" Url="html/T-global.SceneChange.htm" />
+  <HelpKINode Title="SceneChange class">
+    <HelpKINode Title="about SceneChange class" Url="html/T-global.SceneChange.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.SceneChange.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.SceneChange.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.SceneChange.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SceneChange.BuildID property" Url="html/P-global.SceneChange.BuildID.htm" />
+  <HelpKINode Title="SceneChange.CurPlayedLevels property" Url="html/P-global.SceneChange.CurPlayedLevels.htm" />
+  <HelpKINode Title="SceneChange.Error property" Url="html/P-global.SceneChange.Error.htm" />
+  <HelpKINode Title="SceneChange.InitialiseGame method" Url="html/M-global.SceneChange.InitialiseGame.htm" />
+  <HelpKINode Title="SceneChange.LevelBool property" Url="html/P-global.SceneChange.LevelBool.htm" />
+  <HelpKINode Title="SceneChange.LevelCount property" Url="html/P-global.SceneChange.LevelCount.htm" />
+  <HelpKINode Title="SceneChange.LoadDelay method" Url="html/M-global.SceneChange.LoadDelay.htm" />
+  <HelpKINode Title="SceneChange.LoadLevel method" Url="html/M-global.SceneChange.LoadLevel.htm" />
+  <HelpKINode Title="SceneChange.MaxLevel property" Url="html/P-global.SceneChange.MaxLevel.htm" />
+  <HelpKINode Title="SceneChange.SetOrder method" Url="html/M-global.SceneChange.SetOrder.htm" />
+  <HelpKINode Title="SceneChange.Start method" Url="html/M-global.SceneChange.Start.htm" />
+  <HelpKINode Title="SceneChange.ThemeID property" Url="html/P-global.SceneChange.ThemeID.htm" />
+  <HelpKINode Title="sceneCount field" Url="html/F-global.Constants.sceneCount.htm" />
+  <HelpKINode Title="Screenshot method" Url="html/M-global.ButtonScript.Screenshot.htm" />
+  <HelpKINode Title="ScreenshotHandler class" Url="html/AllMembers.T-global.ScreenshotHandler.htm" />
+  <HelpKINode Title="ScreenshotHandler class" Url="html/T-global.ScreenshotHandler.htm" />
+  <HelpKINode Title="ScreenshotHandler class">
+    <HelpKINode Title="about ScreenshotHandler class" Url="html/T-global.ScreenshotHandler.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.ScreenshotHandler.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.ScreenshotHandler.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.ScreenshotHandler.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ScreenshotHandler.TakeScreenshot_Static method" Url="html/M-global.ScreenshotHandler.TakeScreenshot_Static.htm" />
+  <HelpKINode Title="ScreenshotHandler.TrimString method" Url="html/M-global.ScreenshotHandler.TrimString.htm" />
+  <HelpKINode Title="SelectPlayer method" Url="html/M-global.PlayerSelectionButtons.SelectPlayer.htm" />
+  <HelpKINode Title="SetColor class" Url="html/AllMembers.T-global.SetColor.htm" />
+  <HelpKINode Title="SetColor class" Url="html/T-global.SetColor.htm" />
+  <HelpKINode Title="SetColor class">
+    <HelpKINode Title="about SetColor class" Url="html/T-global.SetColor.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.SetColor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.SetColor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.SetColor.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.SetColor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SetColor.ColorToString method" Url="html/M-global.SetColor.ColorToString.htm" />
+  <HelpKINode Title="SetColor.TaskColor field" Url="html/F-global.SetColor.TaskColor.htm" />
+  <HelpKINode Title="SetOnePlayer method" Url="html/M-global.PlayerSelectionButtons.SetOnePlayer.htm" />
+  <HelpKINode Title="SetOrder method" Url="html/M-global.SceneChange.SetOrder.htm" />
+  <HelpKINode Title="SetTheme method" Url="html/M-global.ButtonScript.SetTheme.htm" />
+  <HelpKINode Title="SetThreePlayers method" Url="html/M-global.PlayerSelectionButtons.SetThreePlayers.htm" />
+  <HelpKINode Title="SetUrlScript class" Url="html/AllMembers.T-global.SetUrlScript.htm" />
+  <HelpKINode Title="SetUrlScript class" Url="html/T-global.SetUrlScript.htm" />
+  <HelpKINode Title="SetUrlScript class">
+    <HelpKINode Title="about SetUrlScript class" Url="html/T-global.SetUrlScript.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.SetUrlScript.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.SetUrlScript.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.SetUrlScript.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Sound class" Url="html/AllMembers.T-global.Sound.htm" />
+  <HelpKINode Title="Sound class" Url="html/T-global.Sound.htm" />
+  <HelpKINode Title="Sound class">
+    <HelpKINode Title="about Sound class" Url="html/T-global.Sound.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.Sound.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.Sound.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.Sound.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Sound.clip field" Url="html/F-global.Sound.clip.htm" />
+  <HelpKINode Title="Sound.loop field" Url="html/F-global.Sound.loop.htm" />
+  <HelpKINode Title="Sound.mixerGroup field" Url="html/F-global.Sound.mixerGroup.htm" />
+  <HelpKINode Title="Sound.name field" Url="html/F-global.Sound.name.htm" />
+  <HelpKINode Title="Sound.source field" Url="html/F-global.Sound.source.htm" />
+  <HelpKINode Title="Sound.volume field" Url="html/F-global.Sound.volume.htm" />
+  <HelpKINode Title="Sound.volumeVariance field" Url="html/F-global.Sound.volumeVariance.htm" />
+  <HelpKINode Title="sounds field" Url="html/F-global.AudioManager.sounds.htm" />
+  <HelpKINode Title="source field" Url="html/F-global.Sound.source.htm" />
+  <HelpKINode Title="spaceWorldEnd field" Url="html/F-global.Constants.spaceWorldEnd.htm" />
+  <HelpKINode Title="spaceWorldStart field" Url="html/F-global.Constants.spaceWorldStart.htm" />
+  <HelpKINode Title="sprite field" Url="html/F-global.StolenObjectScript.sprite.htm" />
+  <HelpKINode Title="Start method" Url="html/M-global.SceneChange.Start.htm" />
+  <HelpKINode Title="stolenObj property" Url="html/P-global.StoredColors.stolenObj.htm" />
+  <HelpKINode Title="StolenObjectScript class" Url="html/AllMembers.T-global.StolenObjectScript.htm" />
+  <HelpKINode Title="StolenObjectScript class" Url="html/T-global.StolenObjectScript.htm" />
+  <HelpKINode Title="StolenObjectScript class">
+    <HelpKINode Title="about StolenObjectScript class" Url="html/T-global.StolenObjectScript.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.StolenObjectScript.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.StolenObjectScript.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.StolenObjectScript.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.StolenObjectScript.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StolenObjectScript.sprite field" Url="html/F-global.StolenObjectScript.sprite.htm" />
+  <HelpKINode Title="StolenObjectScript.StolenObjId property" Url="html/P-global.StolenObjectScript.StolenObjId.htm" />
+  <HelpKINode Title="StolenObjId field" Url="html/F-global.PlayerObject.StolenObjId.htm" />
+  <HelpKINode Title="StolenObjId property" Url="html/P-global.StolenObjectScript.StolenObjId.htm" />
+  <HelpKINode Title="StolenObjSprite property" Url="html/P-global.FoundObjectScript.StolenObjSprite.htm" />
+  <HelpKINode Title="StoredColors class" Url="html/AllMembers.T-global.StoredColors.htm" />
+  <HelpKINode Title="StoredColors class" Url="html/T-global.StoredColors.htm" />
+  <HelpKINode Title="StoredColors class">
+    <HelpKINode Title="about StoredColors class" Url="html/T-global.StoredColors.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.StoredColors.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.StoredColors.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.StoredColors.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StoredColors.stolenObj property" Url="html/P-global.StoredColors.stolenObj.htm" />
+  <HelpKINode Title="Submit method" Url="html/M-global.PlayerSelectionButtons.Submit.htm" />
+  <HelpKINode Title="Submitted property" Url="html/P-global.PlayerManager.Submitted.htm" />
+  <HelpKINode Title="Success property" Url="html/P-global.CharacterScript.Success.htm" />
+  <HelpKINode Title="TakeScreenshot_Static method" Url="html/M-global.ScreenshotHandler.TakeScreenshot_Static.htm" />
+  <HelpKINode Title="TaskColor field" Url="html/F-global.SetColor.TaskColor.htm" />
+  <HelpKINode Title="ThemeID property" Url="html/P-global.SceneChange.ThemeID.htm" />
+  <HelpKINode Title="TransitionScript class" Url="html/AllMembers.T-global.TransitionScript.htm" />
+  <HelpKINode Title="TransitionScript class" Url="html/T-global.TransitionScript.htm" />
+  <HelpKINode Title="TransitionScript class">
+    <HelpKINode Title="about TransitionScript class" Url="html/T-global.TransitionScript.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.TransitionScript.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.TransitionScript.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.TransitionScript.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TrimString method" Url="html/M-global.ScreenshotHandler.TrimString.htm" />
+  <HelpKINode Title="TrimString method" Url="html/M-global.VSMPlayScript.TrimString.htm" />
+  <HelpKINode Title="vfcmLevel field" Url="html/F-global.Constants.vfcmLevel.htm" />
+  <HelpKINode Title="VFCMScript class" Url="html/AllMembers.T-global.VFCMScript.htm" />
+  <HelpKINode Title="VFCMScript class" Url="html/T-global.VFCMScript.htm" />
+  <HelpKINode Title="VFCMScript class">
+    <HelpKINode Title="about VFCMScript class" Url="html/T-global.VFCMScript.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.VFCMScript.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.VFCMScript.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.VFCMScript.htm" />
+  </HelpKINode>
+  <HelpKINode Title="VFCMScript.vfcmTaskAssign property" Url="html/P-global.VFCMScript.vfcmTaskAssign.htm" />
+  <HelpKINode Title="vfcmTaskAssign property" Url="html/P-global.VFCMScript.vfcmTaskAssign.htm" />
+  <HelpKINode Title="volume field" Url="html/F-global.Sound.volume.htm" />
+  <HelpKINode Title="volumeVariance field" Url="html/F-global.Sound.volumeVariance.htm" />
+  <HelpKINode Title="VSMHelp method" Url="html/M-global.ButtonScript.VSMHelp.htm" />
+  <HelpKINode Title="VsmHint property" Url="html/P-global.ButtonScript.VsmHint.htm" />
+  <HelpKINode Title="VSMPlayScript class" Url="html/AllMembers.T-global.VSMPlayScript.htm" />
+  <HelpKINode Title="VSMPlayScript class" Url="html/T-global.VSMPlayScript.htm" />
+  <HelpKINode Title="VSMPlayScript class">
+    <HelpKINode Title="about VSMPlayScript class" Url="html/T-global.VSMPlayScript.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.VSMPlayScript.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.VSMPlayScript.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.VSMPlayScript.htm" />
+  </HelpKINode>
+  <HelpKINode Title="VSMPlayScript.orderCounter property" Url="html/P-global.VSMPlayScript.orderCounter.htm" />
+  <HelpKINode Title="VSMPlayScript.TrimString method" Url="html/M-global.VSMPlayScript.TrimString.htm" />
+  <HelpKINode Title="VSMScript class" Url="html/AllMembers.T-global.VSMScript.htm" />
+  <HelpKINode Title="VSMScript class" Url="html/T-global.VSMScript.htm" />
+  <HelpKINode Title="VSMScript class">
+    <HelpKINode Title="about VSMScript class" Url="html/T-global.VSMScript.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.VSMScript.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.VSMScript.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-global.VSMScript.htm" />
+  </HelpKINode>
+  <HelpKINode Title="VSMScript.characters property" Url="html/P-global.VSMScript.characters.htm" />
+  <HelpKINode Title="VSMScript.ErrorCounter property" Url="html/P-global.VSMScript.ErrorCounter.htm" />
+  <HelpKINode Title="VSMScript.getRandomElement method" Url="html/M-global.VSMScript.getRandomElement.htm" />
+  <HelpKINode Title="VSMScript.InstantiateCharacters method" Url="html/M-global.VSMScript.InstantiateCharacters.htm" />
+  <HelpKINode Title="VSMScript.levelOrder property" Url="html/P-global.VSMScript.levelOrder.htm" />
+  <HelpKINode Title="VSMScript.vsmTaskAssign property" Url="html/P-global.VSMScript.vsmTaskAssign.htm" />
+  <HelpKINode Title="vsmTaskAssign property" Url="html/P-global.VSMScript.vsmTaskAssign.htm" />
+  <HelpKINode Title="waterWorldEnd field" Url="html/F-global.Constants.waterWorldEnd.htm" />
+  <HelpKINode Title="waterWorldStart field" Url="html/F-global.Constants.waterWorldStart.htm" />
+  <HelpKINode Title="yellowSlotName property" Url="html/P-global.PlayerSlot.yellowSlotName.htm" />
+</HelpKI>

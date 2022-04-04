@@ -1,5 +1,6 @@
 using UnityEngine;
 
+/// <summary>Handles the animation of characters in the game.</summary>
 public class CharacterScript : MonoBehaviour
 {
     public static bool Success { get; set; }

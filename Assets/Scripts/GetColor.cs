@@ -23,8 +23,15 @@ public class GetColor : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        StartCoroutine(SimpleGetRequest());
-        InvokeRepeating("CheckForUpdate", 1.0f, 0.5f);
+        if(getURL != "")
+        {
+            StartCoroutine(SimpleGetRequest());
+            InvokeRepeating("CheckForUpdate", 1.0f, 0.5f);
+        } else
+        {
+            Debug.Log("No URL specified. See README.md for instructions.");
+        }
+        
     }
 
     IEnumerator SimpleGetRequest()

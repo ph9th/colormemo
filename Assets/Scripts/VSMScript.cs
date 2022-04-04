@@ -13,6 +13,7 @@ public class VSMScript : MonoBehaviour
 
     private void Awake()
     {
+        ButtonScript.Hint = false;
         //Specify folder for prefabs based on theme
         switch (SceneChange.ThemeID)
         {
